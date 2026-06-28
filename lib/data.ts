@@ -1,56 +1,82 @@
 export const projects = [
   {
     num: "01",
-    name: "exac.draw",
-    desc: "Excalidraw clone as a Turborepo monorepo with real-time multi-user collaboration.",
-    tags: ["WebSockets", "Turborepo", "PostgreSQL", "TypeScript"],
-    href: "https://github.com/m-taaha/exac.draw",
+    name: "Musafir Trips",
+    desc: "Full-stack CMS-driven travel platform with secure admin dashboard, NextAuth v5, Server Actions, Cloudinary image pipeline, and ISR revalidation.",
+    tags: ["Next.js", "TypeScript", "Prisma", "Neon", "Auth.js", "Tailwind"],
+    github: "https://github.com/m-taaha/musafir-trips",
+    live: "https://musafirtrips.com",
   },
   {
     num: "02",
-    name: "vidCall",
-    desc: "Peer-to-peer video calling with no server relay. Pure WebRTC and Socket.io.",
-    tags: ["WebRTC", "Socket.io", "Node.js"],
-    href: "https://github.com/m-taaha/vidCall",
+    name: "exac.draw",
+    desc: "Collaborative whiteboard built as a Turborepo monorepo with real-time multi-user canvas sync via WebSockets and persistent state in PostgreSQL.",
+    tags: ["Next.js 15", "Turborepo", "WebSockets", "PostgreSQL", "Tailwind"],
+    github: "https://github.com/m-taaha/exac.draw",
+    live: "https://exac-draw.vercel.app",
   },
   {
     num: "03",
-    name: "Nitpick",
-    desc: "GitHub App that reviews PRs automatically via a webhook → queue → AI worker pipeline.",
-    tags: ["BullMQ", "Octokit", "LLM", "TypeScript"],
-    href: "https://github.com/m-taaha/nitpick",
+    name: "vidCall",
+    desc: "High-performance video conferencing using WebRTC mesh architecture and Socket.io for low-latency peer-to-peer audio/video with screen sharing.",
+    tags: ["React", "WebRTC", "Socket.io", "Node.js", "Express"],
+    github: "https://github.com/m-taaha/vidCall",
+    live: "https://vidcall.vercel.app",
   },
   {
     num: "04",
     name: "Kids Portal",
-    desc: "E-learning platform with Google OAuth, UPI payments, and full admin dashboard.",
-    tags: ["FastAPI", "React", "MySQL", "OAuth"],
-    href: "https://github.com/m-taaha/kids-portal",
+    desc: "Interactive learning platform with a custom Stitcher logic compiler, branching narrative engine, and FastAPI backend for concurrent student data.",
+    tags: ["FastAPI", "Python", "React", "InkJS", "MySQL"],
+    github: "https://gitlab.com/m-taaha/kidsportal",
+    live: null,
   },
   {
     num: "05",
-    name: "Musafir Trips",
-    desc: "Production travel agency site with CMS, auth, image pipeline, and booking flow.",
-    tags: ["Next.js 14", "Prisma 7", "Neon", "Cloudinary"],
-    href: "https://github.com/m-taaha/musafir-trips",
+    name: "Nitpick",
+    desc: "GitHub App that reviews PRs automatically via a webhook → BullMQ queue → AI worker pipeline using Octokit for GitHub API integration.",
+    tags: ["BullMQ", "Octokit", "LLM", "TypeScript", "Node.js"],
+    github: "https://github.com/m-taaha/nitpick",
+    live: null,
   },
 ];
 
-export const stack = [
-  { label: "TypeScript", primary: true },
-  { label: "Next.js", primary: true },
-  { label: "React", primary: true },
-  { label: "Node.js", primary: true },
-  { label: "FastAPI", primary: false },
-  { label: "Prisma", primary: false },
-  { label: "PostgreSQL", primary: false },
-  { label: "MongoDB", primary: false },
-  { label: "Docker", primary: false },
-  { label: "WebRTC", primary: false },
-  { label: "BullMQ", primary: false },
-  { label: "Tailwind", primary: false },
-  { label: "C++", primary: false },
-  { label: "LLM APIs", primary: false },
+export const openSource = {
+  name: "CropChain",
+  event: "Aperture 2.0",
+  desc: "Transformed an unprotected backend route into a secure, production-ready API with a three-layer validation and automated testing framework.",
+  tags: ["Node.js", "Express", "Joi", "Jest", "Supertest"],
+  github: "https://github.com/m-taaha/cropchain",
+};
+
+export const skillGroups = [
+  {
+    label: "Languages",
+    skills: ["TypeScript", "JavaScript", "Python", "C++", "SQL"],
+  },
+  {
+    label: "Frontend",
+    skills: ["Next.js", "React", "Tailwind CSS", "HTML5", "CSS3"],
+  },
+  {
+    label: "Backend & Realtime",
+    skills: [
+      "Node.js",
+      "Express",
+      "FastAPI",
+      "Socket.io",
+      "WebRTC",
+      "WebSockets",
+    ],
+  },
+  {
+    label: "Databases",
+    skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+  },
+  {
+    label: "Tools & DevOps",
+    skills: ["Docker", "Turborepo", "Git", "Nginx", "Vercel", "Jest", "pnpm"],
+  },
 ];
 
 export const links = [
@@ -61,13 +87,18 @@ export const links = [
   },
   {
     label: "LinkedIn",
-    value: "/in/m-taaha",
-    href: "https://linkedin.com/in/m-taaha",
+    value: "mohammad-taaha-ashraf",
+    href: "https://linkedin.com/in/mohammad-taaha-ashraf",
+  },
+  {
+    label: "X / Twitter",
+    value: "_mohammadtaaha",
+    href: "https://x.com/_mohammadtaaha",
   },
   {
     label: "Email",
-    value: "your@email.com",
-    href: "mailto:your@email.com",
+    value: "mtaahaashraf@gmail.com",
+    href: "mailto:mtaahaashraf@gmail.com",
   },
 ];
 
