@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --card: #111111;
+  --border: #1e1e1e;
+  --border-h: #2a2a2a;
+  --t1: #e8e8e8;
+  --t2: #888888;
+  --t3: #444444;
+  --t4: #252525;
+  --pill: #161616;
+  --pill-b: #222222;
+  --pill-on: #555555;
+  --dot-0: #1a1a1a;
+  --dot-1: #1e2a14;
+  --dot-2: #2d4420;
+  --dot-3: #4a6e35;
+  --dot-4: #6b9e4d;
+  --avail: #4a7a30;
+  --link-bg: #0d0d0d;
+  --proj-bg: #0d0d0d;
+  --proj-border: #1a1a1a;
+  --radius: 20px;
+}
+
+.light {
+  --bg: #f5f5f3;
+  --card: #ffffff;
+  --border: #e8e8e6;
+  --border-h: #d0d0ce;
+  --t1: #111111;
+  --t2: #555555;
+  --t3: #aaaaaa;
+  --t4: #cccccc;
+  --pill: #f0f0ee;
+  --pill-b: #e0e0de;
+  --pill-on: #666666;
+  --dot-0: #e8e8e6;
+  --dot-1: #c8ddb8;
+  --dot-2: #9dc87e;
+  --dot-3: #6aaa44;
+  --dot-4: #3d8b20;
+  --avail: #3d8b20;
+  --link-bg: #f8f8f6;
+  --proj-bg: #fafaf8;
+  --proj-border: #e8e8e6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--t1);
+  font-family: 'Inter', sans-serif;
+  transition: background 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
