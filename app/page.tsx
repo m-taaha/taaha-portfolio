@@ -4,6 +4,7 @@ import { GitHubCard } from "@/components/cards/GitHubCard";
 import { AboutCard } from "@/components/cards/AboutCard";
 import { SkillsCard } from "@/components/cards/SkillsCard";
 import { GoalCard } from "@/components/cards/GoalCard";
+import { OpenSourceCard } from "@/components/cards/OpenSourceCard";
 import { ProjectsCard } from "@/components/cards/ProjectsCard";
 import { CtaCard } from "@/components/cards/CtaCard";
 import { LinksCard } from "@/components/cards/LinksCard";
@@ -47,12 +48,22 @@ export default function Home() {
             gap: 8,
           }}
         >
+          {/* row 1 — hero + github */}
           <HeroCard />
           <GitHubCard />
+
+          {/* row 2 — about + skills + goal */}
           <AboutCard />
           <SkillsCard />
           <GoalCard />
+
+          {/* row 3 — open source + (skills overflow) */}
+          <OpenSourceCard />
+
+          {/* row 4 — projects */}
           <ProjectsCard />
+
+          {/* row 5 — cta + links + location */}
           <CtaCard />
           <LinksCard />
           <LocationCard />
