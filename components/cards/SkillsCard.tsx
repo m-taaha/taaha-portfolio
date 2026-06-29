@@ -5,7 +5,7 @@ import { skillGroups } from "@/lib/data";
 
 export function SkillsCard() {
   return (
-    <BentoCard delay={0.18} style={{ gridColumn: "span 5" }}>
+    <BentoCard delay={0.18} className="col-5b">
       <span
         style={{
           display: "block",
@@ -20,7 +20,6 @@ export function SkillsCard() {
       >
         Stack
       </span>
-
       <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
         {skillGroups.map(({ label, skills }) => (
           <div key={label}>
@@ -32,7 +31,7 @@ export function SkillsCard() {
                 letterSpacing: "0.06em",
                 textTransform: "uppercase",
                 marginBottom: 7,
-                transition: "color 0.55s cubic-bezier(0.4,0,0.2,1)",
+                transition: "color 0.55s",
               }}
             >
               {label}
@@ -51,7 +50,7 @@ export function SkillsCard() {
                     color: "var(--pill-on)",
                     letterSpacing: "0.01em",
                     transition:
-                      "background 0.55s cubic-bezier(0.4,0,0.2,1), border-color 0.55s cubic-bezier(0.4,0,0.2,1), color 0.55s cubic-bezier(0.4,0,0.2,1)",
+                      "background 0.55s, border-color 0.55s, color 0.55s",
                   }}
                 >
                   {skill}

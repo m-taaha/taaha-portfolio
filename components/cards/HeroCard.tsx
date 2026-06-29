@@ -18,7 +18,6 @@ export function HeroCard() {
 
   useEffect(() => {
     const current = roles[roleIndex];
-
     if (!deleting && charIndex < current.length) {
       const t = setTimeout(() => {
         setDisplayed(current.slice(0, charIndex + 1));
@@ -26,12 +25,10 @@ export function HeroCard() {
       }, 55);
       return () => clearTimeout(t);
     }
-
     if (!deleting && charIndex === current.length) {
       const t = setTimeout(() => setDeleting(true), 1800);
       return () => clearTimeout(t);
     }
-
     if (deleting && charIndex > 0) {
       const t = setTimeout(() => {
         setDisplayed(current.slice(0, charIndex - 1));
@@ -39,7 +36,6 @@ export function HeroCard() {
       }, 28);
       return () => clearTimeout(t);
     }
-
     if (deleting && charIndex === 0) {
       setDeleting(false);
       setRoleIndex((r) => (r + 1) % roles.length);
@@ -49,12 +45,8 @@ export function HeroCard() {
   return (
     <BentoCard
       delay={0}
-      style={{
-        gridColumn: "span 7",
-        padding: 36,
-        position: "relative",
-        overflow: "hidden",
-      }}
+      className="col-7"
+      style={{ padding: 36, position: "relative", overflow: "hidden" }}
     >
       <div
         style={{
@@ -138,7 +130,7 @@ export function HeroCard() {
         tools. Freelancing, contributing to open source.
       </p>
 
-      {/* FIXED: Added missing <a tag */}
+      {/* FIXED: Added the missing <a tag */}
       <a
         href="/resume.pdf"
         target="_blank"

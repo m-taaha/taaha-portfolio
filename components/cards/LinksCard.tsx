@@ -6,8 +6,7 @@ import { links } from "@/lib/data";
 
 export function LinksCard() {
   return (
-    <BentoCard delay={0.48} style={{ gridColumn: "span 5" }}>
-      {/* label */}
+    <BentoCard delay={0.48} className="col-5c">
       <span
         style={{
           display: "block",
@@ -22,7 +21,6 @@ export function LinksCard() {
       >
         Find me
       </span>
-
       <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
         {links.map(({ label, value, href }) => (
           <motion.a
@@ -30,10 +28,7 @@ export function LinksCard() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{
-              x: 2,
-              transition: { duration: 0.18 },
-            }}
+            whileHover={{ x: 2, transition: { duration: 0.18 } }}
             style={{
               display: "flex",
               alignItems: "center",
@@ -43,8 +38,7 @@ export function LinksCard() {
               border: "1px solid var(--proj-border)",
               borderRadius: 10,
               textDecoration: "none",
-              transition:
-                "background 0.55s cubic-bezier(0.4,0,0.2,1), border-color 0.55s cubic-bezier(0.4,0,0.2,1)",
+              transition: "background 0.55s, border-color 0.55s",
             }}
           >
             <span
@@ -52,7 +46,7 @@ export function LinksCard() {
                 fontSize: 12,
                 color: "var(--t2)",
                 fontWeight: 400,
-                transition: "color 0.55s cubic-bezier(0.4,0,0.2,1)",
+                transition: "color 0.55s",
               }}
             >
               {label}
@@ -61,7 +55,7 @@ export function LinksCard() {
               style={{
                 fontSize: 11,
                 color: "var(--t3)",
-                transition: "color 0.55s cubic-bezier(0.4,0,0.2,1)",
+                transition: "color 0.55s",
               }}
             >
               {value}

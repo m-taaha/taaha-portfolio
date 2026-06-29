@@ -29,7 +29,7 @@ export default function Home() {
           gap: 8,
         }}
       >
-        {/* top bar */}
+        {/* topbar */}
         <div
           style={{
             display: "flex",
@@ -41,29 +41,14 @@ export default function Home() {
         </div>
 
         {/* bento grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(12, 1fr)",
-            gap: 8,
-          }}
-        >
-          {/* row 1 — hero + github */}
+        <div className="bento-grid">
           <HeroCard />
           <GitHubCard />
-
-          {/* row 2 — about + skills + goal */}
           <AboutCard />
           <SkillsCard />
           <GoalCard />
-
-          {/* row 3 — open source + (skills overflow) */}
           <OpenSourceCard />
-
-          {/* row 4 — projects */}
           <ProjectsCard />
-
-          {/* row 5 — cta + links + location */}
           <CtaCard />
           <LinksCard />
           <LocationCard />

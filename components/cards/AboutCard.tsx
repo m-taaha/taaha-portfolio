@@ -4,8 +4,7 @@ import { BentoCard } from "@/components/ui/BentoCard";
 
 export function AboutCard() {
   return (
-    <BentoCard delay={0.12} style={{ gridColumn: "span 4" }}>
-      {/* label */}
+    <BentoCard delay={0.12} className="col-4">
       <span
         style={{
           display: "block",
@@ -20,7 +19,6 @@ export function AboutCard() {
       >
         About
       </span>
-
       <p
         style={{
           fontSize: 13,

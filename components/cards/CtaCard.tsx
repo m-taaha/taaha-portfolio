@@ -7,16 +7,14 @@ export function CtaCard() {
   return (
     <BentoCard
       delay={0.42}
+      className="col-4c"
       style={{
-        gridColumn: "span 4",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
       }}
     >
-      {/* top */}
       <div>
-        {/* available indicator */}
         <div
           style={{
             display: "inline-flex",
@@ -80,7 +78,6 @@ export function CtaCard() {
         </p>
       </div>
 
-      {/* bottom — email + button */}
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         <p
           style={{
@@ -92,7 +89,6 @@ export function CtaCard() {
         >
           mtaahaashraf@gmail.com
         </p>
-
         <motion.a
           href="mailto:mtaahaashraf@gmail.com"
           whileHover={{ y: -1, transition: { duration: 0.18 } }}
@@ -112,8 +108,7 @@ export function CtaCard() {
             cursor: "pointer",
             width: "fit-content",
             textDecoration: "none",
-            transition:
-              "background 0.55s cubic-bezier(0.4,0,0.2,1), border-color 0.55s cubic-bezier(0.4,0,0.2,1), color 0.55s cubic-bezier(0.4,0,0.2,1)",
+            transition: "background 0.55s, border-color 0.55s, color 0.55s",
           }}
         >
           <svg

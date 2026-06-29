@@ -6,8 +6,7 @@ import { openSource } from "@/lib/data";
 
 export function OpenSourceCard() {
   return (
-    <BentoCard delay={0.2} style={{ gridColumn: "span 4" }}>
-      {/* label */}
+    <BentoCard delay={0.2} className="col-4b">
       <span
         style={{
           display: "block",
@@ -23,7 +22,6 @@ export function OpenSourceCard() {
         Open Source
       </span>
 
-      {/* event badge */}
       <div
         style={{
           display: "flex",
@@ -49,7 +47,6 @@ export function OpenSourceCard() {
         </span>
       </div>
 
-      {/* project name */}
       <h3
         style={{
           fontFamily: "'Geist', sans-serif",
@@ -64,7 +61,6 @@ export function OpenSourceCard() {
         {openSource.name}
       </h3>
 
-      {/* desc */}
       <p
         style={{
           fontSize: 12,
@@ -78,7 +74,6 @@ export function OpenSourceCard() {
         {openSource.desc}
       </p>
 
-      {/* tags */}
       <div
         style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 18 }}
       >
@@ -100,7 +95,6 @@ export function OpenSourceCard() {
         ))}
       </div>
 
-      {/* github link */}
       <motion.a
         href={openSource.github}
         target="_blank"

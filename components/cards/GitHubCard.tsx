@@ -31,10 +31,8 @@ export function GitHubCard() {
           `https://github-contributions-api.jogruber.de/v4/${GITHUB_USERNAME}?y=last`,
         );
         const data = await res.json();
-
         const contrib: ContribDay[] = data.contributions ?? [];
         setDays(contrib.slice(-364));
-
         const total = contrib.reduce(
           (sum: number, d: ContribDay) => sum + d.count,
           0,
@@ -46,12 +44,11 @@ export function GitHubCard() {
         setLoading(false);
       }
     }
-
     fetchContribs();
   }, []);
 
   return (
-    <BentoCard delay={0.06} style={{ gridColumn: "span 5" }}>
+    <BentoCard delay={0.06} className="col-5">
       <div
         style={{
           display: "flex",
@@ -71,7 +68,7 @@ export function GitHubCard() {
             fontWeight: 500,
             color: "var(--t1)",
             textDecoration: "none",
-            transition: "color 0.55s cubic-bezier(0.4,0,0.2,1)",
+            transition: "color 0.55s",
           }}
         >
           {GITHUB_USERNAME}
@@ -80,7 +77,7 @@ export function GitHubCard() {
           style={{
             fontSize: 11,
             color: "var(--t3)",
-            transition: "color 0.55s cubic-bezier(0.4,0,0.2,1)",
+            transition: "color 0.55s",
           }}
         >
           github.com
@@ -131,11 +128,7 @@ export function GitHubCard() {
       )}
 
       <p
-        style={{
-          fontSize: 11,
-          color: "var(--t4)",
-          transition: "color 0.55s cubic-bezier(0.4,0,0.2,1)",
-        }}
+        style={{ fontSize: 11, color: "var(--t4)", transition: "color 0.55s" }}
       >
         {totalContribs !== null
           ? `${totalContribs.toLocaleString()} contributions this year`

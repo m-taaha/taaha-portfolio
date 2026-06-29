@@ -6,14 +6,13 @@ export function LocationCard() {
   return (
     <BentoCard
       delay={0.54}
+      className="col-3b"
       style={{
-        gridColumn: "span 3",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
       }}
     >
-      {/* top */}
       <div>
         <span
           style={{
@@ -29,7 +28,6 @@ export function LocationCard() {
         >
           Based in
         </span>
-
         <p
           style={{
             fontFamily: "'Geist', sans-serif",
@@ -43,7 +41,6 @@ export function LocationCard() {
         >
           New Delhi
         </p>
-
         <p
           style={{
             fontSize: 11,
@@ -55,8 +52,6 @@ export function LocationCard() {
           India · IST (UTC +5:30)
         </p>
       </div>
-
-      {/* bottom */}
       <div
         style={{
           display: "inline-flex",

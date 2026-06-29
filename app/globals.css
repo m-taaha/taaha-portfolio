@@ -71,3 +71,71 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
 }
+
+/* ─── Responsive Grid ─── */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 8px;
+}
+
+/* hero */
+.col-7 { grid-column: span 7; }
+/* github */
+.col-5 { grid-column: span 5; }
+/* about */
+.col-4 { grid-column: span 4; }
+/* skills */
+.col-5b { grid-column: span 5; }
+/* goal */
+.col-3 { grid-column: span 3; }
+/* open source */
+.col-4b { grid-column: span 4; }
+/* projects */
+.col-12 { grid-column: span 12; }
+/* cta */
+.col-4c { grid-column: span 4; }
+/* links */
+.col-5c { grid-column: span 5; }
+/* location */
+.col-3b { grid-column: span 3; }
+
+/* tablet — 768px and below */
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .col-7,
+  .col-5,
+  .col-4,
+  .col-5b,
+  .col-3,
+  .col-4b,
+  .col-12,
+  .col-4c,
+  .col-5c,
+  .col-3b {
+    grid-column: span 2;
+  }
+}
+
+/* mobile — 480px and below */
+@media (max-width: 480px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .col-7,
+  .col-5,
+  .col-4,
+  .col-5b,
+  .col-3,
+  .col-4b,
+  .col-12,
+  .col-4c,
+  .col-5c,
+  .col-3b {
+    grid-column: span 1;
+  }
+}

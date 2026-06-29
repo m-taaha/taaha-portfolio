@@ -6,14 +6,13 @@ export function GoalCard() {
   return (
     <BentoCard
       delay={0.24}
+      className="col-3"
       style={{
-        gridColumn: "span 3",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
       }}
     >
-      {/* top */}
       <div>
         <p
           style={{
@@ -52,8 +51,6 @@ export function GoalCard() {
           Building open source contributions toward Google Summer of Code.
         </p>
       </div>
-
-      {/* bottom */}
       <div
         style={{
           display: "inline-flex",
