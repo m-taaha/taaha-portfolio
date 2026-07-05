@@ -63,4 +63,23 @@ Components consume design tokens.
 
 ## Questions I still have
 
-- (Leave this empty for now. We'll fill it together as you learn.)
+## Architecture Discoveries
+
+### Discovery 1
+
+Initially, I wanted to put everything inside `siteConfig`.
+
+After discussing responsibilities, I realized that website configuration and personal information are different domains.
+
+Future configuration may be separated into:
+
+- site.ts
+- person.ts
+- navigation.ts
+- theme.ts
+- metadata.ts
+- socials.ts
+
+Key lesson:
+
+Group data by responsibility, not by convenience.
