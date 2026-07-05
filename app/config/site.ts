@@ -1,17 +1,32 @@
-export interface SiteConfig {
+/**
+ * Configures global website settings.
+ *
+ * This file should only contain information
+ * about the website itself.
+ *
+ * It should never contain:
+ * - Person information
+ * - Theme implementation
+ * - Navigation items
+ * - Metadata
+ */
 
+import type { Theme } from "./theme";
+
+export interface Site {
+  readonly name: string;
+  readonly url: string;
+  readonly locale: string;
+  readonly defaultTheme: Theme;
+  readonly favicon?: string;
+  readonly copyright: string;
 }
 
 
- /*Website
-
-├── Name
-├── URL
-├── Description
-├── Default OG Image
-├── Default Locale
-├── Default Theme
-├── Keywords
-├── Author
-├── Copyright
-├── Metadata*/
+export const site: Site = {
+  name: "taaha.dev",
+  locale: "en-IN",
+  url: "https://taaha.dev",
+  defaultTheme: "dark",
+  copyright: "© 2026 Mohammad Taaha Ashraf",
+};
