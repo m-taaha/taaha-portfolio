@@ -11,7 +11,7 @@
  * - Metadata
  */
 
-import type { Theme } from "./theme";
+import type { Theme } from "./theme/index";
 
 export interface Site {
   readonly name: string;
