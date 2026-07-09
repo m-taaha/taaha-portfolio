@@ -1,8 +1,8 @@
-export type Role =  "Software Engineer";
+export type Title =  "Software Engineer";
 
 export interface Person {
   readonly name: string;
-  readonly role: Role;
+  readonly title: Title;
   readonly heroMessages: readonly string[];
   readonly email: string;
   readonly github: string;
@@ -16,14 +16,16 @@ export interface Person {
 }
 
 export const person: Person = {
-  name: "Mohammd Taaha Ashraf",
-  role: "Software Engineer",
+  name: "Mohammad Taaha Ashraf",
+  title: "Software Engineer",
   heroMessages: [
-  "Building AI Products",
-  "Designing Scalable Systems",
-  "Turning Ideas into Products",
-  "Learning Through Building",
-],
+    "Building AI Products",
+    "Designing Scalable Systems",
+    "Turning Ideas into Products",
+    "Learning Through Building",
+  ],
   email: "mtaahaashraf@gmail.com",
   github: "https://github.com/m-taaha",
+  shortBio:
+    "I build scalable web applications and AI-powered products while continuously exploring software architecture and backend systems.",
 };
