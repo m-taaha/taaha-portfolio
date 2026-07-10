@@ -1,3 +1,4 @@
+import { Hero } from "./components/sections/Hero/Hero";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
         <button className="mt-8 rounded-lg bg-brand-primary px-5 py-2 text-brand-foreground transition hover:bg-brand-soft">
           Enter Portfolio
         </button>
+        <Hero />
       </div>
     </main>
   );
