@@ -7,7 +7,7 @@ import { RotatingText } from "./RotatingText";
 
 export function Hero() {
   return (
-    <Section>
+    <Section className="flex flex-col gap-6">
       <HeroContent />
       <HeroActions />
     </Section>

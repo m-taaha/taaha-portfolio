@@ -60,3 +60,22 @@ Then we describe it using interfaces and types.
 Only after that do we create the actual objects.
 
 I also learned the difference between describing data and storing data.
+
+---
+
+
+# React + TypeScript Notes
+
+## Props Interface
+
+Every reusable component should describe the shape of the props it accepts.
+
+Example:
+
+- HeroContent owns the data.
+- RotatingText owns how the data is displayed.
+
+```tsx
+interface RotatingTextProps {
+  messages: readonly string[];
+}

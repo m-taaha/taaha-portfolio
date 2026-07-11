@@ -7,7 +7,7 @@ export function HeroContent() {
     <div>
       <Heading>{person.name}</Heading>
 
-      <RotatingText />
+      <RotatingText messages={person.heroMessages} />
 
       <Text>
         {person.shortBio}
