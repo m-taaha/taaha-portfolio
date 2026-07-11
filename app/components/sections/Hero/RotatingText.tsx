@@ -1,26 +1,20 @@
-"use client"
+"use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react"
-
+import { useEffect, useState } from "react";
 
 interface RotatingTextProps {
   messages: readonly string[];
 }
 
-
-export function RotatingText({
-  messages,
-}: RotatingTextProps) {
+export function RotatingText({ messages }: RotatingTextProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((previousIndex) => {
-        return (previousIndex + 1) % messages.length;
-      })
+      setCurrentIndex((previous) => (previous + 1) % messages.length);
     }, 2000);
 
-    return () => clearInterval(interval)
+    return () => clearInterval(interval);
   }, [messages]);
 
   return (
@@ -50,4 +44,3 @@ export function RotatingText({
     </div>
   );
 }
-
