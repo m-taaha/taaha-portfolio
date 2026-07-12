@@ -4,11 +4,11 @@ import { person } from "@/app/config/person"
 import { Heading, Text } from "@/app/components/ui/Typography";
 import { RotatingText } from "./RotatingText";
 import { HeroActions } from "./HeroActions";
-import {motion} from "framer-motion"
+import {motion, type Variants} from "framer-motion"
 
 
 // this controls timing
-const containerVariants = {
+const containerVariants: Variants  = {
   hidden: {},
 
   visible: {
@@ -19,7 +19,7 @@ const containerVariants = {
 }
 
 // this controls how each child appears
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 20,

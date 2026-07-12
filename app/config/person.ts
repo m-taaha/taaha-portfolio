@@ -7,12 +7,15 @@ export interface Person {
   readonly email: string;
   readonly github: string;
 
+  readonly status: string;
+  readonly skills: readonly string[];
+
   linkedin?: string;
   twitter?: string;
   location?: string;
   shortBio?: string;
   resumeUrl?: string;
-  avatar?: string;
+  readonly avatar: string;
 }
 
 export const person: Person = {
@@ -28,4 +31,24 @@ export const person: Person = {
   github: "https://github.com/m-taaha",
   shortBio:
     "I build scalable web applications and AI-powered products while continuously exploring software architecture and backend systems.",
+  avatar: "/images/profile-v2.png",
+
+  status: "Available for Work",
+  skills: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "FastAPI",
+    "Python",
+    "PostgreSQL",
+    "MongoDB",
+    "Prisma",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Git",
+    "Docker",
+    "AI",
+  ] as const,
 };
