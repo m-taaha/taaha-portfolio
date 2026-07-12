@@ -18,13 +18,13 @@ export function ProfileCard() {
 
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">{person.name}</h3>
-          <p className="text-xs tracking-widest uppercase text-text-secondary">
-            {person.title}
+          <p className="text-xs uppercase tracking-[0.3em] text-text-secondary">
+            SOFTWARE ENGINEER
           </p>
 
           <StatusBadge status={person.status} />
 
-          <div className="w-full border-t border-border-default" />
+          <div className="my-4 w-full border-t border-border-default" />
 
           <SkillChips skills={person.skills} />
         </div>

@@ -1,4 +1,4 @@
-export type Title =  "Software Engineer";
+export type Title = "Software Engineer";
 
 export interface Person {
   readonly name: string;
@@ -34,21 +34,5 @@ export const person: Person = {
   avatar: "/images/profile-v2.png",
 
   status: "Available for Work",
-  skills: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Node.js",
-    "Express",
-    "FastAPI",
-    "Python",
-    "PostgreSQL",
-    "MongoDB",
-    "Prisma",
-    "Tailwind CSS",
-    "Framer Motion",
-    "Git",
-    "Docker",
-    "AI",
-  ] as const,
+  skills: ["Next.js", "TypeScript", "Node.js", "Python", "C++", "AI"] as const,
 };
