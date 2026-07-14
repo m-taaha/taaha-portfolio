@@ -28,5 +28,5 @@ export const site: Site = {
   locale: "en-IN",
   url: "https://taaha.dev",
   defaultTheme: "dark",
-  copyright: "© 2026 Mohammad Taaha Ashraf",
+  copyright: `© ${new Date().getFullYear()} Mohammad Taaha Ashraf. All rights reserved.`,
 };
