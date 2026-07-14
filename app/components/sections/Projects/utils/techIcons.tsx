@@ -14,7 +14,7 @@ import {
 import { TbBrandCpp } from "react-icons/tb";
 import { FaEthereum } from "react-icons/fa";
 
-export const techIcons: Record<string, { icon: JSX.Element; color: string }> = {
+export const techIcons: Record<string, { icon: React.ReactNode; color: string }> = {
   "Next.js": {
     icon: <SiNextdotjs />,
     color: "text-white",
