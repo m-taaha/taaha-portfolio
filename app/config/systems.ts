@@ -1,16 +1,27 @@
 export interface System {
   readonly id: string;
-  readonly title: string;
-  readonly tagline: string;
-  readonly description: string;
+
+  readonly name: string;
+
+  readonly category: string;
+
+  readonly overview: string;
+
+  readonly problem: string;
+
+  readonly solution: string;
+
+  readonly architecture: readonly string[];
+
+  readonly highlights: readonly string[];
 
   readonly technologies: readonly string[];
 
-  readonly github?: string;
-  readonly gitlab?: string;
-  readonly live?: string;
-
   readonly image: string;
+
+  readonly github?: string;
+
+  readonly live?: string;
 
   readonly featured: boolean;
 }
@@ -19,12 +30,34 @@ export const systems: readonly System[] = [
   {
     id: "kidsportal",
 
-    title: "KidsPortal",
+    name: "KidsPortal",
 
-    tagline: "Interactive Learning Platform",
+    category: "Interactive Learning Platform",
 
-    description:
-      "A modern learning platform where children explore interactive stories, videos, quizzes, and educational content powered by a custom CMS.",
+    overview:
+      "A modern educational platform where children learn through interactive stories, videos and quizzes powered by a custom CMS.",
+
+    problem:
+      "Traditional learning platforms provide static content with limited engagement and almost no personalization.",
+
+    solution:
+      "Built an interactive learning platform with a custom CMS, branching story engine, XML imports and scalable FastAPI backend.",
+
+    architecture: [
+      "React Frontend",
+      "FastAPI Backend",
+      "PostgreSQL Database",
+      "Story Engine",
+      "Custom CMS",
+    ],
+
+    highlights: [
+      "Interactive Story Engine",
+      "CMS Dashboard",
+      "Authentication",
+      "XML Story Import",
+      "Video Content Delivery",
+    ],
 
     technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
 
@@ -38,18 +71,38 @@ export const systems: readonly System[] = [
   {
     id: "portfolio",
 
-    title: "Developer Portfolio",
+    name: "taaha.dev",
 
-    tagline: "Personal Brand",
+    category: "Personal Engineering Portfolio",
 
-    description:
-      "A premium portfolio built with Next.js, TypeScript, Tailwind CSS and Framer Motion focused on performance and beautiful user experience.",
+    overview:
+      "A premium developer portfolio designed to showcase engineering thinking rather than simply listing projects.",
+
+    problem:
+      "Most developer portfolios look identical and fail to communicate engineering decisions behind the work.",
+
+    solution:
+      "Designed a component-driven portfolio focused on storytelling, reusable architecture and smooth interactions.",
+
+    architecture: [
+      "Next.js App Router",
+      "Reusable Components",
+      "Motion System",
+      "Design Tokens",
+    ],
+
+    highlights: [
+      "Dark-first Design",
+      "Framer Motion",
+      "Responsive Layout",
+      "Component Architecture",
+    ],
 
     technologies: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
 
     image: "/images/projects/portfolio/cover.png",
 
-    gitlab: "https://gitlab.com/zavianexus/kidsportal",
+    github: "https://github.com/m-taaha/taaha.dev",
 
     featured: true,
   },
@@ -57,12 +110,33 @@ export const systems: readonly System[] = [
   {
     id: "nitpick",
 
-    title: "NitPIck",
+    name: "NitPick",
 
-    tagline: "AI Code Review Assistant",
+    category: "AI Code Review Platform",
 
-    description:
-      "An AI-powered code review platform that analyzes pull requests, runs background jobs with BullMQ and Redis, and provides intelligent feedback to improve code quality.",
+    overview:
+      "An AI-assisted developer platform that automates pull request analysis and intelligent code reviews.",
+
+    problem:
+      "Manual code reviews consume engineering time and often miss repetitive quality issues.",
+
+    solution:
+      "Designed an AI-powered review pipeline using background workers, Redis queues and LLM-based analysis.",
+
+    architecture: [
+      "Next.js",
+      "Node.js API",
+      "BullMQ Workers",
+      "Redis Queue",
+      "OpenAI",
+    ],
+
+    highlights: [
+      "AI Code Review",
+      "Background Jobs",
+      "Queue Processing",
+      "GitHub Integration",
+    ],
 
     technologies: [
       "Next.js",
