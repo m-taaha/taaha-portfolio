@@ -6,13 +6,13 @@ export function SystemsSection() {
     <section id="systems" className="mx-auto max-w-7xl px-6 py-32">
       <SectionHeading
         eyebrow="Engineering Systems"
-        title="Systems I've Built"
+        title="Systems I've Designed"
         description="
-A collection of production-focused software systems designed with scalability, clean architecture, and long-term maintainability in mind.
+Each system represents a real engineering challenge—from scalable backend architecture to AI-powered developer tools and interactive learning platforms.
 "
       />
 
-      <div className="mt-20">
+      <div className="mt-24">
         <SystemsGrid />
       </div>
     </section>

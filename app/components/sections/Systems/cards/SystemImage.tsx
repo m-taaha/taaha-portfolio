@@ -10,7 +10,8 @@ export function SystemImage({ image, title }: SystemImageProps) {
     <div
       className="
         relative
-        aspect-video
+        h-full
+        min-h-[420px]
         overflow-hidden
         bg-surface-secondary
       "
@@ -23,7 +24,7 @@ export function SystemImage({ image, title }: SystemImageProps) {
           object-cover
           transition-transform
           duration-700
-          group-hover:scale-105
+          hover:scale-105
         "
       />
 
@@ -31,22 +32,9 @@ export function SystemImage({ image, title }: SystemImageProps) {
         className="
           absolute
           inset-0
-          bg-black/20
-          group-hover:bg-black/10
-          transition-colors
-          duration-500
-        "
-      />
-
-      <div
-        className="
-          absolute
-          inset-x-0
-          bottom-0
-          h-32
-          bg-gradient-to-t
-          from-black/60
-          to-transparent
+          bg-gradient-to-l
+          from-transparent
+          to-black/10
         "
       />
     </div>

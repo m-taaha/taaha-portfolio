@@ -154,7 +154,7 @@ export const systems: readonly System[] = [
 
     image: "/images/projects/portfolio/cover.png",
 
-    github: "https://github.com/m-taaha/taaha.dev",
+    github: "https://github.com/m-taaha/taaha-portfolio",
 
     featured: true,
   },

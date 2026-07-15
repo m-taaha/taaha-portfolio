@@ -1,7 +1,10 @@
 import { System } from "@/app/config/systems";
 
-import { SystemImage } from "./SystemImage";
-import { SystemTechStack } from "./SystemTechStack";
+import { SystemHeader } from "./SystemHeader";
+import { SystemChallenge } from "./SystemChallenge";
+import { SystemArchitecture } from "./SystemArchitechture";
+import { SystemHighlights } from "./SystemHighlights";
+import { SystemPreview } from "./preview/SystemPreview";
 import { SystemActions } from "./SystemActions";
 
 interface SystemCardProps {
@@ -14,30 +17,37 @@ export function SystemCard({ system }: SystemCardProps) {
       className="
         group
         overflow-hidden
-        rounded-3xl
+        rounded-[32px]
         border
         border-border-subtle
         bg-surface-primary
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:border-brand-primary/30
       "
     >
-      <SystemImage image={system.image} title={system.title} />
+      <div className="grid lg:grid-cols-[500px_1fr]">
+        {/* Left Content */}
 
-      <div className="space-y-6 p-8">
-        <div>
-          <p className="text-sm text-brand-primary">{system.tagline}</p>
+        <div className="space-y-10 p-12">
+          <SystemHeader
+            category={system.category}
+            name={system.name}
+            overview={system.overview}
+          />
 
-          <h3 className="mt-2 text-3xl font-semibold">{system.title}</h3>
+          <SystemChallenge
+            problem={system.problem}
+            solution={system.solution}
+          />
+
+          <SystemArchitecture architecture={system.architecture} />
+
+          <SystemHighlights highlights={system.highlights} />
+
+          <SystemActions system={system} />
         </div>
 
-        <p className="leading-7 text-text-secondary">{system.description}</p>
+        {/* Right Preview */}
 
-        <SystemTechStack technologies={system.technologies} />
-
-        <SystemActions system={system} />
+        <SystemPreview system={system} />
       </div>
     </article>
   );
