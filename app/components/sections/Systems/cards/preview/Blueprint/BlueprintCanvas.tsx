@@ -49,7 +49,12 @@ export function BlueprintCanvas({ blueprint }: Props) {
           if (!from || !to) return null;
 
           return (
-            <BlueprintConnection key={index} startNode={from} endNode={to} />
+            <BlueprintConnection
+              key={index}
+              startNode={from}
+              endNode={to}
+              delay={index * 0.35}
+            />
           );
         })}
 
