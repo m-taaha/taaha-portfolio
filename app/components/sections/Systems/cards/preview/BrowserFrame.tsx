@@ -1,52 +1,63 @@
+"use client"
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface BrowserFrameProps {
-  image: string;
-  title: string;
+  imageSrc: string;
+  altText: string;
 }
 
-export function BrowserFrame({ image, title }: BrowserFrameProps) {
+export function BrowserFrame({ imageSrc, altText }: BrowserFrameProps) {
   return (
-    <div
+    <motion.div
       className="
-        absolute
-        left-1/2
-        top-[55%]
-        w-[88%]
-        -translate-x-1/2
-        -translate-y-1/2
-        group-hover:-translate-y-5
+        relative
+        z-20
+        w-full
+        max-w-3xl
+        mx-auto
+        rounded-2xl
         overflow-hidden
-        rounded-[28px]
         border
         border-white/10
-        bg-[#0f1117]
-        shadow-[0_60px_150px_rgba(0,0,0,.65)]
-        transition-all
-        duration-700
-       group-hover:scale-[1.03]
+        bg-[#101114]
       "
+      variants={{
+        idle: {
+          y: 40,
+          scale: 1,
+          opacity: 1,
+        },
+
+        hover: {
+          y: 190,
+          scale: 0.90,
+          opacity: 0.82,
+        },
+      }}
+      transition={{
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1],
+      }}
     >
-      {/* Header */}
-
-      <div className="flex items-center gap-3 border-b border-white/5 bg-black/40 px-6 py-4">
-        <div className="h-3 w-3 rounded-full bg-red-400" />
-        <div className="h-3 w-3 rounded-full bg-yellow-400" />
-        <div className="h-3 w-3 rounded-full bg-green-400" />
-
-        <div className="mx-auto rounded-full bg-white/5 px-5 py-1 text-xs text-text-muted">
-          {title.toLowerCase()}.dev
-        </div>
+      {/* macOS style title bar */}
+      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/5">
+        <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
+        <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
+        <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
       </div>
 
-      <div className="relative aspect-[16/10]">
+      <div className="relative aspect-[16/10] w-full">
         <Image
-          src={image}
-          alt={title}
+          src={imageSrc}
+          alt={altText}
           fill
-          className="object-cover object-top"
+          className="object-cover object-top opacity-90 transition-opacity duration-500 hover:opacity-100"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

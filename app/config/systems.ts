@@ -111,7 +111,7 @@ export const systems: readonly System[] = [
 
     technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
 
-    image: "/images/projects/kidsportal/cover.png",
+    image: "/images/projects/kidsportal/cover-v2.png",
 
     gitlab: "https://gitlab.com/zavianexus/kidsportal",
 
