@@ -53,7 +53,7 @@ export function BlueprintCanvas({ blueprint }: Props) {
               key={index}
               startNode={from}
               endNode={to}
-              delay={index * 0.35}
+              delay={0.3 + index * 0.28}
             />
           );
         })}
