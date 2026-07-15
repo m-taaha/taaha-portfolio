@@ -1,4 +1,4 @@
-import { techIcons } from "../Projects/utils/techIcons";
+import { techIcons } from "../Systems/utils/techIcons";
 
 interface SkillChipProps {
   technology: string;

@@ -1,10 +1,10 @@
 import { techIcons } from "../utils/techIcons";
 
-interface Props {
+interface SystemTechStackProps {
   technologies: readonly string[];
 }
 
-export function ProjectTechStack({ technologies }: Props) {
+export function SystemTechStack({ technologies }: SystemTechStackProps) {
   return (
     <div className="flex flex-wrap gap-2">
       {technologies.slice(0, 5).map((tech) => {

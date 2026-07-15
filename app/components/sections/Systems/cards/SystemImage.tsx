@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-interface ProjectImageProps {
+interface SystemImageProps {
   image: string;
   title: string;
 }
 
-export function ProjectImage({ image, title }: ProjectImageProps) {
+export function SystemImage({ image, title }: SystemImageProps) {
   return (
     <div
       className="
@@ -27,8 +27,6 @@ export function ProjectImage({ image, title }: ProjectImageProps) {
         "
       />
 
-      {/* dark overlay */}
-
       <div
         className="
           absolute
@@ -39,8 +37,6 @@ export function ProjectImage({ image, title }: ProjectImageProps) {
           duration-500
         "
       />
-
-      {/* bottom gradient */}
 
       <div
         className="

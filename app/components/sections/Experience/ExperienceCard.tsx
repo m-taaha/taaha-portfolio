@@ -1,5 +1,6 @@
 import { ExperienceItem } from "@/app/config/experience";
-import { ProjectTechStack } from "../Projects/cards/ ProjectTechStack";
+import { SystemTechStack } from "../Systems/cards/SystemTechStack";
+
 
 
 
@@ -46,7 +47,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
 
         {/* Tech Stack */}
 
-        <ProjectTechStack technologies={experience.technologies} />
+        <SystemTechStack technologies={experience.technologies} />
       </div>
     </article>
   );

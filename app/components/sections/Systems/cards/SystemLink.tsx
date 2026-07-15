@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
-interface ProjectLinkProps {
+interface SystemLinkProps {
   href?: string;
   icon: ReactNode;
   children: ReactNode;
 }
 
-export function ProjectLink({ href, icon, children }: ProjectLinkProps) {
+export function SystemLink({ href, icon, children }: SystemLinkProps) {
   if (!href) return null;
 
   return (

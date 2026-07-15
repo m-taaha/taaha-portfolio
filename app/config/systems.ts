@@ -1,4 +1,4 @@
-export interface Project {
+export interface System {
   readonly id: string;
   readonly title: string;
   readonly tagline: string;
@@ -11,10 +11,11 @@ export interface Project {
   readonly live?: string;
 
   readonly image: string;
+
   readonly featured: boolean;
 }
 
-export const projects: readonly Project[] = [
+export const systems: readonly System[] = [
   {
     id: "kidsportal",
 
@@ -30,8 +31,6 @@ export const projects: readonly Project[] = [
     image: "/images/projects/kidsportal/cover.png",
 
     github: "https://github.com/m-taaha/taaha-portfolio",
-
-
 
     featured: true,
   },
@@ -51,8 +50,6 @@ export const projects: readonly Project[] = [
     image: "/images/projects/portfolio/cover.png",
 
     gitlab: "https://gitlab.com/zavianexus/kidsportal",
-
-
 
     featured: true,
   },
@@ -79,8 +76,6 @@ export const projects: readonly Project[] = [
     image: "/images/projects/nitpick/cover.png",
 
     github: "https://github.com/m-taaha/nitpick",
-
-
 
     featured: true,
   },
