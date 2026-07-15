@@ -1,24 +1,25 @@
-"use client"
+"use client";
 
-import { person } from "@/app/config/person"
+import { motion, type Variants } from "framer-motion";
+
+import { person } from "@/app/config/person";
+
 import { Heading, Text } from "@/app/components/ui/Typography";
-import { RotatingText } from "./RotatingText";
+
 import { HeroActions } from "./HeroActions";
-import {motion, type Variants} from "framer-motion"
+import { HeroOverview } from "./HeroOverview";
+import { HeroStatus } from "./HeroStatus";
 
-
-// this controls timing
-const containerVariants: Variants  = {
+const containerVariants: Variants = {
   hidden: {},
 
   visible: {
     transition: {
-      staggerChildren: 0.2, //animate my children one after another
+      staggerChildren: 0.18,
     },
   },
-}
+};
 
-// this controls how each child appears
 const itemVariants: Variants = {
   hidden: {
     opacity: 0,
@@ -41,14 +42,14 @@ export function HeroContent() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="flex flex-col gap-6"
+      className="flex flex-col gap-8"
     >
       <motion.div variants={itemVariants}>
-        <Heading>{person.name}</Heading>
+        <HeroStatus />
       </motion.div>
 
       <motion.div variants={itemVariants}>
-        <RotatingText messages={person.heroMessages} />
+        <Heading className="max-w-2xl">{person.heroHeadline}</Heading>
       </motion.div>
 
       <motion.div variants={itemVariants}>
@@ -58,8 +59,10 @@ export function HeroContent() {
       <motion.div variants={itemVariants}>
         <HeroActions />
       </motion.div>
+
+      <motion.div variants={itemVariants}>
+        <HeroOverview />
+      </motion.div>
     </motion.div>
   );
 }
-
- 
