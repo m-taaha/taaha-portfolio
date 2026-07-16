@@ -1,5 +1,4 @@
 import { Navbar } from "./components/navigation/Navbar";
-import { About } from "./components/sections/About/About";
 import { Contact } from "./components/sections/Contact/Contact";
 import { Experience } from "./components/sections/Experience/Experience";
 import { Footer } from "./components/sections/Footer/Footer";
@@ -13,7 +12,6 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <SystemsSection />
-      <About />
       <Experience />
       <Skills />
       <Contact />
