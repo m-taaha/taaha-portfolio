@@ -1,5 +1,6 @@
 import { Container } from "../ui/Container";
 
+import { MobileMenu } from "./MobileMenu";
 import { NavBrand } from "./NavBrand";
 import { NavLinks } from "./NavLinks";
 import { ResumeButton } from "./ResumeButton";
@@ -14,16 +15,24 @@ export function Navbar() {
         border-b
         border-border-subtle
         bg-background/80
-        backdrop-blur-md
+        backdrop-blur-xl
       "
     >
       <Container>
         <div className="flex h-20 items-center justify-between">
           <NavBrand />
 
-          <NavLinks />
+          <div className="hidden md:block">
+            <NavLinks />
+          </div>
 
-          <ResumeButton />
+          <div className="hidden md:block">
+            <ResumeButton />
+          </div>
+
+          <div className="md:hidden">
+            <MobileMenu />
+          </div>
         </div>
       </Container>
     </header>

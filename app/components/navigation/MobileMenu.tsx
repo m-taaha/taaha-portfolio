@@ -1,0 +1,134 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+
+import { navigation } from "@/app/config/navigation";
+
+export function MobileMenu() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="
+          flex
+          h-11
+          w-11
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-border-subtle
+        "
+      >
+        <Menu className="h-5 w-5" />
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <>
+            <motion.div
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+            />
+
+            <motion.div
+              className="
+                fixed
+                inset-x-4
+                top-4
+                z-50
+                rounded-3xl
+                border
+                border-border-subtle
+                bg-surface-primary
+                p-6
+              "
+              initial={{
+                opacity: 0,
+                y: -30,
+                scale: 0.98,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+              }}
+              exit={{
+                opacity: 0,
+                y: -20,
+                scale: 0.98,
+              }}
+              transition={{
+                duration: 0.25,
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-semibold">Navigation</h3>
+
+                <button
+                  onClick={() => setOpen(false)}
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-border-subtle
+                  "
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+
+              <nav className="mt-8 flex flex-col gap-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="
+                      text-lg
+                      text-text-secondary
+                      transition-colors
+                      hover:text-brand-primary
+                    "
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+
+                <div className="mt-4 border-t border-border-subtle pt-6">
+                  <Link
+                    href="/resume.pdf"
+                    target="_blank"
+                    className="
+                      inline-flex
+                      rounded-full
+                      border
+                      border-brand-primary/30
+                      px-5
+                      py-3
+                      text-brand-primary
+                    "
+                  >
+                    Resume
+                  </Link>
+                </div>
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
