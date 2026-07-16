@@ -2,7 +2,7 @@ import { contact } from "@/app/config/contact";
 
 export function ContactContent() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       <div
         className="
           inline-flex
@@ -19,21 +19,48 @@ export function ContactContent() {
         {contact.availability}
       </div>
 
-      <p className="max-w-xl leading-8 text-text-secondary">
-        {contact.description}
-      </p>
-
-      <div className="space-y-4">
+      <div className="space-y-10">
         <div>
-          <p className="text-sm text-text-muted">Email</p>
+          <p
+            className="
+              text-sm
+              uppercase
+              tracking-[0.18em]
+              text-text-muted
+            "
+          >
+            Email
+          </p>
 
-          <p className="text-lg">{contact.email}</p>
+          <a
+            href={`mailto:${contact.email}`}
+            className="
+              mt-3
+              inline-block
+              text-3xl
+              font-semibold
+              tracking-tight
+              transition-colors
+              hover:text-brand-primary
+            "
+          >
+            {contact.email}
+          </a>
         </div>
 
         <div>
-          <p className="text-sm text-text-muted">Location</p>
+          <p
+            className="
+              text-sm
+              uppercase
+              tracking-[0.18em]
+              text-text-muted
+            "
+          >
+            Location
+          </p>
 
-          <p className="text-lg">{contact.location}</p>
+          <p className="mt-3 text-xl">{contact.location}</p>
         </div>
       </div>
     </div>

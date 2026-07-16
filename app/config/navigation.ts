@@ -6,11 +6,11 @@ export interface NavigationItem {
 export const navigation: readonly NavigationItem[] = [
   {
     label: "Systems",
-    href: "#projects",
+    href: "#systems",
   },
   {
     label: "Journey",
-    href: "#about",
+    href: "#journey",
   },
   {
     label: "Capabilities",

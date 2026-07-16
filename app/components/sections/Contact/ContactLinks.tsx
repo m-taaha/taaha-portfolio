@@ -1,6 +1,14 @@
 import Link from "next/link";
 
+import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+
 import { contact } from "@/app/config/contact";
+
+const icons = {
+  GitHub: <FaGithub />,
+  LinkedIn: <FaLinkedin />,
+  Resume: <FaFileAlt />,
+};
 
 export function ContactLinks() {
   return (
@@ -12,6 +20,7 @@ export function ContactLinks() {
           target="_blank"
           rel="noopener noreferrer"
           className="
+            group
             flex
             items-center
             justify-between
@@ -26,9 +35,23 @@ export function ContactLinks() {
             hover:bg-surface-secondary
           "
         >
-          <span>{link.label}</span>
+          <div className="flex items-center gap-3">
+            <span className="text-white/70">
+              {icons[link.label as keyof typeof icons]}
+            </span>
 
-          <span>→</span>
+            <span className="font-medium">{link.label}</span>
+          </div>
+
+          <span
+            className="
+              transition-transform
+              duration-300
+              group-hover:translate-x-1
+            "
+          >
+            ↗
+          </span>
         </Link>
       ))}
     </div>

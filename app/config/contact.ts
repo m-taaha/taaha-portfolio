@@ -10,20 +10,23 @@ export interface ContactConfig {
   readonly availability: string;
   readonly email: string;
   readonly location: string;
+  readonly responseTime: string;
   readonly links: readonly ContactLink[];
 }
 
 export const contact: ContactConfig = {
-  title: "Let's Build Something Great",
+  title: "Interested in Building Together?",
 
   description:
-    "I'm currently looking for software engineering internships and exciting opportunities to build scalable products. Whether you have an idea, an opportunity, or simply want to connect, I'd love to hear from you.",
+    "I'm currently looking for software engineering internships and opportunities to build scalable backend systems, AI products, and developer tools.",
 
-  availability: "Open to Internships",
+  availability: "Open to Software Engineering Internships",
 
   email: "mtaahaashraf@gmail.com",
 
   location: "New Delhi, India",
+
+  responseTime: "Usually within 24 hours",
 
   links: [
     {
