@@ -1,3 +1,3 @@
 export const footer = {
-  tagline: "Learning Through Building.",
+  tagline: "Curious enough to learn. Patient enough to build.",
 } as const;
