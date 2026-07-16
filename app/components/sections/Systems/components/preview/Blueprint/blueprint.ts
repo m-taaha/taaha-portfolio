@@ -20,100 +20,31 @@ export interface BlueprintData {
 }
 
 export const architectures: Record<string, BlueprintData> = {
-  kidsportal: {
-    id: "kidsportal",
-    nodes: [
-      { id: "react", label: "React UI", x: 200, y: 500, type: "client" },
-      { id: "fastapi", label: "FastAPI", x: 500, y: 500, type: "server" },
-      { id: "postgres", label: "PostgreSQL", x: 800, y: 300, type: "database" },
-      {
-        id: "storyengine",
-        label: "Story Engine",
-        x: 800,
-        y: 700,
-        type: "service",
-      },
-    ],
-    connections: [
-      { from: "react", to: "fastapi" },
-      { from: "fastapi", to: "postgres" },
-      { from: "fastapi", to: "storyengine" },
-    ],
-  },
-  portfolio: {
-    id: "portfolio",
-    nodes: [
-      {
-        id: "github",
-        label: "GitHub",
-        x: 110,
-        y: 140,
-        type: "service",
-      },
-
-      {
-        id: "webhook",
-        label: "Webhook",
-        x: 390,
-        y: 140,
-        type: "server",
-      },
-
-      {
-        id: "bullmq",
-        label: "BullMQ",
-        x: 700,
-        y: 140,
-        type: "queue",
-      },
-
-      {
-        id: "redis",
-        label: "Redis",
-        x: 520,
-        y: 360,
-        type: "database",
-      },
-
-      {
-        id: "openai",
-        label: "OpenAI",
-        x: 920,
-        y: 360,
-        type: "service",
-      },
-    ],
-    connections: [
-      { from: "config", to: "tokens" },
-      { from: "tokens", to: "components" },
-      { from: "components", to: "pages" },
-      { from: "pages", to: "deployment" },
-    ],
-  },
   nitpick: {
     id: "nitpick",
+
     nodes: [
       {
         id: "github",
         label: "GitHub",
-        x: 110,
-        y: 200,
+        x: 140,
+        y: 260,
         type: "service",
       },
 
       {
         id: "webhook",
         label: "Webhook",
-        x: 380,
-        y: 200,
+        x: 360,
+        y: 260,
         type: "server",
       },
 
       {
-        id: "bullmq",
+        id: "queue",
         label: "BullMQ",
-        x: 660,
-        y: 200,
+        x: 580,
+        y: 260,
         type: "queue",
       },
 
@@ -121,23 +52,131 @@ export const architectures: Record<string, BlueprintData> = {
         id: "redis",
         label: "Redis",
         x: 500,
-        y: 380,
+        y: 430,
         type: "database",
       },
 
       {
         id: "openai",
         label: "OpenAI",
-        x: 860,
-        y: 390,
+        x: 820,
+        y: 260,
         type: "service",
       },
     ],
+
     connections: [
       { from: "github", to: "webhook" },
-      { from: "webhook", to: "bullmq" },
-      { from: "bullmq", to: "redis" },
-      { from: "bullmq", to: "openai" },
+      { from: "webhook", to: "queue" },
+      { from: "queue", to: "redis" },
+      { from: "queue", to: "openai" },
+    ],
+  },
+
+  kidsportal: {
+    id: "kidsportal",
+
+    nodes: [
+      {
+        id: "client",
+        label: "React",
+        x: 140,
+        y: 300,
+        type: "client",
+      },
+
+      {
+        id: "api",
+        label: "FastAPI",
+        x: 390,
+        y: 300,
+        type: "server",
+      },
+
+      {
+        id: "story",
+        label: "Story Engine",
+        x: 660,
+        y: 180,
+        type: "service",
+      },
+
+      {
+        id: "cms",
+        label: "CMS",
+        x: 660,
+        y: 420,
+        type: "service",
+      },
+
+      {
+        id: "db",
+        label: "PostgreSQL",
+        x: 900,
+        y: 300,
+        type: "database",
+      },
+    ],
+
+    connections: [
+      { from: "client", to: "api" },
+      { from: "api", to: "story" },
+      { from: "api", to: "cms" },
+      { from: "story", to: "db" },
+      { from: "cms", to: "db" },
+    ],
+  },
+
+  portfolio: {
+    id: "portfolio",
+
+    nodes: [
+      {
+        id: "config",
+        label: "Config",
+        x: 120,
+        y: 300,
+        type: "service",
+      },
+
+      {
+        id: "tokens",
+        label: "Tokens",
+        x: 330,
+        y: 300,
+        type: "service",
+      },
+
+      {
+        id: "components",
+        label: "Components",
+        x: 560,
+        y: 300,
+        type: "service",
+      },
+
+      {
+        id: "pages",
+        label: "Pages",
+        x: 790,
+        y: 300,
+        type: "server",
+      },
+
+      {
+        id: "deploy",
+        label: "Deploy",
+        x: 930,
+        y: 300,
+        type: "service",
+      },
+    ],
+
+    connections: [
+      { from: "config", to: "tokens" },
+      { from: "tokens", to: "components" },
+      { from: "components", to: "pages" },
+      { from: "pages", to: "deploy" },
     ],
   },
 };
