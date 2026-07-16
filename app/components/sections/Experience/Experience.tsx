@@ -5,15 +5,18 @@ import { ExperienceTimeline } from "./ExperienceTimeline";
 
 export function Experience() {
   return (
-    <section id="experience" className="py-32">
+    <section id="journey" className="py-32">
       <Container>
         <SectionHeading
-          eyebrow="Experience"
-          title="Building Through Real Projects"
-          description="Every milestone represents a step in my journey—from learning web development to building AI-powered developer tools and leading technical initiatives."
+          eyebrow="Journey"
+          title="How My Thinking Changed"
+          description="
+            Every stage represents a shift in how I approach software—
+            from writing code to designing complete systems.
+          "
         />
 
-        <div className="mt-20">
+        <div className="mt-24">
           <ExperienceTimeline />
         </div>
       </Container>

@@ -1,54 +1,87 @@
+"use client";
+
 import { ExperienceItem } from "@/app/config/experience";
-import { SystemTechStack } from "../Systems/cards/SystemTechStack";
 
-
-
-
-
-interface ExperienceCardProps {
+interface Props {
   experience: ExperienceItem;
 }
 
-export function ExperienceCard({ experience }: ExperienceCardProps) {
+export function ExperienceCard({ experience }: Props) {
   return (
-    <article
+    <div
       className="
-        rounded-3xl
-        border
-        border-border-subtle
-        bg-surface-primary
-        p-8
-        transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:border-brand-primary/30
+        relative
+        flex
+        flex-col
+        items-center
       "
     >
-      <div className="space-y-6">
-        {/* Year */}
+      {/* Copper node */}
 
-        <p className="text-sm font-medium text-brand-primary">
-          {experience.year}
-        </p>
-
-        {/* Title */}
-
-        <div>
-          <h3 className="text-3xl font-semibold">{experience.title}</h3>
-
-          <p className="mt-2 text-text-secondary">{experience.organization}</p>
-        </div>
-
-        {/* Description */}
-
-        <p className="leading-7 text-text-secondary">
-          {experience.description}
-        </p>
-
-        {/* Tech Stack */}
-
-        <SystemTechStack technologies={experience.technologies} />
+      <div
+        className="
+          z-10
+          flex
+          h-5
+          w-5
+          items-center
+          justify-center
+          rounded-full
+          border-2
+          border-brand-primary
+          bg-background-primary
+        "
+      >
+        <div
+          className="
+            h-2
+            w-2
+            rounded-full
+            bg-brand-primary
+          "
+        />
       </div>
-    </article>
+
+      {/* Year */}
+
+      <p
+        className="
+          mt-5
+          text-xs
+          uppercase
+          tracking-[0.24em]
+          text-brand-primary
+        "
+      >
+        {experience.year}
+      </p>
+
+      {/* Title */}
+
+      <h3
+        className="
+          mt-3
+          text-center
+          text-lg
+          font-semibold
+        "
+      >
+        {experience.title}
+      </h3>
+
+      {/* Description */}
+
+      <p
+        className="
+          mt-4
+          text-center
+          text-sm
+          leading-7
+          text-text-secondary
+        "
+      >
+        {experience.description}
+      </p>
+    </div>
   );
 }
