@@ -5,6 +5,8 @@ import { useState } from "react";
 
 import { experiences } from "@/app/config/experience";
 import { ExperienceCard } from "./ExperienceCard";
+import { Sparkles } from "lucide-react";
+
 
 export function ExperienceTimeline() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -160,6 +162,74 @@ export function ExperienceTimeline() {
               </motion.span>
             ))}
           </div>
+
+          {/* Artifact */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.45,
+            }}
+            className="
+    mt-12
+    rounded-2xl
+    border
+    border-brand-primary/20
+    bg-brand-primary/[0.04]
+    p-7
+  "
+          >
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-brand-primary" />
+
+              <p
+                className="
+        text-xs
+        uppercase
+        tracking-[0.28em]
+        text-brand-primary
+      "
+              >
+                Lesson Learned
+              </p>
+            </div>
+
+            <h4 className="mt-4 text-xl font-semibold">
+              {activeExperience.artifact.title}
+            </h4>
+
+            <p className="mt-1 text-text-secondary">
+              {activeExperience.artifact.subtitle}
+            </p>
+
+            <div
+              className="
+      mt-6
+      border-l-2
+      border-brand-primary
+      pl-5
+    "
+            >
+              <p
+                className="
+        italic
+        leading-8
+        text-text-secondary
+        before:content-['“']
+        after:content-['”']
+      "
+              >
+                {activeExperience.artifact.lesson}
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
       </AnimatePresence>
     </div>
