@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { BlueprintConnection } from "./BlueprintConnection";
 import { BlueprintNode } from "./BlueprintNode";
+import { BlueprintPacket } from "./BlueprintPacket"; // <-- NEW
 import { BlueprintData } from "./blueprint";
 
 interface Props {
@@ -10,6 +11,34 @@ interface Props {
 }
 
 export function BlueprintCanvas({ blueprint }: Props) {
+  // Temporary packet timeline.
+  // Later we'll generate these dynamically from the connections.
+  const packets = [
+    {
+      x: 245,
+      y: 200,
+      delay: 0,
+    },
+
+    {
+      x: 520,
+      y: 200,
+      delay: 0.8,
+    },
+
+    {
+      x: 560,
+      y: 300,
+      delay: 1.6,
+    },
+
+    {
+      x: 760,
+      y: 300,
+      delay: 1.6,
+    },
+  ];
+
   return (
     <motion.div
       className="
@@ -39,6 +68,8 @@ export function BlueprintCanvas({ blueprint }: Props) {
         className="h-full w-full"
         preserveAspectRatio="xMidYMid meet"
       >
+        {/* Connections */}
+
         {blueprint.connections.map((connection, index) => {
           const from = blueprint.nodes.find(
             (node) => node.id === connection.from,
@@ -58,8 +89,21 @@ export function BlueprintCanvas({ blueprint }: Props) {
           );
         })}
 
+        {/* Nodes */}
+
         {blueprint.nodes.map((node) => (
           <BlueprintNode key={node.id} node={node} />
+        ))}
+
+        {/* Packets */}
+
+        {packets.map((packet, index) => (
+          <BlueprintPacket
+            key={index}
+            x={packet.x}
+            y={packet.y}
+            delay={packet.delay}
+          />
         ))}
       </motion.svg>
 
