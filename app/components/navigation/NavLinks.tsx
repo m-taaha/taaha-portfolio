@@ -20,7 +20,9 @@ export function NavLinks() {
               <Link
                 href={item.href}
                 className={`
+                  group
                   relative
+                  pb-2
                   text-sm
                   transition-colors
                   duration-300
@@ -33,12 +35,35 @@ export function NavLinks() {
               >
                 {item.label}
 
+                {/* Hover underline */}
+
+                {!isActive && (
+                  <span
+                    className="
+                      absolute
+                      bottom-0
+                      left-0
+                      h-px
+                      w-full
+                      origin-left
+                      scale-x-0
+                      bg-brand-primary
+                      transition-transform
+                      duration-300
+                      ease-out
+                      group-hover:scale-x-100
+                    "
+                  />
+                )}
+
+                {/* Active underline */}
+
                 {isActive && (
                   <motion.span
                     layoutId="active-nav"
                     className="
                       absolute
-                      -bottom-2
+                      bottom-0
                       left-0
                       h-px
                       w-full
@@ -46,7 +71,7 @@ export function NavLinks() {
                     "
                     transition={{
                       type: "spring",
-                      stiffness: 450,
+                      stiffness: 500,
                       damping: 35,
                     }}
                   />
