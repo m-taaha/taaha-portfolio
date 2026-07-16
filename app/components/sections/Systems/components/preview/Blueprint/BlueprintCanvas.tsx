@@ -54,6 +54,83 @@ export function BlueprintCanvas({ blueprint }: Props) {
         "
       />
 
+      {/* Header */}
+
+      <motion.div
+        className="
+          absolute
+          left-10
+          right-10
+          top-10
+          z-20
+          flex
+          items-start
+          justify-between
+        "
+        initial={{
+          opacity: 0,
+          y: -12,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          delay: 0.15,
+          duration: 0.45,
+        }}
+      >
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.32em] text-brand-primary">
+            System Architecture
+          </p>
+
+          <h3 className="mt-2 text-xl font-semibold text-white">
+            {blueprint.title}
+          </h3>
+
+          <p className="mt-1 text-sm text-white/45">{blueprint.subtitle}</p>
+        </div>
+
+        <div
+          className="
+            flex
+            items-center
+            gap-2
+            rounded-full
+            border
+            border-brand-primary/20
+            bg-brand-primary/10
+            px-4
+            py-2
+          "
+        >
+          <motion.div
+            className="h-2 w-2 rounded-full bg-brand-primary"
+            animate={{
+              opacity: [1, 0.35, 1],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 1.8,
+              repeat: Infinity,
+            }}
+          />
+
+          <span
+            className="
+              text-[11px]
+              font-medium
+              uppercase
+              tracking-[0.22em]
+              text-brand-primary
+            "
+          >
+            {blueprint.status}
+          </span>
+        </div>
+      </motion.div>
+
       {/* Blueprint */}
 
       <motion.svg

@@ -15,6 +15,11 @@ export interface ConnectionData {
 
 export interface BlueprintData {
   id: string;
+
+  title: string;
+  subtitle: string;
+  status?: "Live" | "Building" | "Prototype";
+
   nodes: NodeData[];
   connections: ConnectionData[];
 }
@@ -22,6 +27,10 @@ export interface BlueprintData {
 export const architectures: Record<string, BlueprintData> = {
   nitpick: {
     id: "nitpick",
+
+    title: "NitPick",
+    subtitle: "AI Code Review Platform",
+    status: "Live",
 
     nodes: [
       {
@@ -76,6 +85,10 @@ export const architectures: Record<string, BlueprintData> = {
   kidsportal: {
     id: "kidsportal",
 
+    title: "KidsPortal",
+    subtitle: "Interactive Learning Platform",
+    status: "Building",
+
     nodes: [
       {
         id: "client",
@@ -129,6 +142,10 @@ export const architectures: Record<string, BlueprintData> = {
 
   portfolio: {
     id: "portfolio",
+
+    title: "taaha.dev",
+    subtitle: "Developer Portfolio",
+    status: "Live",
 
     nodes: [
       {
