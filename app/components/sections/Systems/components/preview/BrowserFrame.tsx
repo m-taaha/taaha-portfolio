@@ -11,22 +11,56 @@ export function BrowserFrame({ imageSrc, altText }: BrowserFrameProps) {
   return (
     <div
       className="
-        relative
+        mx-auto
         w-full
-        max-w-3xl
-        rounded-2xl
+        max-w-[860px]
         overflow-hidden
+        rounded-2xl
         border
         border-white/10
-        bg-[#101114]
-        shadow-2xl
+        bg-[#111317]
+        shadow-[0_35px_80px_rgba(0,0,0,.45)]
       "
     >
-      <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/5">
-        <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-        <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
-        <div className="w-2.5 h-2.5 rounded-full bg-white/20" />
+      {/* Browser Top Bar */}
+
+      <div
+        className="
+          flex
+          items-center
+          justify-between
+          border-b
+          border-white/5
+          bg-[#1a1c21]
+          px-5
+          py-3
+        "
+      >
+        <div className="flex items-center gap-2">
+          <div className="h-3 w-3 rounded-full bg-red-400/80" />
+          <div className="h-3 w-3 rounded-full bg-yellow-400/80" />
+          <div className="h-3 w-3 rounded-full bg-green-400/80" />
+        </div>
+
+        <div
+          className="
+            rounded-full
+            border
+            border-white/5
+            bg-[#111317]
+            px-6
+            py-1.5
+            text-[11px]
+            text-white/40
+          "
+        >
+          github.com/m-taaha/nitpick
+        </div>
+
+        <div className="w-16" />
       </div>
+
+      {/* Screenshot */}
 
       <div className="relative aspect-[16/10] w-full">
         <Image

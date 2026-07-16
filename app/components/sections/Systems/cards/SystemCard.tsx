@@ -4,7 +4,7 @@ import { SystemHeader } from "../components/viewer/SystemHeader";
 import { SystemChallenge } from "../components/viewer/SystemChallenge";
 import { SystemArchitecture } from "../components/viewer/SystemArchitechture";
 import { SystemHighlights } from "../components/viewer/SystemHighlights";
-import { SystemPreview } from "../components/preview/SystemPreview";
+import { SystemPreview } from "../components/preview/InteractivePreview";
 import { SystemActions } from "../components/viewer/SystemActions";
 
 

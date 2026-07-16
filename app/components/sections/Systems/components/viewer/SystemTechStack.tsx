@@ -1,4 +1,4 @@
-import { techIcons } from "../utils/techIcons";
+import { techIcons } from "..//../utils/techIcons";
 
 interface SystemTechStackProps {
   technologies: readonly string[];

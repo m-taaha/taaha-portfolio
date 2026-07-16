@@ -12,21 +12,35 @@ interface Props {
   system: System;
 }
 
-export function SystemPreview({ system }: Props) {
+export function InteractivePreview({ system }: Props) {
   const blueprint = architectures[system.id];
 
   return (
     <motion.div
+      initial="idle"
+      whileHover="hover"
       className="
         relative
         h-full
-        w-full
+        min-h-[700px]
         overflow-hidden
+        bg-surface-secondary
       "
-      initial="idle"
-      whileHover="hover"
+      style={{
+        perspective: 1800,
+      }}
     >
-      {/* ---------------- Blueprint ---------------- */}
+      {/* Ambient Glow */}
+
+      <div
+        className="
+          absolute
+          inset-0
+          bg-[radial-gradient(circle_at_center,rgba(201,124,75,.10),transparent_70%)]
+        "
+      />
+
+      {/* Blueprint */}
 
       {blueprint && (
         <motion.div
@@ -37,19 +51,20 @@ export function SystemPreview({ system }: Props) {
           "
           variants={{
             idle: {
-              y: -140,
-              scale: 0.82,
               opacity: 0,
+              y: -120,
+              scale: 0.96,
             },
 
             hover: {
-              y: -20,
-              scale: 1,
               opacity: 1,
+              y: -10,
+              scale: 1,
             },
           }}
           transition={{
-            duration: 0.9,
+            delay: 0.15,
+            duration: 0.8,
             ease: [0.16, 1, 0.3, 1],
           }}
         >
@@ -57,7 +72,7 @@ export function SystemPreview({ system }: Props) {
         </motion.div>
       )}
 
-      {/* ---------------- Browser ---------------- */}
+      {/* Browser */}
 
       <motion.div
         className="
@@ -66,24 +81,27 @@ export function SystemPreview({ system }: Props) {
           bottom-0
           z-20
           w-full
-          max-w-3xl
+          px-8
           -translate-x-1/2
         "
+        style={{
+          transformOrigin: "bottom center",
+        }}
         variants={{
           idle: {
-            y: -350,
-            scale: 1,
+            y: -360,
+            rotateX: 0,
             opacity: 1,
           },
 
           hover: {
             y: 90,
-            scale: 0.9,
-            opacity: 0.82,
+            rotateX: 7,
+            opacity: 0.9,
           },
         }}
         transition={{
-          duration: 0.85,
+          duration: 1.05,
           ease: [0.16, 1, 0.3, 1],
         }}
       >

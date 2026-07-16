@@ -3,8 +3,9 @@ import { System } from "@/app/config/systems";
 import { SystemOverview } from "./SytemOverview";
 import { SystemArchitecture } from "../components/viewer/SystemArchitechture";
 import { SystemHighlights } from "../components/viewer/SystemHighlights";
-import { SystemTechStack } from "./SystemTechStack";
-import { SystemActions } from "./SystemActions";
+import { SystemTechStack } from "../components/viewer/SystemTechStack";
+import { SystemActions } from "../components/viewer/SystemActions";
+
 
 
 interface SystemContentProps {
