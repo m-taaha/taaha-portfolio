@@ -15,9 +15,9 @@ export const experiences: readonly ExperienceItem[] = [
     organization: "Programming Foundations",
 
     description:
-      "Learned problem solving, algorithms, recursion and data structures. This is where software engineering started making sense.",
+      "This was where software engineering finally started making sense. I learned algorithms, recursion, STL, debugging, and discovered that solving problems was more rewarding than simply writing code.",
 
-    technologies: ["C++", "STL", "DSA"],
+    technologies: ["C++", "STL", "Recursion", "Algorithms", "Problem Solving"],
   },
 
   {
@@ -25,12 +25,12 @@ export const experiences: readonly ExperienceItem[] = [
 
     title: "Frontend",
 
-    organization: "Building User Interfaces",
+    organization: "Building User Experiences",
 
     description:
-      "Moved from solving problems to building interfaces with React, creating responsive applications and learning modern frontend development.",
+      "I shifted from solving isolated coding problems to creating interfaces people could actually use. React taught me how design, interaction, and developer experience come together.",
 
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
   },
 
   {
@@ -38,12 +38,12 @@ export const experiences: readonly ExperienceItem[] = [
 
     title: "Backend",
 
-    organization: "Full Stack Development",
+    organization: "Designing Systems",
 
     description:
-      "Started designing APIs, authentication systems, databases and complete backend architectures instead of only user interfaces.",
+      "This was the biggest mindset shift. I stopped thinking in pages and components and started thinking in APIs, authentication, databases, scalability, and system architecture.",
 
-    technologies: ["Node.js", "Express", "MongoDB", "TypeScript"],
+    technologies: ["Node.js", "Express", "MongoDB", "JWT", "TypeScript"],
   },
 
   {
@@ -51,12 +51,12 @@ export const experiences: readonly ExperienceItem[] = [
 
     title: "Realtime",
 
-    organization: "Distributed Systems",
+    organization: "Distributed Communication",
 
     description:
-      "Explored WebSockets, queues and event-driven communication while learning how scalable applications exchange data.",
+      "Applications became conversations instead of requests. I explored WebSockets, event-driven architectures, queues, and asynchronous communication between services.",
 
-    technologies: ["WebSockets", "Redis", "BullMQ", "Socket.io"],
+    technologies: ["WebSockets", "Socket.IO", "Redis", "Events", "Queues"],
   },
 
   {
@@ -67,9 +67,9 @@ export const experiences: readonly ExperienceItem[] = [
     organization: "Jamia Hamdard Tezos Society",
 
     description:
-      "Began mentoring students, leading technical initiatives and helping teams build real-world software together.",
+      "I realized building software isn't only about writing code. Mentoring students, reviewing projects, and leading technical initiatives became just as rewarding as shipping features.",
 
-    technologies: ["Leadership", "Git", "Code Reviews", "Mentoring"],
+    technologies: ["Leadership", "Mentoring", "Code Review", "Git"],
   },
 
   {
@@ -77,12 +77,12 @@ export const experiences: readonly ExperienceItem[] = [
 
     title: "AI Systems",
 
-    organization: "Building with LLMs",
+    organization: "Building Intelligent Products",
 
     description:
-      "Focused on AI-powered products like NitPick, combining LLMs, background workers, GitHub webhooks and intelligent automation.",
+      "Instead of using AI as a chatbot, I started designing products around it. Projects like NitPick taught me how LLMs, queues, webhooks, background workers, and automation fit together.",
 
-    technologies: ["OpenAI", "BullMQ", "Redis", "Next.js"],
+    technologies: ["OpenAI", "BullMQ", "Redis", "GitHub Webhooks", "Next.js"],
   },
 
   {
@@ -90,11 +90,17 @@ export const experiences: readonly ExperienceItem[] = [
 
     title: "System Design",
 
-    organization: "Continuous Journey",
+    organization: "Current Focus",
 
     description:
-      "Currently focused on building production-grade software, scalable architectures and developer tools while preparing for top engineering roles.",
+      "Today I think beyond features. My focus is designing production-grade software, scalable architectures, developer tools, and AI-powered systems that solve meaningful problems.",
 
-    technologies: ["Architecture", "AI", "Cloud", "System Design"],
+    technologies: [
+      "Architecture",
+      "Scalability",
+      "AI",
+      "Developer Tools",
+      "System Design",
+    ],
   },
 ] as const;
