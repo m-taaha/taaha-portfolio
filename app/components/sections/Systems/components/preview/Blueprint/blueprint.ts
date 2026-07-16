@@ -93,41 +93,46 @@ export const architectures: Record<string, BlueprintData> = {
   nitpick: {
     id: "nitpick",
     nodes: [
-  {
-    id: "github",
-    label: "GitHub",
-    x: 110,
-    y: 200,
-  },
+      {
+        id: "github",
+        label: "GitHub",
+        x: 110,
+        y: 200,
+        type: "service",
+      },
 
-  {
-    id: "webhook",
-    label: "Webhook",
-    x: 380,
-    y: 200,
-  },
+      {
+        id: "webhook",
+        label: "Webhook",
+        x: 380,
+        y: 200,
+        type: "server",
+      },
 
-  {
-    id: "bullmq",
-    label: "BullMQ",
-    x: 660,
-    y: 200,
-  },
+      {
+        id: "bullmq",
+        label: "BullMQ",
+        x: 660,
+        y: 200,
+        type: "queue",
+      },
 
-  {
-    id: "redis",
-    label: "Redis",
-    x: 500,
-    y: 380,
-  },
+      {
+        id: "redis",
+        label: "Redis",
+        x: 500,
+        y: 380,
+        type: "database",
+      },
 
-  {
-    id: "openai",
-    label: "OpenAI",
-    x: 860,
-    y: 390,
-  },
-],
+      {
+        id: "openai",
+        label: "OpenAI",
+        x: 860,
+        y: 390,
+        type: "service",
+      },
+    ],
     connections: [
       { from: "github", to: "webhook" },
       { from: "webhook", to: "bullmq" },
