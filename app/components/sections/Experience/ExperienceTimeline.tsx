@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 import { experiences } from "@/app/config/experience";
@@ -7,6 +8,8 @@ import { ExperienceCard } from "./ExperienceCard";
 
 export function ExperienceTimeline() {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const activeExperience = experiences[activeIndex];
 
   const progress = (activeIndex / (experiences.length - 1)) * 100;
 
@@ -21,14 +24,18 @@ export function ExperienceTimeline() {
 
         {/* Animated Progress */}
 
-        <div
-          className="absolute left-0 top-2.5 h-px bg-brand-primary transition-all duration-500"
-          style={{
+        <motion.div
+          className="absolute left-0 top-2.5 h-px bg-brand-primary"
+          animate={{
             width: `${progress}%`,
+          }}
+          transition={{
+            duration: 0.45,
+            ease: [0.16, 1, 0.3, 1],
           }}
         />
 
-        {/* Nodes */}
+        {/* Timeline Nodes */}
 
         <div className="relative grid grid-cols-7">
           {experiences.map((experience, index) => (
@@ -42,52 +49,119 @@ export function ExperienceTimeline() {
         </div>
       </div>
 
-      {/* Details */}
+      {/* Detail Card */}
 
-      <div
-        className="
-          rounded-3xl
-          border
-          border-border-subtle
-          bg-surface-primary
-          p-10
-        "
-      >
-        <p className="text-sm text-brand-primary">
-          {experiences[activeIndex].year}
-        </p>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeExperience.title}
+          initial={{
+            opacity: 0,
+            y: 28,
+            scale: 0.98,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          exit={{
+            opacity: 0,
+            y: -28,
+            scale: 0.98,
+          }}
+          transition={{
+            duration: 0.35,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="
+            rounded-3xl
+            border
+            border-border-subtle
+            bg-surface-primary
+            p-10
+          "
+        >
+          <motion.p
+            className="text-sm text-brand-primary"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.05 }}
+          >
+            {activeExperience.year}
+          </motion.p>
 
-        <h3 className="mt-3 text-4xl font-semibold">
-          {experiences[activeIndex].title}
-        </h3>
+          <motion.h3
+            className="mt-3 text-4xl font-semibold"
+            initial={{
+              opacity: 0,
+              y: 12,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.08,
+            }}
+          >
+            {activeExperience.title}
+          </motion.h3>
 
-        <p className="mt-2 text-text-secondary">
-          {experiences[activeIndex].organization}
-        </p>
+          <motion.p
+            className="mt-2 text-text-secondary"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.12 }}
+          >
+            {activeExperience.organization}
+          </motion.p>
 
-        <p className="mt-8 max-w-3xl leading-8 text-text-secondary">
-          {experiences[activeIndex].description}
-        </p>
+          <motion.p
+            className="mt-8 max-w-3xl leading-8 text-text-secondary"
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.18,
+            }}
+          >
+            {activeExperience.description}
+          </motion.p>
 
-        <div className="mt-10 flex flex-wrap gap-3">
-          {experiences[activeIndex].technologies.map((tech) => (
-            <span
-              key={tech}
-              className="
-                rounded-full
-                border
-                border-brand-primary/25
-                bg-brand-primary/10
-                px-4
-                py-2
-                text-sm
-              "
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
+          <div className="mt-10 flex flex-wrap gap-3">
+            {activeExperience.technologies.map((tech, index) => (
+              <motion.span
+                key={tech}
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: 0.25 + index * 0.06,
+                }}
+                className="
+                  rounded-full
+                  border
+                  border-brand-primary/25
+                  bg-brand-primary/10
+                  px-4
+                  py-2
+                  text-sm
+                "
+              >
+                {tech}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
