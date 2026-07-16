@@ -1,11 +1,13 @@
 import { System } from "@/app/config/systems";
 
-import { SystemHeader } from "./SystemHeader";
-import { SystemChallenge } from "./SystemChallenge";
-import { SystemArchitecture } from "./SystemArchitechture";
-import { SystemHighlights } from "./SystemHighlights";
-import { SystemPreview } from "./preview/SystemPreview";
-import { SystemActions } from "./SystemActions";
+import { SystemHeader } from "../components/viewer/SystemHeader";
+import { SystemChallenge } from "../components/viewer/SystemChallenge";
+import { SystemArchitecture } from "../components/viewer/SystemArchitechture";
+import { SystemHighlights } from "../components/viewer/SystemHighlights";
+import { SystemPreview } from "../components/preview/SystemPreview";
+import { SystemActions } from "../components/viewer/SystemActions";
+
+
 
 interface SystemCardProps {
   system: System;
