@@ -6,10 +6,10 @@ export interface SkillCategory {
 
 export const skills: readonly SkillCategory[] = [
   {
-    title: "Frontend",
+    title: "Build Interfaces",
 
     description:
-      "Building responsive, accessible, and performant user interfaces with modern React-based technologies.",
+      "Crafting responsive interfaces that feel fast, accessible, and effortless to use across modern web applications.",
 
     technologies: [
       "React",
@@ -21,20 +21,27 @@ export const skills: readonly SkillCategory[] = [
   },
 
   {
-    title: "Backend",
+    title: "Engineer Systems",
 
     description:
-      "Designing scalable APIs, databases, and backend systems with modern development practices.",
+      "Designing scalable backend architectures, APIs, databases, and production-ready infrastructure.",
 
-    technologies: ["Node.js", "FastAPI", "Python", "PostgreSQL", "Redis"],
+    technologies: [
+      "Node.js",
+      "Express",
+      "FastAPI",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+    ],
   },
 
   {
-    title: "AI & Developer Tools",
+    title: "Ship AI Products",
 
     description:
-      "Exploring AI integrations, automation, background processing, and developer productivity tools.",
+      "Building AI-powered workflows with automation, LLM integrations, queues, and developer tooling.",
 
-    technologies: ["OpenAI", "BullMQ", "Git", "GitHub API"],
+    technologies: ["Gemini", "Python", "GitHub API", "BullMQ", "Git"],
   },
 ] as const;

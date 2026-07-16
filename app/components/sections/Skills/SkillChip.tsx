@@ -16,15 +16,33 @@ export function SkillChip({ technology }: SkillChipProps) {
         rounded-full
         border
         border-border-subtle
-        px-3
+        bg-surface-secondary/60
+        px-3.5
         py-2
         text-sm
         text-text-secondary
+        transition-all
+        duration-300
+        hover:-translate-y-0.5
+        hover:border-brand-primary/30
+        hover:bg-brand-primary/5
+        hover:text-text-primary
       "
     >
-      {item && <span className={item.color}>{item.icon}</span>}
+      {item && (
+        <span
+          className={`
+            ${item.color}
+            transition-transform
+            duration-300
+            group-hover:scale-110
+          `}
+        >
+          {item.icon}
+        </span>
+      )}
 
-      {technology}
+      <span>{technology}</span>
     </span>
   );
 }

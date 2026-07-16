@@ -8,10 +8,15 @@ import {
   SiTailwindcss,
   SiFramer,
   SiRedis,
-  SiOpenid,
+  SiGooglegemini,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiGithub,
+  SiGit,
 } from "react-icons/si";
 
-import { TbBrandCpp } from "react-icons/tb";
+import { TbBrandCpp, TbStack2 } from "react-icons/tb";
 import { FaEthereum } from "react-icons/fa";
 
 export const techIcons: Record<string, { icon: React.ReactNode; color: string }> = {
@@ -60,9 +65,9 @@ export const techIcons: Record<string, { icon: React.ReactNode; color: string }>
     color: "text-red-500",
   },
 
-  OpenAI: {
-    icon: <SiOpenid />,
-    color: "text-white",
+  Gemini: {
+    icon: <SiGooglegemini />,
+    color: "text-brand-primary",
   },
 
   "C++": {
@@ -73,5 +78,34 @@ export const techIcons: Record<string, { icon: React.ReactNode; color: string }>
   Ethereum: {
     icon: <FaEthereum />,
     color: "text-purple-400",
+  },
+  Express: {
+    icon: <SiExpress />,
+    color: "text-gray-300",
+  },
+
+  MongoDB: {
+    icon: <SiMongodb />,
+    color: "text-green-500",
+  },
+
+  MySQL: {
+    icon: <SiMysql />,
+    color: "text-sky-500",
+  },
+
+  Git: {
+    icon: <SiGit />,
+    color: "text-orange-500",
+  },
+
+  "GitHub API": {
+    icon: <SiGithub />,
+    color: "text-white",
+  },
+
+  BullMQ: {
+    icon: <TbStack2 />,
+    color: "text-brand-primary",
   },
 };

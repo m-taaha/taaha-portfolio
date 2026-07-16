@@ -66,8 +66,8 @@ export const architectures: Record<string, BlueprintData> = {
       },
 
       {
-        id: "openai",
-        label: "OpenAI",
+        id: "gemini",
+        label: "Gemini",
         x: 820,
         y: 260,
         type: "service",
@@ -78,7 +78,7 @@ export const architectures: Record<string, BlueprintData> = {
       { from: "github", to: "webhook" },
       { from: "webhook", to: "queue" },
       { from: "queue", to: "redis" },
-      { from: "queue", to: "openai" },
+      { from: "queue", to: "gemini" },
     ],
   },
 
