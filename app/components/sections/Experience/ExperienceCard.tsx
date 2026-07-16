@@ -1,25 +1,37 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 import { ExperienceItem } from "@/app/config/experience";
 
 interface Props {
   experience: ExperienceItem;
+  active: boolean;
+  onClick: () => void;
 }
 
-export function ExperienceCard({ experience }: Props) {
+export function ExperienceCard({ experience, active, onClick }: Props) {
   return (
-    <div
+    <button
+      onClick={onClick}
       className="
-        relative
         flex
         flex-col
         items-center
+        text-center
       "
     >
-      {/* Copper node */}
+      {/* Node */}
 
-      <div
+      <motion.div
+        animate={{
+          scale: active ? 1.2 : 1,
+        }}
+        transition={{
+          duration: 0.3,
+        }}
         className="
+          relative
           z-10
           flex
           h-5
@@ -28,10 +40,29 @@ export function ExperienceCard({ experience }: Props) {
           justify-center
           rounded-full
           border-2
-          border-brand-primary
-          bg-background-primary
         "
+        style={{
+          borderColor: active ? "#d18b35" : "rgba(209,139,53,.35)",
+        }}
       >
+        <motion.div
+          animate={{
+            scale: active ? [1, 1.5, 1] : 1,
+            opacity: active ? [0.5, 1, 0.5] : 0.5,
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+          }}
+          className="
+            absolute
+            h-8
+            w-8
+            rounded-full
+            bg-brand-primary/20
+          "
+        />
+
         <div
           className="
             h-2
@@ -40,9 +71,7 @@ export function ExperienceCard({ experience }: Props) {
             bg-brand-primary
           "
         />
-      </div>
-
-      {/* Year */}
+      </motion.div>
 
       <p
         className="
@@ -56,32 +85,15 @@ export function ExperienceCard({ experience }: Props) {
         {experience.year}
       </p>
 
-      {/* Title */}
-
       <h3
         className="
-          mt-3
-          text-center
+          mt-2
           text-lg
           font-semibold
         "
       >
         {experience.title}
       </h3>
-
-      {/* Description */}
-
-      <p
-        className="
-          mt-4
-          text-center
-          text-sm
-          leading-7
-          text-text-secondary
-        "
-      >
-        {experience.description}
-      </p>
-    </div>
+    </button>
   );
 }
