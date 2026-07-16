@@ -6,14 +6,32 @@ import { SkillChips } from "./SkillChips";
 
 export function ProfileCard() {
   return (
-    <div className="w-full max-w-sm rounded-3xl border border-border-subtle bg-surface-primary p-8 ">
+    <div
+      className="
+    w-full
+    max-w-[340px]
+    rounded-3xl
+    border
+    border-border-subtle
+    bg-surface-primary
+    p-6
+    sm:p-8
+  "
+    >
       <div className="flex flex-col items-center text-center gap-6 ">
         <Image
           src={person.avatar!}
           alt={person.name}
-          width={170}
-          height={170}
-          className="rounded-full object-cover ring ring-border-default"
+          width={150}
+          height={150}
+          className="
+rounded-full
+object-cover
+ring
+ring-border-default
+sm:w-[170px]
+sm:h-[170px]
+"
         />
 
         <div className="space-y-2">

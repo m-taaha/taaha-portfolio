@@ -42,25 +42,52 @@ export function HeroContent() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="flex flex-col gap-8"
+      className="
+    flex
+    flex-col
+    gap-8
+    text-center
+    lg:text-left
+    items-center
+    lg:items-start
+  "
     >
       <motion.div variants={itemVariants}>
         <HeroStatus />
       </motion.div>
 
       <motion.div variants={itemVariants}>
-        <Heading className="max-w-2xl">{person.heroHeadline}</Heading>
+        <Heading
+          className="
+    max-w-xl
+    text-5xl
+    leading-none
+    sm:text-6xl
+    lg:max-w-2xl
+  "
+        >
+          {person.heroHeadline}
+        </Heading>
       </motion.div>
 
       <motion.div variants={itemVariants}>
-        <Text className="max-w-2xl">{person.shortBio}</Text>
+        <Text
+          className="
+    max-w-md
+    text-center
+    lg:max-w-2xl
+    lg:text-left
+  "
+        >
+          {person.shortBio}
+        </Text>
       </motion.div>
 
       <motion.div variants={itemVariants}>
         <HeroActions />
       </motion.div>
 
-      <motion.div variants={itemVariants}>
+      <motion.div variants={itemVariants} className="hidden lg:block">
         <HeroOverview />
       </motion.div>
     </motion.div>

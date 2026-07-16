@@ -10,14 +10,16 @@ export function HeroOverview() {
         border
         border-border-subtle
         bg-surface-primary
-        p-6
+       p-5 sm:p-6
       "
     >
       <div className="space-y-5">
         <div>
           <p className="text-sm text-brand-primary">{currentFocus.title}</p>
 
-          <h3 className="mt-2 text-2xl font-bold">{currentFocus.subtitle}</h3>
+          <h3 className="mt-2 text-xl sm:text-2xl font-bold">
+            {currentFocus.subtitle}
+          </h3>
 
           <p className="mt-3 leading-7 text-text-secondary">
             {currentFocus.description}

@@ -13,7 +13,17 @@ import {
 
 export function HeroVisual() {
   return (
-    <div className="relative flex h-[650px] w-[650px] items-center justify-center">
+    <div
+      className="
+        relative
+        hidden
+        h-[650px]
+        w-[650px]
+        items-center
+        justify-center
+        lg:flex
+      "
+    >
       <Glow />
 
       <TechCard
