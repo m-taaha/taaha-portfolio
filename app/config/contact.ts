@@ -10,7 +10,7 @@ export interface ContactConfig {
   readonly availability: string;
   readonly email: string;
   readonly location: string;
-  readonly responseTime: string;
+  readonly responseTime?: string;
   readonly links: readonly ContactLink[];
 }
 
@@ -26,7 +26,7 @@ export const contact: ContactConfig = {
 
   location: "New Delhi, India",
 
-  responseTime: "Usually within 24 hours",
+
 
   links: [
     {

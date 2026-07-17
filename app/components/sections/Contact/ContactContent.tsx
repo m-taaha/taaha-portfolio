@@ -1,9 +1,25 @@
+"use client"
+import { motion } from "framer-motion";
 import { contact } from "@/app/config/contact";
 
 export function ContactContent() {
   return (
     <div className="space-y-10">
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.9,
+        }}
+        whileInView={{
+          opacity: 1,
+          scale: 1,
+        }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          delay: 0.15,
+        }}
         className="
           inline-flex
           rounded-full
@@ -17,7 +33,7 @@ export function ContactContent() {
         "
       >
         {contact.availability}
-      </div>
+      </motion.div>
 
       <div className="space-y-10">
         <div>
@@ -35,13 +51,15 @@ export function ContactContent() {
           <a
             href={`mailto:${contact.email}`}
             className="
-              mt-3
-              inline-block
-              text-3xl
-              font-semibold
-              tracking-tight
-              transition-colors
-              hover:text-brand-primary
+             mt-3
+inline-block
+break-all
+text-2xl
+font-semibold
+tracking-tight
+transition-colors
+hover:text-brand-primary
+sm:text-3xl
             "
           >
             {contact.email}
