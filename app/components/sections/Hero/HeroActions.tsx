@@ -15,7 +15,7 @@ export function HeroActions() {
     sm:flex-row
   "
     >
-      <Button>View Projects</Button>
+      <Button>Explore Systems</Button>
 
       <Button
         variant="secondary"

@@ -1,3 +1,4 @@
+
 export interface CurrentFocus {
   readonly title: string;
   readonly subtitle: string;
@@ -6,12 +7,12 @@ export interface CurrentFocus {
 }
 
 export const currentFocus: CurrentFocus = {
-  title: "Currently Building",
+  title: "Current Focus",
 
   subtitle: "NitPick",
 
   description:
-    "An AI-powered code review platform that automates pull request analysis using intelligent workflows.",
+    "Building an AI-powered code review platform that helps engineering teams review pull requests faster through intelligent automation.",
 
-  technologies: ["Next.js", "BullMQ", "Redis", "OpenAI"],
+  technologies: ["Next.js", "Gemini", "Redis"],
 } as const;
