@@ -27,14 +27,13 @@ export function TechGraph() {
         ease: [0.16, 1, 0.3, 1],
       }}
       className="
-        relative
-        mt-20
-        overflow-hidden
-        rounded-3xl
-        border
-        border-white/6
-        bg-[#111317]
-      "
+relative
+overflow-hidden
+rounded-3xl
+border
+border-border-subtle
+bg-surface-primary
+"
     >
       {/* Grid */}
 
@@ -67,7 +66,13 @@ export function TechGraph() {
 
       <svg
         viewBox="0 0 1200 520"
-        className="relative z-10 h-[450px] w-full"
+        className="
+      relative
+      z-10
+      h-[620px]
+      w-full
+      lg:h-[450px]
+    "
         preserveAspectRatio="xMidYMid meet"
       >
         {techEdges.map((edge, index) => {

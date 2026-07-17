@@ -1,3 +1,5 @@
+"use client"
+import {motion} from "framer-motion";
 import { SkillCategory as SkillCategoryType } from "@/app/config/skills";
 import { SkillChip } from "./SkillChip";
 
@@ -66,18 +68,25 @@ export function SkillCategory({ category }: SkillCategoryProps) {
 
       <div className="relative space-y-8">
         <div>
-          <h3
+          <motion.h3
+            whileHover={{
+              x: 4,
+            }}
+            transition={{
+              duration: 0.25,
+            }}
             className="
-              text-3xl
-              font-bold
-              tracking-tight
-              transition-colors
-              duration-300
-              group-hover:text-brand-primary
-            "
+ text-2xl
+lg:text-3xl
+    font-bold
+    tracking-tight
+    transition-colors
+    duration-300
+    group-hover:text-brand-primary
+  "
           >
             {category.title}
-          </h3>
+          </motion.h3>
 
           <p
             className="
@@ -91,7 +100,7 @@ export function SkillCategory({ category }: SkillCategoryProps) {
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-3">
           {category.technologies.map((technology) => (
             <SkillChip key={technology} technology={technology} />
           ))}
