@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from '../../ui/Button'
+import { person } from "@/app/config/person";
 
 export function HeroActions() {
   return (
@@ -16,7 +17,14 @@ export function HeroActions() {
     >
       <Button>View Projects</Button>
 
-      <Button variant="secondary">Download Resume</Button>
+      <Button
+        variant="secondary"
+        href={person.resumeUrl!}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Download Resume
+      </Button>
     </div>
   );
 }
