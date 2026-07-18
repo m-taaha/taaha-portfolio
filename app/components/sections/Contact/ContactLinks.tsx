@@ -2,9 +2,10 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileAlt,} from "react-icons/fa";
 
 import { contact } from "@/app/config/contact";
+import { ArrowUpRight } from "lucide-react";
 
 const icons = {
   GitHub: <FaGithub />,
@@ -16,9 +17,22 @@ export function ContactLinks() {
   return (
     <div className="space-y-4">
       {contact.links.map((link, index) => (
-        <motion.div>
+        <motion.div
+          key={link.label}
+          initial={{
+            opacity: 0,
+            y: 10,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{
+            delay: index * 0.08,
+          }}
+        >
           <Link
-            key={link.label}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
@@ -55,7 +69,7 @@ hover:shadow-[0_12px_30px_rgba(209,139,53,.12)]
               group-hover:translate-x-1
             "
             >
-              ↗
+              <ArrowUpRight className="h-4 w-4" />
             </span>
           </Link>
         </motion.div>

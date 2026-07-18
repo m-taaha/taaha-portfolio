@@ -15,13 +15,13 @@ export function ContactCard() {
         <div>
           <p
             className="
-              text-sm
-              uppercase
-              tracking-[0.22em]
-              text-brand-primary
-            "
+text-sm
+uppercase
+tracking-[0.22em]
+text-brand-primary
+"
           >
-            Available On
+            Connect
           </p>
         </div>
 

@@ -18,15 +18,13 @@ export const contact: ContactConfig = {
   title: "Interested in Building Together?",
 
   description:
-    "I'm currently looking for software engineering internships and opportunities to build scalable backend systems, AI products, and developer tools.",
+"I'm currently looking for software engineering internship opportunities where I can build scalable backend systems, AI-powered products, and developer tools.",
 
-  availability: "Open to Software Engineering Internships",
+  availability: "Available for Software Engineering Internships",
 
   email: "mtaahaashraf@gmail.com",
 
   location: "New Delhi, India",
-
-
 
   links: [
     {
