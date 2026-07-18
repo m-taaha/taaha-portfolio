@@ -43,14 +43,14 @@ export const systems: readonly System[] = [
       "Manual code reviews consume engineering time and often miss repetitive quality issues across large pull requests.",
 
     solution:
-      "Designed an AI-powered review pipeline using background workers, Redis queues, GitHub webhooks, and LLM-based analysis to automate code review.",
+      "Built an AI-powered review pipeline that processes GitHub pull requests through webhook events, background workers, Redis queues, and Gemini-powered analysis.",
 
     architecture: [
       "Next.js Frontend",
       "Node.js API",
       "BullMQ Workers",
       "Redis Queue",
-      "OpenAI Integration",
+      "Gemini Integration",
     ],
 
     highlights: [
@@ -67,7 +67,7 @@ export const systems: readonly System[] = [
       "TypeScript",
       "BullMQ",
       "Redis",
-      "OpenAI",
+      "Gemini",
     ],
 
     image: "/images/projects/nitpick/cover.png",

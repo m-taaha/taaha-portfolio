@@ -93,20 +93,25 @@ export function BlueprintCanvas({ blueprint }: Props) {
         </div>
 
         <div
-          className="
-            flex
-            items-center
-            gap-2
-            rounded-full
-            border
-            border-brand-primary/20
-            bg-brand-primary/10
-            px-4
-            py-2
-          "
+          className={`
+    flex
+    items-center
+    gap-2
+    rounded-full
+    px-4
+    py-2
+    border
+    ${
+      blueprint.status === "Live"
+        ? "border-green-500/20 bg-green-500/10"
+        : "border-brand-primary/20 bg-brand-primary/10"
+    }
+  `}
         >
           <motion.div
-            className="h-2 w-2 rounded-full bg-brand-primary"
+            className={`h-2 w-2 rounded-full ${
+              blueprint.status === "Live" ? "bg-green-500" : "bg-brand-primary"
+            }`}
             animate={{
               opacity: [1, 0.35, 1],
               scale: [1, 1.25, 1],
@@ -118,13 +123,13 @@ export function BlueprintCanvas({ blueprint }: Props) {
           />
 
           <span
-            className="
-              text-[11px]
-              font-medium
-              uppercase
-              tracking-[0.22em]
-              text-brand-primary
-            "
+            className={`
+      text-[11px]
+      font-medium
+      uppercase
+      tracking-[0.22em]
+      ${blueprint.status === "Live" ? "text-green-500" : "text-brand-primary"}
+    `}
           >
             {blueprint.status}
           </span>

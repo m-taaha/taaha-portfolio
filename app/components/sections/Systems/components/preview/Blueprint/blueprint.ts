@@ -30,7 +30,7 @@ export const architectures: Record<string, BlueprintData> = {
 
     title: "NitPick",
     subtitle: "AI Code Review Platform",
-    status: "Live",
+    status: "Building",
 
     nodes: [
       {

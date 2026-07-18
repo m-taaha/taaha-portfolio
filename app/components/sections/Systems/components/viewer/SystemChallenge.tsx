@@ -33,4 +33,5 @@ export function SystemChallenge({ problem, solution }: SystemChallengeProps) {
       </div>
     </section>
   );
+  
 }
