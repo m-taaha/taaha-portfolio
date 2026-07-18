@@ -6,8 +6,8 @@ export function Glow() {
       left-1/2
       top-1/2
       -z-10
-      h-96
-      w-96
+ h-[430px]
+w-[430px]
       -translate-x-1/2
       -translate-y-1/2
       rounded-full

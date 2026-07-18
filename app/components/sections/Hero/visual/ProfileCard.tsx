@@ -37,7 +37,7 @@ sm:h-[170px]
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">{person.name}</h3>
           <p className="text-xs uppercase tracking-[0.3em] text-text-secondary">
-            SOFTWARE ENGINEER
+            AI FULL • STACK
           </p>
 
           <StatusBadge status={person.status} />

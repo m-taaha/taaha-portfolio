@@ -11,10 +11,10 @@ export function TerminalBadge({ className }: TerminalBadgeProps) {
   return (
     <motion.div
       animate={{
-        y: [0, 8, 0],
+        y: [0, 5, 0],
       }}
       transition={{
-        duration: 5,
+        duration: 6,
         repeat: Infinity,
         ease: "easeInOut",
       }}
@@ -24,17 +24,33 @@ export function TerminalBadge({ className }: TerminalBadgeProps) {
         rounded-2xl
         border
         border-border-subtle
-        bg-surface-primary
-        p-4
+        bg-surface-primary/90
+        backdrop-blur-xl
+        px-4
+        py-3
         shadow-xl
         `,
         className,
       )}
     >
-      <div className="font-mono text-xs space-y-2">
-        <p className="text-text-secondary">$ npm run dev</p>
+      <div className="space-y-3 min-w-[170px]">
+        <div className="flex items-center gap-2">
+          <div className="h-2 w-2 rounded-full bg-green-500" />
 
-        <p className="text-green-400">✓ Portfolio running...</p>
+          <p className="text-xs font-medium text-text-primary">System Status</p>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <span className="text-xs text-text-muted">Portfolio</span>
+
+          <span className="text-xs font-medium text-green-500">Online</span>
+        </div>
+
+        <div className="flex items-center justify-between">
+          <span className="text-xs text-text-muted">Build</span>
+
+          <span className="text-xs font-medium">Production</span>
+        </div>
       </div>
     </motion.div>
   );

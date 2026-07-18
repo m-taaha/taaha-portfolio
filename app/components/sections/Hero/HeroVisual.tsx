@@ -53,7 +53,7 @@ export function HeroVisual() {
         className="bottom-6 right-6"
       />
 
-      <TerminalBadge className="bottom-12 left-6" />
+      <TerminalBadge className="bottom-16 left-4" />
 
       <ProfileCard />
     </div>
