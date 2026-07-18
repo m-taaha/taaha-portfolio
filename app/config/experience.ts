@@ -63,7 +63,7 @@ export const experiences: readonly ExperienceItem[] = [
     organization: "Designing Systems",
 
     description:
-      "This was the biggest mindset shift. I stopped thinking in pages and components and started thinking in APIs, authentication, databases, scalability, and system architecture.",
+      "This was the biggest mindset shift. I stopped thinking in pages and components and started thinking in services, data flow, authentication, and scalable backend architecture.",
 
     technologies: ["Node.js", "Express", "MongoDB", "JWT", "TypeScript"],
 
@@ -71,7 +71,7 @@ export const experiences: readonly ExperienceItem[] = [
       title: "First REST API",
       subtitle: "Express + MongoDB",
       lesson:
-        "Good backend design is mostly about data flow rather than writing endpoints.",
+        "Good backend systems are designed around how data moves, not around how endpoints are written.",
     },
   },
 
@@ -103,7 +103,7 @@ export const experiences: readonly ExperienceItem[] = [
     organization: "Jamia Hamdard Tezos Society",
 
     description:
-      "I realized building software isn't only about writing code. Mentoring students, reviewing projects, and leading technical initiatives became just as rewarding as shipping features.",
+      "I realized building software isn't only about writing code. Becoming Tech Head gave me opportunities to mentor juniors, review projects, and help other students build better software.",
 
     technologies: ["Leadership", "Mentoring", "Code Review", "Git"],
 
@@ -111,7 +111,7 @@ export const experiences: readonly ExperienceItem[] = [
       title: "Tech Head",
       subtitle: "Jamia Hamdard",
       lesson:
-        "Building software is difficult. Helping other people build software is even harder.",
+        "Teaching others exposed gaps in my own understanding faster than building projects alone.",
     },
   },
 
@@ -123,15 +123,15 @@ export const experiences: readonly ExperienceItem[] = [
     organization: "Building Intelligent Products",
 
     description:
-      "Instead of using AI as a chatbot, I started designing products around it. Projects like NitPick taught me how LLMs, queues, webhooks, background workers, and automation fit together.",
+      "Instead of using AI as a feature, I started designing systems around it. NitPick taught me how orchestration, automation, queues, and LLMs work together to solve real engineering problems.",
 
-    technologies: ["OpenAI", "BullMQ", "Redis", "GitHub Webhooks", "Next.js"],
+    technologies: ["Gemini", "BullMQ", "Redis", "GitHub Webhooks", "Next.js"],
 
     artifact: {
       title: "NitPick",
       subtitle: "AI Code Review Platform",
       lesson:
-        "LLMs become far more useful when surrounded by queues, webhooks and reliable system design.",
+        "LLMs become significantly more valuable when combined with reliable orchestration, queues, and automation.",
     },
   },
 
@@ -143,7 +143,7 @@ export const experiences: readonly ExperienceItem[] = [
     organization: "Current Focus",
 
     description:
-      "Today I think beyond features. My focus is designing production-grade software, scalable architectures, developer tools, and AI-powered systems that solve meaningful problems.",
+      "Today my focus is designing production-ready software, AI-powered developer tools, and scalable systems where architecture matters more than frameworks.",
 
     technologies: [
       "Architecture",
@@ -157,7 +157,7 @@ export const experiences: readonly ExperienceItem[] = [
       title: "Current Direction",
       subtitle: "Architecture Thinking",
       lesson:
-        "I now spend more time evaluating trade-offs than choosing frameworks.",
+        "The best engineering decisions usually come from evaluating trade-offs rather than chasing the newest technology.",
     },
   },
 ] as const;
