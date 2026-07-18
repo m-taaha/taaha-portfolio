@@ -24,7 +24,7 @@ export const skills: readonly SkillCategory[] = [
     title: "Engineer Systems",
 
     description:
-      "Designing scalable backend architectures, APIs, databases, and production-ready infrastructure.",
+      "Designing backend systems, APIs, databases, and application architecture with scalability and maintainability in mind.",
 
     technologies: [
       "Node.js",
@@ -40,7 +40,7 @@ export const skills: readonly SkillCategory[] = [
     title: "Ship AI Products",
 
     description:
-      "Building AI-powered workflows with automation, LLM integrations, queues, and developer tooling.",
+      "Building AI-powered workflows using orchestration, automation, queues, and modern language models.",
 
     technologies: ["Gemini", "Python", "GitHub API", "BullMQ", "Git"],
   },
