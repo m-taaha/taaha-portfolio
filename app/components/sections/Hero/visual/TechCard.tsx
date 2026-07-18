@@ -14,10 +14,10 @@ export function TechCard({ icon, label, subtitle, className }: TechCardProps) {
   return (
     <motion.div
       animate={{
-        y: [0, -10, 0],
+        y: [0, -6, 0],
       }}
       transition={{
-        duration: 4,
+        duration: 6,
         repeat: Infinity,
         ease: "easeInOut",
       }}
@@ -30,14 +30,14 @@ export function TechCard({ icon, label, subtitle, className }: TechCardProps) {
         bg-surface-primary/80
         backdrop-blur-xl
         px-3
-        py-3
+        py-2.5
         shadow-xl
         `,
         className,
       )}
     >
       <div className="flex items-center gap-3">
-        <div className="text-2xl">{icon}</div>
+        <div className="text-xl">{icon}</div>
 
         <div>
           <p className="text-sm font-semibold">{label}</p>

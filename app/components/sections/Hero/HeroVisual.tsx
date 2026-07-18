@@ -6,7 +6,6 @@ import { TechCard } from "./visual/TechCard";
 import {
   SiNextdotjs,
   SiReact,
-  SiTypescript,
   SiNodedotjs,
   SiPython,
 } from "react-icons/si";
@@ -30,38 +29,31 @@ export function HeroVisual() {
         icon={<SiNextdotjs />}
         label="Next.js"
         subtitle="Frontend Framework"
-        className="-top-12 -left-6"
+        className="-top-4 left-10"
       />
 
       <TechCard
         icon={<SiReact className="text-sky-400" />}
         label="React"
         subtitle="UI Library"
-        className="top-24 -left-14"
-      />
-
-      <TechCard
-        icon={<SiTypescript className="text-blue-500" />}
-        label="TypeScript"
-        subtitle="Type Safe"
-        className="-bottom-6 -left-2"
+        className="top-28 left-2"
       />
 
       <TechCard
         icon={<SiNodedotjs className="text-green-500" />}
         label="Node.js"
         subtitle="Backend Runtime"
-        className="top-24 -right-2"
+        className="top-30 right-0"
       />
 
       <TechCard
         icon={<SiPython className="text-yellow-400" />}
         label="Python"
         subtitle="AI & Backend"
-        className="-bottom-8 -right-8"
+        className="bottom-6 right-6"
       />
 
-      <TerminalBadge className="bottom-20 -left-18" />
+      <TerminalBadge className="bottom-12 left-6" />
 
       <ProfileCard />
     </div>
