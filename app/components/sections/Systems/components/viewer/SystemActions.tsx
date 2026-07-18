@@ -2,7 +2,7 @@ import { System } from "@/app/config/systems";
 
 import { FiArrowRight, FiGithub, FiExternalLink } from "react-icons/fi";
 import { SiGitlab } from "react-icons/si";
-import { SystemLink } from "../../cards/SystemLink";
+import { SystemLink } from "../../cards/SystemLink.tsx";
 
 
 
