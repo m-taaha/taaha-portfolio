@@ -93,7 +93,7 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "client",
         label: "React",
-        x: 140,
+        x: 130,
         y: 300,
         type: "client",
       },
@@ -101,7 +101,7 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "api",
         label: "FastAPI",
-        x: 390,
+        x: 340,
         y: 300,
         type: "server",
       },
@@ -109,7 +109,7 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "story",
         label: "Story Engine",
-        x: 660,
+        x: 590,
         y: 180,
         type: "service",
       },
@@ -117,7 +117,7 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "cms",
         label: "CMS",
-        x: 660,
+        x: 590,
         y: 420,
         type: "service",
       },
@@ -125,7 +125,7 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "db",
         label: "PostgreSQL",
-        x: 900,
+        x: 850,
         y: 300,
         type: "database",
       },
@@ -151,7 +151,7 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "config",
         label: "Config",
-        x: 120,
+        x: 130,
         y: 300,
         type: "service",
       },
@@ -159,15 +159,15 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "tokens",
         label: "Tokens",
-        x: 330,
-        y: 300,
+        x: 310,
+        y: 400,
         type: "service",
       },
 
       {
         id: "components",
         label: "Components",
-        x: 560,
+        x: 490,
         y: 300,
         type: "service",
       },
@@ -175,15 +175,15 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "pages",
         label: "Pages",
-        x: 790,
-        y: 300,
+        x: 670,
+        y: 200,
         type: "server",
       },
 
       {
         id: "deploy",
         label: "Deploy",
-        x: 930,
+        x: 850,
         y: 300,
         type: "service",
       },
