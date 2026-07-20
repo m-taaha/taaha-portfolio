@@ -13,10 +13,22 @@ export function TerminalBadge({ className }: TerminalBadgeProps) {
       animate={{
         y: [0, 5, 0],
       }}
+      whileHover={{
+        scale: 1.03,
+        rotate: -1,
+      }}
       transition={{
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut",
+        y: {
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+        scale: {
+          duration: 0.2,
+        },
+        rotate: {
+          duration: 0.2,
+        },
       }}
       className={cn(
         `

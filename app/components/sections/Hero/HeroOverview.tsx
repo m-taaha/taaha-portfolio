@@ -1,16 +1,28 @@
+"use client"
+import { motion } from "framer-motion";
 import { currentFocus } from "@/app/config/hero";
 import { SkillChip } from "../Skills/SkillChip";
 
 export function HeroOverview() {
   return (
-    <div
+    <motion.div
+      whileHover={{
+        y: -4,
+      }}
+      transition={{
+        duration: 0.25,
+      }}
       className="
-        mt-12
-        rounded-3xl
-        border
-        border-border-subtle
-        bg-surface-primary
-        p-6
+        mt-10
+       rounded-3xl
+border
+border-border-subtle
+bg-surface-primary
+p-6
+transition-all
+duration-300
+hover:border-brand-primary/25
+hover:shadow-[0_18px_40px_rgba(209,139,53,.12)]
       "
     >
       <div className="space-y-6">
@@ -62,6 +74,6 @@ export function HeroOverview() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
