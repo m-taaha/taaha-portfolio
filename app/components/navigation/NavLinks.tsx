@@ -33,7 +33,17 @@ export function NavLinks() {
                   }
                 `}
               >
-                {item.label}
+                <motion.span
+                  animate={{
+                    y: isActive ? -1 : 0,
+                  }}
+                  transition={{
+                    duration: 0.2,
+                  }}
+                  className="inline-block"
+                >
+                  {item.label}
+                </motion.span>
 
                 {/* Hover underline */}
 
@@ -49,7 +59,7 @@ export function NavLinks() {
                       scale-x-0
                       bg-brand-primary
                       transition-transform
-                      duration-300
+                      duration-200
                       ease-out
                       group-hover:scale-x-100
                     "
@@ -65,14 +75,14 @@ export function NavLinks() {
                       absolute
                       bottom-0
                       left-0
-                      h-px
+                      h-[-2px]
                       w-full
                       bg-brand-primary
                     "
                     transition={{
                       type: "spring",
-                      stiffness: 500,
-                      damping: 35,
+                      stiffness: 380,
+                      damping: 30,
                     }}
                   />
                 )}
