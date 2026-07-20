@@ -4,10 +4,23 @@ import { cn } from "@/lib/utils";
 type ButtonVariant = "primary" | "secondary";
 
 const buttonVariants = {
-  primary: "bg-brand-primary text-brand-foreground hover:bg-brand-soft",
+  primary: `
+    bg-brand-primary
+    text-brand-foreground
 
-  secondary:
-    "border border-border-default bg-transparent text-text-primary hover:border-border-strong hover:bg-surface-primary",
+    hover:bg-brand-soft
+    hover:shadow-[0_12px_30px_rgba(209,139,53,.22)]
+  `,
+
+  secondary: `
+    border
+    border-border-default
+    bg-transparent
+    text-text-primary
+
+    hover:border-brand-primary/40
+    hover:bg-surface-primary
+  `,
 } as const;
 
 interface ButtonProps {
@@ -31,7 +44,32 @@ export function Button({
   rel,
 }: ButtonProps) {
   const styles = cn(
-    "inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-medium transition-colors focus:outline-none focus:ring-2 disabled:pointer-events-none disabled:opacity-50",
+    `
+  inline-flex
+  items-center
+  justify-center
+  rounded-xl
+  px-5
+  py-3
+  text-sm
+  font-medium
+
+  transition-all
+  duration-300
+
+  hover:-translate-y-0.5
+  hover:shadow-[0_12px_30px_rgba(209,139,53,.15)]
+
+  active:translate-y-0
+  active:scale-[0.98]
+
+  focus:outline-none
+  focus:ring-2
+  focus:ring-brand-primary/30
+
+  disabled:pointer-events-none
+  disabled:opacity-50
+  `,
     buttonVariants[variant],
     className,
   );
