@@ -1,3 +1,4 @@
+"use client"
 import { Glow } from "./visual/Glow";
 import { ProfileCard } from "./visual/ProfileCard";
 import { TerminalBadge } from "./visual/TerminalBadge";
