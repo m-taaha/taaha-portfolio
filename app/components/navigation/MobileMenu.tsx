@@ -12,21 +12,28 @@ export function MobileMenu() {
 
   return (
     <>
-      <button
+      <motion.button
+        whileHover={{
+          scale: 1.05,
+          rotate: 8,
+        }}
+        whileTap={{
+          scale: 0.95,
+        }}
         onClick={() => setOpen(true)}
         className="
-          flex
-          h-11
-          w-11
-          items-center
-          justify-center
-          rounded-xl
-          border
-          border-border-subtle
-        "
+    flex
+    h-11
+    w-11
+    items-center
+    justify-center
+    rounded-xl
+    border
+    border-border-subtle
+  "
       >
         <Menu className="h-5 w-5" />
-      </button>
+      </motion.button>
 
       <AnimatePresence>
         {open && (
@@ -73,7 +80,14 @@ export function MobileMenu() {
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold">Navigation</h3>
 
-                <button
+                <motion.button
+                  whileHover={{
+                    rotate: 90,
+                    scale: 1.05,
+                  }}
+                  whileTap={{
+                    scale: 0.95,
+                  }}
                   onClick={() => setOpen(false)}
                   className="
                     flex
@@ -87,24 +101,42 @@ export function MobileMenu() {
                   "
                 >
                   <X className="h-5 w-5" />
-                </button>
+                </motion.button>
               </div>
 
               <nav className="mt-8 flex flex-col gap-6">
-                {navigation.map((item) => (
-                  <Link
+                {navigation.map((item, index) => (
+                  <motion.div
                     key={item.label}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="
-                      text-lg
-                      text-text-secondary
-                      transition-colors
-                      hover:text-brand-primary
-                    "
+                    initial={{
+                      opacity: 0,
+                      y: 12,
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    transition={{
+                      delay: 0.08 + index * 0.06,
+                      duration: 0.25,
+                    }}
                   >
-                    {item.label}
-                  </Link>
+                    <Link
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className="
+        block
+        text-lg
+        text-text-secondary
+        transition-all
+        duration-300
+        hover:translate-x-2
+        hover:text-brand-primary
+      "
+                    >
+                      {item.label}
+                    </Link>
+                  </motion.div>
                 ))}
 
                 <div className="mt-4 border-t border-border-subtle pt-6">
@@ -112,14 +144,22 @@ export function MobileMenu() {
                     href="/resume.pdf"
                     target="_blank"
                     className="
-                      inline-flex
-                      rounded-full
-                      border
-                      border-brand-primary/30
-                      px-5
-                      py-3
-                      text-brand-primary
-                    "
+  inline-flex
+  items-center
+  justify-center
+  rounded-full
+  border
+  border-brand-primary/30
+  bg-brand-primary/10
+  px-5
+  py-3
+  text-brand-primary
+  transition-all
+  duration-300
+  hover:-translate-y-1
+  hover:border-brand-primary/50
+  hover:shadow-[0_12px_30px_rgba(209,139,53,.18)]
+"
                   >
                     Resume
                   </Link>
