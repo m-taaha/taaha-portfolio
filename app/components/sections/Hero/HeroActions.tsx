@@ -20,24 +20,35 @@ export function HeroActions() {
       "
     >
       <motion.div whileHover="hover" whileTap={{ scale: 0.98 }}>
-        <Button 
-        href="#systems"
-        >
-          <span className="flex items-center gap-2">
+        <Button href="#systems">
+          <motion.span
+            className="flex items-center gap-2"
+            variants={{
+              hover: {
+                x: 2,
+              },
+            }}
+          >
             Explore Systems
             <motion.span
+              initial={{
+                x: -6,
+                opacity: 0,
+              }}
               variants={{
                 hover: {
-                  x: 4,
+                  x: 0,
+                  opacity: 1,
                 },
               }}
               transition={{
                 duration: 0.2,
+                ease: "easeOut",
               }}
             >
               <ArrowRight className="h-4 w-4" />
             </motion.span>
-          </span>
+          </motion.span>
         </Button>
       </motion.div>
 
@@ -48,22 +59,34 @@ export function HeroActions() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span className="flex items-center gap-2">
-            Download Resume
+          <motion.span
+            className="flex items-center gap-2"
+            variants={{
+              hover: {
+                x: 2,
+              },
+            }}
+          >
+            Resume
             <motion.span
+              initial={{
+                x: -6,
+                opacity: 0,
+              }}
               variants={{
                 hover: {
-                  x: 3,
-                  y: -3,
+                  x: 0,
+                  opacity: 1,
                 },
               }}
               transition={{
-                duration: 0.2,
+                duration: 0.22,
+                ease: "easeOut",
               }}
             >
               <ArrowUpRight className="h-4 w-4" />
             </motion.span>
-          </span>
+          </motion.span>
         </Button>
       </motion.div>
     </div>
