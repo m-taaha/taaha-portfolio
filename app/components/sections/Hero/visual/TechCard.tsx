@@ -16,10 +16,19 @@ export function TechCard({ icon, label, subtitle, className }: TechCardProps) {
       animate={{
         y: [0, -6, 0],
       }}
+      whileHover={{
+        y: -10,
+        scale: 1.04,
+      }}
       transition={{
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut",
+        y: {
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        },
+        scale: {
+          duration: 0.2,
+        },
       }}
       className={cn(
         `
