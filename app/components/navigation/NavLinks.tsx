@@ -75,7 +75,7 @@ export function NavLinks() {
                       absolute
                       bottom-0
                       left-0
-                      h-[-2px]
+                      h-[2px]
                       w-full
                       bg-brand-primary
                     "
