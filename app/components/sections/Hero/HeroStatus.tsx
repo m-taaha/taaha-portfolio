@@ -1,3 +1,7 @@
+"use client"
+import { motion } from "framer-motion";
+
+
 export function HeroStatus() {
   return (
     <div
@@ -15,7 +19,18 @@ export function HeroStatus() {
         text-brand-primary
       "
     >
-      <div className="h-2 w-2 rounded-full bg-green-500" />
+      <motion.div
+        className="h-2 w-2 rounded-full bg-green-500"
+        animate={{
+          scale: [1, 1.4, 1],
+          opacity: [1, 0.6, 1],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
 
       <span>Available for Software Engineering Internships</span>
     </div>
