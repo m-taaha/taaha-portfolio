@@ -22,14 +22,17 @@ export function FooterBrand() {
       }}
       className="space-y-4"
     >
-     <motion.h3
-whileHover={{
- x:4,
-}}
-
-transition={{
- duration:.2,
-}}>{person.name}</motion.h3>
+      <motion.h3
+        whileHover={{
+          x: 4,
+          color: "#d18b35",
+        }}
+        transition={{
+          duration: 0.2,
+        }}
+      >
+        {person.name}
+      </motion.h3>
 
       <p className="text-text-secondary">{person.title}</p>
 
