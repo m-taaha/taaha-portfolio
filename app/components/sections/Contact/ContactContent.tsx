@@ -1,5 +1,5 @@
 "use client";
-
+import { FadeUp, Stagger } from "@/app/components/motion";
 import { motion } from "framer-motion";
 import { Copy } from "lucide-react";
 import { toast } from "sonner";
@@ -18,22 +18,8 @@ export function ContactContent() {
   }
 
   return (
-    <div className="space-y-10">
-      <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0.9,
-        }}
-        whileInView={{
-          opacity: 1,
-          scale: 1,
-        }}
-        viewport={{
-          once: true,
-        }}
-        transition={{
-          delay: 0.15,
-        }}
+    <Stagger className="space-y-10">
+      <FadeUp
         className="
           inline-flex
           rounded-full
@@ -47,82 +33,82 @@ export function ContactContent() {
         "
       >
         {contact.availability}
-      </motion.div>
+      </FadeUp>
 
       <div className="space-y-10">
         {/* Email */}
 
-        <div>
-          <p
-            className="
-              text-sm
-              uppercase
-              tracking-[0.18em]
-              text-text-muted
-            "
-          >
-            Email
-          </p>
-
-          <motion.button
-            whileHover={{
-              x: 3,
-            }}
-            whileTap={{
-              scale: 0.98,
-            }}
-            onClick={copyEmail}
-            className="
-              group
-              mt-3
-              flex
-              items-center
-              gap-3
-              break-all
-              text-left
-              text-2xl
-              font-semibold
-              tracking-tight
-              transition-colors
-              hover:text-brand-primary
-              sm:text-3xl
-            "
-          >
-            <span>{contact.email}</span>
-
-            <Copy
+        <FadeUp>
+          <div>
+            <p
               className="
-                h-5
-                w-5
-                opacity-0
-                transition-all
-                duration-300
-                group-hover:translate-x-1
-                group-hover:opacity-100
-              "
-            />
-          </motion.button>
+        text-sm
+        uppercase
+        tracking-[0.18em]
+        text-text-muted
+      "
+            >
+              Email
+            </p>
 
-          <p className="mt-2 text-sm text-text-muted">Click to copy email</p>
-        </div>
+            <motion.button
+              whileHover={{ x: 3 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={copyEmail}
+              className="
+        group
+        mt-3
+        flex
+        items-center
+        gap-3
+        break-all
+        text-left
+        text-2xl
+        font-semibold
+        tracking-tight
+        transition-colors
+        hover:text-brand-primary
+        sm:text-3xl
+      "
+            >
+              <span>{contact.email}</span>
+
+              <Copy
+                className="
+          h-5
+          w-5
+          opacity-0
+          transition-all
+          duration-300
+          group-hover:translate-x-1
+          group-hover:opacity-100
+        "
+              />
+            </motion.button>
+
+            <p className="mt-2 text-sm text-text-muted">Click to copy email</p>
+          </div>
+        </FadeUp>
 
         {/* Location */}
 
-        <div>
-          <p
-            className="
-              text-sm
-              uppercase
-              tracking-[0.18em]
-              text-text-muted
-            "
-          >
-            Location
-          </p>
+        <FadeUp>
+          <div>
+            <p
+              className="
+        text-sm
+        uppercase
+        tracking-[0.18em]
+        text-text-muted
+      "
+            >
+              Location
+            </p>
 
-          <p className="mt-3 text-xl">{contact.location}</p>
-        </div>
+            <p className="mt-3 text-xl">{contact.location}</p>
+          </div>
+        </FadeUp>
       </div>
-    </div>
+    </Stagger>
   );
 }
