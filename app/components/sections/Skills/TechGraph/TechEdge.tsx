@@ -22,8 +22,8 @@ export function TechEdge({ start, end }: Props) {
       <motion.path
         d={path}
         fill="none"
-        stroke="rgba(255,255,255,.05)"
-        strokeWidth={8}
+        stroke="rgba(201,124,75,.28)"
+        strokeWidth={6}
         strokeLinecap="round"
         initial={{
           pathLength: 0,
@@ -88,15 +88,15 @@ export function TechEdge({ start, end }: Props) {
         d={path}
         fill="none"
         stroke="rgba(255,255,255,.7)"
-        strokeWidth={2.4}
+        strokeWidth={3}
         strokeLinecap="round"
-        strokeDasharray="12 140"
+        strokeDasharray="18 140"
         animate={{
           strokeDashoffset: [150, 0],
           opacity: [0, 1, 0],
         }}
         transition={{
-          duration: 2,
+          duration: 2.5,
           repeat: Infinity,
           ease: "linear",
         }}

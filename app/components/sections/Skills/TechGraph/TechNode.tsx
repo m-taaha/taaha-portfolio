@@ -19,6 +19,9 @@ export function TechNode({ node }: Props) {
         opacity: 1,
         scale: 1,
       }}
+      whileHover={{
+        scale: 1.08,
+      }}
       transition={{
         duration: 0.45,
       }}
@@ -34,6 +37,10 @@ export function TechNode({ node }: Props) {
           scale: [1, 1.08, 1],
           opacity: [0.35, 0.65, 0.35],
         }}
+        whileHover={{
+          scale: 1.4,
+          opacity: 0.9,
+        }}
         transition={{
           duration: 4,
           repeat: Infinity,
@@ -44,7 +51,10 @@ export function TechNode({ node }: Props) {
       {/* Node */}
 
       <foreignObject x={node.x - 62} y={node.y - 18} width={124} height={36}>
-        <div
+        <motion.div
+          whileHover={{
+            scale: 1.06,
+          }}
           className="
             flex
             h-full
@@ -53,8 +63,14 @@ export function TechNode({ node }: Props) {
             justify-center
             rounded-full
             border
-            border-white/10
-            bg-[#18191d]/95
+           border-white/10
+           bg-[#18191d]/95
+
+            transition-all
+            duration-300
+
+            hover:border-brand-primary/40
+            hover:shadow-[0_0_24px_rgba(209,139,53,.22)]
             text-[11px]
             font-medium
             uppercase
@@ -64,7 +80,7 @@ export function TechNode({ node }: Props) {
           "
         >
           {node.label}
-        </div>
+        </motion.div>
       </foreignObject>
     </motion.g>
   );

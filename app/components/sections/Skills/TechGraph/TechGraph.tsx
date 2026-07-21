@@ -59,7 +59,7 @@ bg-surface-primary
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
-          bg-brand-primary/5
+          bg-brand-primary/8
           blur-[140px]
         "
       />
