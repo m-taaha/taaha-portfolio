@@ -25,7 +25,9 @@ export function SystemSelector({
             whileHover={{ y: -2 }}
             onClick={() => onSelect(system.id)}
             className={`
-              rounded-full
+               relative
+  overflow-hidden
+  rounded-full
               border
               px-6
               py-3
@@ -35,12 +37,33 @@ export function SystemSelector({
 
               ${
                 active
-                  ? "border-brand-primary bg-brand-primary/10 text-white"
+                  ? "text-white"
                   : "border-border-subtle text-text-secondary hover:border-brand-primary/40"
               }
             `}
           >
-            {system.name}
+            <>
+              {active && (
+                <motion.div
+                  layoutId="active-system"
+                  className="
+        absolute
+        inset-0
+        rounded-full
+        bg-brand-primary/10
+        border
+        border-brand-primary/30
+      "
+                  transition={{
+                    type: "spring",
+                    stiffness: 360,
+                    damping: 30,
+                  }}
+                />
+              )}
+
+              <span className="relative z-10">{system.name}</span>
+            </>
           </motion.button>
         );
       })}
