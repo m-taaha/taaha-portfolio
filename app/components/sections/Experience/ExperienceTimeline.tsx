@@ -42,6 +42,7 @@ export function ExperienceTimeline() {
             {experiences.map((experience, index) => (
               <ExperienceCard
                 key={experience.title}
+                index={index}
                 experience={experience}
                 active={activeIndex === index}
                 onClick={() => setActiveIndex(index)}
@@ -55,6 +56,9 @@ export function ExperienceTimeline() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeExperience.title}
+            whileHover={{
+              y: -4,
+            }}
             initial={{
               opacity: 0,
               y: 28,
@@ -75,11 +79,14 @@ export function ExperienceTimeline() {
               ease: [0.16, 1, 0.3, 1],
             }}
             className="
-              rounded-3xl
-              border
-              border-border-subtle
-              bg-surface-primary
-              p-10
+             rounded-3xl
+             border
+             border-border-subtle
+             bg-surface-primary
+             p-10
+             transition-shadow
+             duration-300
+             hover:shadow-[0_18px_45px_rgba(209,139,53,.08)]
             "
           >
             <motion.p

@@ -8,18 +8,35 @@ interface Props {
   experience: ExperienceItem;
   active: boolean;
   onClick: () => void;
+  index: number;
 }
 
-export function ExperienceCard({ experience, active, onClick }: Props) {
+export function ExperienceCard({ experience, active, onClick, index }: Props) {
   return (
-    <button
+    <motion.button
+      initial={{
+        opacity: 0,
+        y: 18,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        delay: index * 0.08,
+        duration: 0.35,
+        ease: [0.16, 1, 0.3, 1],
+      }}
       onClick={onClick}
       className="
-        flex
-        flex-col
-        items-center
-        text-center
-      "
+    flex
+    flex-col
+    items-center
+    text-center
+  "
     >
       {/* Node */}
 
@@ -94,6 +111,6 @@ export function ExperienceCard({ experience, active, onClick }: Props) {
       >
         {experience.title}
       </h3>
-    </button>
+    </motion.button>
   );
 }
