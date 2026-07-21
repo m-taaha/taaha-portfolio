@@ -17,7 +17,7 @@ export function Stagger({
   children,
   className,
   delay = 0,
-  staggerChildren = 0.12,
+  staggerChildren = 0.1,
 }: StaggerProps) {
   return (
     <motion.div
@@ -34,8 +34,8 @@ export function Stagger({
         show: {
           transition: {
             delayChildren: delay,
-
             staggerChildren,
+            ease: [0.16, 1, 0.3, 1],
           },
         },
       }}
