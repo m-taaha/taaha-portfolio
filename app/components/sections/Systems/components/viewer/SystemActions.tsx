@@ -1,3 +1,5 @@
+"use client"
+import { motion } from "framer-motion";
 import { System } from "@/app/config/systems";
 
 import { FiArrowRight, FiGithub, FiExternalLink } from "react-icons/fi";
@@ -29,7 +31,11 @@ export function SystemActions({ system }: SystemActionsProps) {
         </SystemLink>
       </div>
 
-      <button
+      <motion.button
+        whileHover="hover"
+        whileTap={{
+          scale: 0.98,
+        }}
         className="
           flex
           items-center
@@ -42,8 +48,19 @@ export function SystemActions({ system }: SystemActionsProps) {
         "
       >
         View System
-        <FiArrowRight />
-      </button>
+        <motion.span
+          variants={{
+            hover: {
+              x: 4,
+            },
+          }}
+          transition={{
+            duration: 0.2,
+          }}
+        >
+          <FiArrowRight />
+        </motion.span>
+      </motion.button>
     </div>
   );
 }

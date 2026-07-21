@@ -105,7 +105,11 @@ export function InteractivePreview({ system }: Props) {
           ease: [0.16, 1, 0.3, 1],
         }}
       >
-        <BrowserFrame imageSrc={system.image} altText={system.name} />
+        <BrowserFrame
+          imageSrc={system.image}
+          altText={system.name}
+          browserUrl={system.browserUrl}
+        />
       </motion.div>
     </motion.div>
   );

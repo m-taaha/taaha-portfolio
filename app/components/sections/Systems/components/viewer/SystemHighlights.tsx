@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { FiCheck } from "react-icons/fi";
 
 interface SystemHighlightsProps {
@@ -21,8 +23,15 @@ export function SystemHighlights({ highlights }: SystemHighlightsProps) {
 
       <div className="grid gap-3 sm:grid-cols-2">
         {highlights.map((highlight) => (
-          <div
+          <motion.div
             key={highlight}
+            whileHover={{
+              y: -2,
+              scale: 1.01,
+            }}
+            transition={{
+              duration: 0.2,
+            }}
             className="
               flex
               items-center
@@ -51,7 +60,7 @@ export function SystemHighlights({ highlights }: SystemHighlightsProps) {
             </div>
 
             <span>{highlight}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

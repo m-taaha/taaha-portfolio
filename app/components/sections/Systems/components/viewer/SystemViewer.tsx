@@ -1,3 +1,5 @@
+"use client"
+import { motion } from "framer-motion";
 import { System } from "@/app/config/systems";
 
 import { SystemHeader } from "./SystemHeader";
@@ -16,15 +18,25 @@ interface Props {
 
 export function SystemViewer({ system }: Props) {
   return (
-    <div
+    <motion.div
+      whileHover={{
+        y: -4,
+      }}
+      transition={{
+        duration: 0.25,
+      }}
       className="
-        mt-12
-        rounded-[32px]
-        border
-        border-border-subtle
-        bg-surface-primary
-        overflow-hidden
-      "
+    mt-12
+    overflow-hidden
+    rounded-[32px]
+    border
+    border-border-subtle
+    bg-surface-primary
+    transition-all
+    duration-300
+    hover:border-brand-primary/30
+    hover:shadow-[0_24px_60px_rgba(209,139,53,.10)]
+  "
     >
       <div className="grid lg:grid-cols-[540px_1fr]">
         {/* LEFT */}
@@ -64,6 +76,6 @@ export function SystemViewer({ system }: Props) {
 
         <InteractivePreview system={system} />
       </div>
-    </div>
+    </motion.div>
   );
 }

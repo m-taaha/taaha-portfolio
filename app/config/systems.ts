@@ -25,6 +25,8 @@ export interface System {
 
   readonly live?: string;
 
+  readonly browserUrl: string;
+
   readonly featured: boolean;
 }
 
@@ -74,6 +76,8 @@ export const systems: readonly System[] = [
 
     github: "https://github.com/m-taaha/nitpick",
 
+    browserUrl: "github.com/m-taaha/nitpick",
+
     featured: true,
   },
 
@@ -115,6 +119,8 @@ export const systems: readonly System[] = [
 
     gitlab: "https://gitlab.com/zavianexus/kidsportal",
 
+    browserUrl: "kidsportal.local",
+
     featured: true,
   },
 
@@ -155,6 +161,8 @@ export const systems: readonly System[] = [
     image: "/images/projects/portfolio/cover.png",
 
     github: "https://github.com/m-taaha/taaha-portfolio",
+
+    browserUrl: "taaha.dev",
 
     featured: true,
   },

@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { techIcons } from "..//../utils/techIcons";
 
 interface SystemTechStackProps {
@@ -11,7 +13,11 @@ export function SystemTechStack({ technologies }: SystemTechStackProps) {
         const item = techIcons[tech];
 
         return (
-          <span
+          <motion.span
+  whileHover={{
+    y:-2,
+    scale:1.05,
+  }}
             key={tech}
             className="
               flex
@@ -29,7 +35,7 @@ export function SystemTechStack({ technologies }: SystemTechStackProps) {
             {item && <span className={item.color}>{item.icon}</span>}
 
             {tech}
-          </span>
+          </motion.span>
         );
       })}
 

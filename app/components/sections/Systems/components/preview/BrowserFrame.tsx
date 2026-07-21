@@ -1,15 +1,22 @@
 "use client";
-
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface BrowserFrameProps {
   imageSrc: string;
   altText: string;
+  browserUrl: string;
 }
 
-export function BrowserFrame({ imageSrc, altText }: BrowserFrameProps) {
+export function BrowserFrame({ imageSrc, altText, browserUrl }: BrowserFrameProps) {
   return (
-    <div
+    <motion.div
+      whileHover={{
+        scale: 1.01,
+      }}
+      transition={{
+        duration: 0.3,
+      }}
       className="
         relative
         mx-auto
@@ -70,7 +77,7 @@ export function BrowserFrame({ imageSrc, altText }: BrowserFrameProps) {
             shadow-inner
           "
         >
-          github.com/m-taaha/nitpick
+          {browserUrl}
         </div>
 
         {/* Right Icons */}
@@ -129,6 +136,6 @@ export function BrowserFrame({ imageSrc, altText }: BrowserFrameProps) {
           to-transparent
         "
       />
-    </div>
+    </motion.div>
   );
 }
