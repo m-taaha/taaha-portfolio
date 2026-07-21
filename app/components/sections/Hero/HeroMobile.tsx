@@ -1,3 +1,4 @@
+import { FadeUp, ScaleIn } from "@/app/components/motion";
 import { Section } from "@/app/components/ui/Section";
 
 import { HeroContent } from "./HeroContent";
@@ -10,11 +11,15 @@ export function HeroMobile() {
       <div className="space-y-10">
         <HeroContent />
 
-        <HeroOverview />
+        <FadeUp>
+          <HeroOverview />
+        </FadeUp>
 
-        <div className="flex justify-center">
-          <ProfileCard />
-        </div>
+        <ScaleIn>
+          <div className="flex justify-center">
+            <ProfileCard />
+          </div>
+        </ScaleIn>
       </div>
     </Section>
   );

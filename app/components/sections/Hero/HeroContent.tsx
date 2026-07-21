@@ -1,6 +1,6 @@
-"use client";
 
-import { motion, type Variants } from "framer-motion";
+
+import { FadeUp, Stagger } from "@/app/components/motion";
 
 import { person } from "@/app/config/person";
 
@@ -10,38 +10,12 @@ import { HeroActions } from "./HeroActions";
 import { HeroOverview } from "./HeroOverview";
 import { HeroStatus } from "./HeroStatus";
 
-const containerVariants: Variants = {
-  hidden: {},
 
-  visible: {
-    transition: {
-      staggerChildren: 0.18,
-    },
-  },
-};
 
-const itemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
 
 export function HeroContent() {
   return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
+    <Stagger
       className="
     flex
     flex-col
@@ -52,11 +26,11 @@ export function HeroContent() {
     lg:items-start
   "
     >
-      <motion.div variants={itemVariants}>
+      <FadeUp>
         <HeroStatus />
-      </motion.div>
+      </FadeUp>
 
-      <motion.div variants={itemVariants}>
+      <FadeUp>
         <Heading
           className="
     max-w-xl
@@ -68,9 +42,9 @@ export function HeroContent() {
         >
           {person.heroHeadline}
         </Heading>
-      </motion.div>
+      </FadeUp>
 
-      <motion.div variants={itemVariants}>
+      <FadeUp>
         <Text
           className="
     max-w-md
@@ -81,15 +55,15 @@ export function HeroContent() {
         >
           {person.shortBio}
         </Text>
-      </motion.div>
+      </FadeUp>
 
-      <motion.div variants={itemVariants}>
+      <FadeUp>
         <HeroActions />
-      </motion.div>
+      </FadeUp>
 
-      <motion.div variants={itemVariants} className="hidden lg:block">
+      <FadeUp className="hidden lg:block">
         <HeroOverview />
-      </motion.div>
-    </motion.div>
+      </FadeUp>
+    </Stagger>
   );
 }

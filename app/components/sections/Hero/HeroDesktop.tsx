@@ -1,3 +1,4 @@
+import { ScaleIn } from "@/app/components/motion";
 import { Section } from "@/app/components/ui/Section";
 import { HeroContent } from "./HeroContent";
 import { HeroVisual } from "./HeroVisual";
@@ -10,7 +11,9 @@ export function HeroDesktop() {
         <HeroContent />
 
         {/* Desktop */}
-        <HeroVisual />
+        <ScaleIn>
+          <HeroVisual />
+        </ScaleIn>
 
         {/* Mobile */}
         <div className="flex justify-center lg:hidden">
