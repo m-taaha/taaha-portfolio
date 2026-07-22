@@ -1,11 +1,12 @@
 import { Container } from "@/app/components/ui/Container";
+import { Section } from "@/app/components/ui/Section";
 import { SectionHeading } from "@/app/components/ui/SecionHeading";
 
 import { ExperienceTimeline } from "./ExperienceTimeline";
 
 export function Experience() {
   return (
-    <section id="journey" className="py-32">
+    <Section id="journey" className="py-32">
       <Container>
         <SectionHeading
           eyebrow="Journey"
@@ -16,10 +17,10 @@ export function Experience() {
           "
         />
 
-        <div className="mt-24">
+        <div className="mt-20 lg:mt-24">
           <ExperienceTimeline />
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

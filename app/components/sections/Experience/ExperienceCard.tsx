@@ -104,10 +104,11 @@ export function ExperienceCard({ experience, active, onClick, index }: Props) {
 
       <h3
         className="
-          mt-2
-          text-lg
-          font-semibold
-        "
+mt-2
+text-base
+lg:text-lg
+font-semibold
+"
       >
         {experience.title}
       </h3>

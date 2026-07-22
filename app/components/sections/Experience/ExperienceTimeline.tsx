@@ -38,7 +38,7 @@ export function ExperienceTimeline() {
             }}
           />
 
-          <div className="relative grid grid-cols-7">
+          <div className="relative grid grid-cols-7 gap-2">
             {experiences.map((experience, index) => (
               <ExperienceCard
                 key={experience.title}
@@ -79,11 +79,13 @@ export function ExperienceTimeline() {
               ease: [0.16, 1, 0.3, 1],
             }}
             className="
-             rounded-3xl
-             border
-             border-border-subtle
-             bg-surface-primary
-             p-10
+rounded-3xl
+border
+border-border-subtle
+bg-surface-primary
+p-6
+sm:p-8
+lg:p-10
              transition-shadow
              duration-300
              hover:shadow-[0_18px_45px_rgba(209,139,53,.08)]
@@ -99,7 +101,7 @@ export function ExperienceTimeline() {
             </motion.p>
 
             <motion.h3
-              className="mt-3 text-4xl font-semibold"
+              className="mt-3 text-3xl sm:text-4xl font-semibold"
               initial={{
                 opacity: 0,
                 y: 12,
@@ -125,7 +127,15 @@ export function ExperienceTimeline() {
             </motion.p>
 
             <motion.p
-              className="mt-8 max-w-3xl leading-8 text-text-secondary"
+              className="
+mt-8
+max-w-3xl
+text-base
+leading-7
+text-text-secondary
+lg:text-lg
+lg:leading-8
+"
               initial={{
                 opacity: 0,
               }}
@@ -155,14 +165,16 @@ export function ExperienceTimeline() {
                     delay: 0.25 + index * 0.06,
                   }}
                   className="
-                    rounded-full
-                    border
-                    border-brand-primary/25
-                    bg-brand-primary/10
-                    px-4
-                    py-2
-                    text-sm
-                  "
+rounded-full
+border
+border-brand-primary/25
+bg-brand-primary/10
+px-3
+py-1.5
+sm:px-4
+sm:py-2
+text-sm
+"
                 >
                   {tech}
                 </motion.span>
@@ -182,7 +194,9 @@ export function ExperienceTimeline() {
                 delay: 0.45,
               }}
               className="
-                mt-12
+mt-8
+lg:mt-12
+rounded-2xl
                 rounded-2xl
                 border
                 border-brand-primary/20
