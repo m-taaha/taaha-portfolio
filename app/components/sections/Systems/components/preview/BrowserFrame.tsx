@@ -69,9 +69,11 @@ export function BrowserFrame({ imageSrc, altText, browserUrl }: BrowserFrameProp
             border
             border-white/5
             bg-[#111317]
-            px-7
             py-1.5
-            text-[11px]
+            px-3
+sm:px-7
+text-[10px]
+sm:text-[11px]
             tracking-wide
             text-white/35
             shadow-inner

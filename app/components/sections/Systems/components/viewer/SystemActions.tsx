@@ -16,7 +16,14 @@ interface SystemActionsProps {
 
 export function SystemActions({ system }: SystemActionsProps) {
   return (
-    <div className="flex items-center justify-between pt-2">
+    <div
+      className="flex
+flex-col
+gap-6
+sm:flex-row
+sm:items-center
+sm:justify-between"
+    >
       <div className="flex gap-3">
         <SystemLink href={system.github} icon={<FiGithub />}>
           GitHub

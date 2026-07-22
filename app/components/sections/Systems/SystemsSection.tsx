@@ -1,20 +1,19 @@
-import { SystemsGrid } from "./SystemsGrid";
+import { Section } from "@/app/components/ui/Section";
 import { SectionHeading } from "../../ui/SecionHeading";
+import { SystemsGrid } from "./SystemsGrid";
 
 export function SystemsSection() {
   return (
-    <section id="systems" className="mx-auto max-w-7xl px-6 py-32">
+    <Section id="systems">
       <SectionHeading
         eyebrow="Engineering Systems"
         title="Systems I've Designed"
-        description="
-Each system represents a real engineering challenge—from scalable backend architecture to AI-powered developer tools and interactive learning platforms.
-"
+        description="Each system represents a real engineering challenge—from scalable backend architecture to AI-powered developer tools and interactive learning platforms."
       />
 
-      <div className="mt-24">
+      <div className="mt-20 lg:mt-24">
         <SystemsGrid />
       </div>
-    </section>
+    </Section>
   );
 }

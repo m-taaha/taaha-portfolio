@@ -26,7 +26,7 @@ export function SystemViewer({ system }: Props) {
         duration: 0.25,
       }}
       className="
-    mt-12
+    mt-8 lg:mt-12
     overflow-hidden
     rounded-[32px]
     border
@@ -38,10 +38,10 @@ export function SystemViewer({ system }: Props) {
     hover:shadow-[0_24px_60px_rgba(209,139,53,.10)]
   "
     >
-      <div className="grid lg:grid-cols-[540px_1fr]">
+      <div className="grid xl:grid-cols-[540px_1fr]">
         {/* LEFT */}
 
-        <div className="p-12">
+        <div className="p-6 sm:p-8 lg:p-10 xl:p-12">
           <SystemHeader
             category={system.category}
             name={system.name}

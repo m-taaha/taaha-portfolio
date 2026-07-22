@@ -27,8 +27,11 @@ export function SystemSelector({ activeId, onSelect }: Props) {
               rounded-full
               border
               border-border-subtle
-              px-6
-              py-3
+             px-4
+sm:px-6
+
+py-2.5
+sm:py-3
               text-sm
               transition-all
               duration-300
