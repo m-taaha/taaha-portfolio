@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FadeUp, Stagger } from "@/app/components/motion";
 import Link from "next/link";
 
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
@@ -15,26 +16,17 @@ const icons = {
 
 export function FooterLinks() {
   return (
-    <div className="flex flex-col items-start gap-6 lg:pt-1">
+    <Stagger
+      className="
+    flex
+    flex-col
+    items-start
+    gap-6
+    lg:pt-1
+  "
+    >
       {contact.links.map((link, index) => (
-        <motion.div
-          key={link.label}
-          initial={{
-            opacity: 0,
-            x: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            x: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            delay: index * 0.08,
-            duration: 0.4,
-          }}
-        >
+       <FadeUp key={link.label}>
           <Link
             href={link.href}
             target={
@@ -100,8 +92,8 @@ export function FooterLinks() {
     "
             />
           </Link>
-        </motion.div>
+        </FadeUp>
       ))}
-    </div>
+    </Stagger>
   );
 }
