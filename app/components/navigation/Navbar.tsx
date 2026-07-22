@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
 import { Container } from "../ui/Container";
 
 import { MobileMenu } from "./MobileMenu";
@@ -6,8 +11,52 @@ import { NavLinks } from "./NavLinks";
 import { ResumeButton } from "./ResumeButton";
 
 export function Navbar() {
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    let previousScroll = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      // Always show near the top
+      if (currentScroll < 40) {
+        setVisible(true);
+        previousScroll = currentScroll;
+        return;
+      }
+
+      // Ignore tiny scrolls
+      if (Math.abs(currentScroll - previousScroll) < 8) return;
+
+      if (currentScroll > previousScroll) {
+        // scrolling down
+        setVisible(false);
+      } else {
+        // scrolling up
+        setVisible(true);
+      }
+
+      previousScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header
+    <motion.header
+      initial={{
+        y: 0,
+      }}
+      animate={{
+        y: visible ? 0 : -100,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: [0.22, 1, 0.36, 1],
+      }}
       className="
         sticky
         top-0
@@ -35,6 +84,6 @@ export function Navbar() {
           </div>
         </div>
       </Container>
-    </header>
+    </motion.header>
   );
 }
