@@ -22,15 +22,20 @@ export function MobileMenu() {
         }}
         onClick={() => setOpen(true)}
         className="
-    flex
-    h-11
-    w-11
-    items-center
-    justify-center
-    rounded-xl
-    border
-    border-border-subtle
-  "
+flex
+h-11
+w-11
+items-center
+justify-center
+rounded-xl
+border
+border-border-subtle
+transition-all
+duration-300
+hover:border-brand-primary/40
+hover:bg-brand-primary/5
+hover:shadow-[0_0_18px_rgba(209,139,53,.12)]
+"
       >
         <Menu className="h-5 w-5" />
       </motion.button>
@@ -90,15 +95,19 @@ export function MobileMenu() {
                   }}
                   onClick={() => setOpen(false)}
                   className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-border-subtle
-                  "
+flex
+h-10
+w-10
+items-center
+justify-center
+rounded-xl
+border
+border-border-subtle
+transition-all
+duration-300
+hover:border-brand-primary/40
+hover:bg-brand-primary/5
+"
                 >
                   <X className="h-5 w-5" />
                 </motion.button>
@@ -139,7 +148,14 @@ export function MobileMenu() {
                   </motion.div>
                 ))}
 
-                <div className="mt-4 border-t border-border-subtle pt-6">
+                <motion.div
+                  whileHover={{
+                    scale: 1.02,
+                  }}
+                  whileTap={{
+                    scale: 0.98,
+                  }}
+                >
                   <Link
                     href="/resume.pdf"
                     target="_blank"
@@ -163,7 +179,7 @@ export function MobileMenu() {
                   >
                     Resume
                   </Link>
-                </div>
+                </motion.div>
               </nav>
             </motion.div>
           </>
