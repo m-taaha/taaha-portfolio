@@ -68,7 +68,6 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: site.name,
-
     images: [
       {
         url: "/og-image.png",
@@ -81,15 +80,15 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+    creator: "@_mohammadTaaha", 
     title,
     description,
-    creator: "@_mohammadTaaha",
     images: ["/og-image.png"],
   },
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+//   icons: {
+//     icon: "/favicon.ico",
+//     shortcut: "/favicon.ico",
+//     apple: "/apple-touch-icon.png",
+//   },
 };
