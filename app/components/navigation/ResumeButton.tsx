@@ -27,6 +27,13 @@ export function ResumeButton() {
           justify-center
           overflow-hidden
           rounded-full
+
+          focus-visible:outline-none
+focus-visible:ring-2
+focus-visible:ring-brand-primary
+focus-visible:ring-offset-2
+focus-visible:ring-offset-bg-primary
+
           border
           border-border-subtle
           bg-surface-primary

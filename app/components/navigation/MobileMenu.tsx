@@ -13,6 +13,7 @@ export function MobileMenu() {
   return (
     <>
       <motion.button
+        aria-label="Open navigation menu"
         whileHover={{
           scale: 1.05,
           rotate: 8,
@@ -22,20 +23,27 @@ export function MobileMenu() {
         }}
         onClick={() => setOpen(true)}
         className="
-flex
-h-11
-w-11
-items-center
-justify-center
-rounded-xl
-border
-border-border-subtle
-transition-all
-duration-300
-hover:border-brand-primary/40
-hover:bg-brand-primary/5
-hover:shadow-[0_0_18px_rgba(209,139,53,.12)]
-"
+    flex
+    h-11
+    w-11
+    items-center
+    justify-center
+    rounded-xl
+
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-brand-primary
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-bg-primary
+
+    border
+    border-border-subtle
+    transition-all
+    duration-300
+    hover:border-brand-primary/40
+    hover:bg-brand-primary/5
+    hover:shadow-[0_0_18px_rgba(209,139,53,.12)]
+  "
       >
         <Menu className="h-5 w-5" />
       </motion.button>
@@ -86,6 +94,7 @@ hover:shadow-[0_0_18px_rgba(209,139,53,.12)]
                 <h3 className="text-lg font-semibold">Navigation</h3>
 
                 <motion.button
+                  aria-label="Close navigation menu"
                   whileHover={{
                     rotate: 90,
                     scale: 1.05,
@@ -95,19 +104,26 @@ hover:shadow-[0_0_18px_rgba(209,139,53,.12)]
                   }}
                   onClick={() => setOpen(false)}
                   className="
-flex
-h-10
-w-10
-items-center
-justify-center
-rounded-xl
-border
-border-border-subtle
-transition-all
-duration-300
-hover:border-brand-primary/40
-hover:bg-brand-primary/5
-"
+    flex
+    h-10
+    w-10
+    items-center
+    justify-center
+    rounded-xl
+
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-brand-primary
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-bg-primary
+
+    border
+    border-border-subtle
+    transition-all
+    duration-300
+    hover:border-brand-primary/40
+    hover:bg-brand-primary/5
+  "
                 >
                   <X className="h-5 w-5" />
                 </motion.button>
@@ -159,6 +175,7 @@ hover:bg-brand-primary/5
                   <Link
                     href="/resume.pdf"
                     target="_blank"
+                    aria-label="Open resume in a new tab"
                     className="
   inline-flex
   items-center

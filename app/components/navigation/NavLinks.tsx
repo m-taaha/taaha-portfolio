@@ -10,7 +10,7 @@ export function NavLinks() {
   const activeSection = useActiveSection();
 
   return (
-    <nav>
+    <nav aria-label="Primary navigation">
       <ul className="flex items-center gap-10">
         {navigation.map((item) => {
           const isActive = activeSection === item.href.replace("#", "");
@@ -20,18 +20,27 @@ export function NavLinks() {
               <Link
                 href={item.href}
                 className={`
-                  group
-                  relative
-                  pb-2
-                  text-sm
-                  transition-colors
-                  duration-300
-                  ${
-                    isActive
-                      ? "text-text-primary"
-                      : "text-text-secondary hover:text-text-primary"
-                  }
-                `}
+group
+relative
+rounded-md
+px-2
+py-2
+  text-sm
+  transition-colors
+  duration-300
+
+  focus-visible:outline-none
+  focus-visible:ring-2
+  focus-visible:ring-brand-primary
+  focus-visible:ring-offset-2
+  focus-visible:ring-offset-bg-primary
+
+  ${
+    isActive
+      ? "text-text-primary"
+      : "text-text-secondary hover:text-text-primary"
+  }
+`}
               >
                 <motion.span
                   animate={{

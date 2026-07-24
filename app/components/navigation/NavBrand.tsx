@@ -6,14 +6,21 @@ export function NavBrand() {
     <Link
       href="/"
       className="
-        group
-        text-lg
-        font-semibold
-        tracking-tight
-        transition-colors
-        duration-300
-        hover:text-brand-primary
-      "
+  group
+  text-lg
+  font-semibold
+  tracking-tight
+  transition-colors
+  duration-300
+  hover:text-brand-primary
+
+  focus-visible:outline-none
+  focus-visible:ring-2
+  focus-visible:ring-brand-primary
+  focus-visible:ring-offset-2
+  focus-visible:ring-offset-bg-primary
+  rounded-md
+"
     >
       <span
         className="

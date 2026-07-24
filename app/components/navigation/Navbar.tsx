@@ -63,7 +63,7 @@ export function Navbar() {
         z-50
         border-b
         border-border-subtle
-        bg-background/80
+        bg-background/90
         backdrop-blur-xl
       "
     >
