@@ -18,7 +18,8 @@ export function SkillCategory({ category }: SkillCategoryProps) {
         border
         border-border-subtle
         bg-surface-primary
-        p-8
+       p-6
+sm:p-8
         transition-all
         duration-500
         hover:-translate-y-1.5
@@ -66,7 +67,7 @@ export function SkillCategory({ category }: SkillCategoryProps) {
         "
       />
 
-      <div className="relative space-y-8">
+      <div className="relative space-y-6">
         <div>
           <motion.h3
             whileHover={{
@@ -76,7 +77,8 @@ export function SkillCategory({ category }: SkillCategoryProps) {
               duration: 0.25,
             }}
             className="
- text-2xl
+text-xl
+sm:text-2xl
 lg:text-3xl
     font-bold
     tracking-tight
@@ -91,7 +93,7 @@ lg:text-3xl
           <p
             className="
               mt-4
-              max-w-[34ch]
+              max-w-[36ch]
               leading-7
               text-text-secondary
             "
@@ -100,7 +102,9 @@ lg:text-3xl
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div
+          className="flex flex-wrap gap-2.5 sm:gap-3"
+        >
           {category.technologies.map((technology) => (
             <SkillChip key={technology} technology={technology} />
           ))}

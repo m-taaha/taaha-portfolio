@@ -1,13 +1,12 @@
+import { Section } from "@/app/components/ui/Section";
 import { Container } from "@/app/components/ui/Container";
 import { SectionHeading } from "@/app/components/ui/SecionHeading";
 import { SkillsGrid } from "./SkilllsGrid";
 import { TechGraph } from "./TechGraph/TechGraph";
 
-
-
 export function Skills() {
   return (
-    <section id="skills" className="py-32">
+    <Section id="skills" className="py-32">
       <Container>
         <SectionHeading
           eyebrow="Capabilities"
@@ -18,7 +17,7 @@ export function Skills() {
         <div className="mt-20">
           <SkillsGrid />
         </div>
-        <div className="mt-28">
+        <div className="mt-20 lg:mt-28">
           <div className="max-w-2xl">
             <p
               className="
@@ -33,20 +32,24 @@ export function Skills() {
 
             <h3
               className="
-        mt-3
-        text-3xl
-        font-semibold
-      "
+mt-3
+text-2xl
+sm:text-3xl
+font-semibold
+tracking-tight
+"
             >
               How Everything Connects
             </h3>
 
             <p
               className="
-        mt-4
-        leading-7
-        text-text-secondary
-      "
+mt-4
+text-base
+leading-7
+text-text-secondary
+lg:text-lg
+"
             >
               Technologies don't exist in isolation. This graph represents how
               the tools I use connect together to build complete software
@@ -60,6 +63,6 @@ export function Skills() {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

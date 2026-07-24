@@ -6,9 +6,11 @@ export function SkillsGrid() {
   return (
     <Stagger
       className="
-    grid
-    gap-8
-    lg:grid-cols-3
+  grid
+gap-6
+md:grid-cols-2
+xl:grid-cols-3
+lg:gap-8
   "
     >
       {skills.map((category) => (
