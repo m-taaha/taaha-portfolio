@@ -26,7 +26,7 @@ export function FooterLinks() {
   "
     >
       {contact.links.map((link, index) => (
-       <FadeUp key={link.label}>
+        <FadeUp key={link.label}>
           <Link
             href={link.href}
             target={
@@ -44,9 +44,11 @@ export function FooterLinks() {
     relative
     inline-flex
     items-center
-    gap-3
+   gap-2.5
+sm:gap-3
     pb-1
-    text-lg
+text-base
+sm:text-lg 
     text-text-secondary
     transition-all
     duration-300
@@ -54,7 +56,7 @@ export function FooterLinks() {
     hover:text-brand-primary
   "
           >
-            <span className="text-base text-white/70">
+            <span className="text-sm sm:text-base text-white/70">
               {icons[link.label as keyof typeof icons]}
             </span>
 

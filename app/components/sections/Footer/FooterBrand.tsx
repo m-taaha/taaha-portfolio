@@ -19,9 +19,19 @@ export function FooterBrand() {
         {person.name}
       </motion.h3>
 
-      <p className="text-text-secondary">{person.title}</p>
+      <p className="text-base text-text-secondary">{person.title}</p>
 
-      <p className="max-w-sm text-text-muted">{footer.tagline}</p>
+      <p
+        className="
+    max-w-sm
+    text-sm
+    leading-7
+    text-text-muted
+    sm:text-base
+  "
+      >
+        {footer.tagline}
+      </p>
     </FadeUp>
   );
 }
