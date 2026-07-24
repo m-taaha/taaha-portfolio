@@ -114,7 +114,8 @@ sm:text-[11px]
           src={imageSrc}
           alt={altText}
           fill
-          priority
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 860px"
           className="
             object-cover
             object-top

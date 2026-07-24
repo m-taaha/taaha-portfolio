@@ -53,16 +53,18 @@ export function ProfileCard() {
           <Image
             src={person.avatar!}
             alt={person.name}
-            width={150}
-            height={150}
+            width={170}
+            height={170}
+            priority
+            sizes="170px"
             className="
-      rounded-full
-      object-cover
-      ring
-      ring-border-default
-      sm:w-[170px]
-      sm:h-[170px]
-    "
+    rounded-full
+    object-cover
+    ring
+    ring-border-default
+    sm:w-[170px]
+    sm:h-[170px]
+  "
           />
         </motion.div>
 
