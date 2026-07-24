@@ -26,7 +26,7 @@ export interface Site {
 export const site: Site = {
   name: "taaha.dev",
   locale: "en-IN",
-  url: "https://taaha.dev",
+  url: "https://taaha-portfolio-three.vercel.app",
   defaultTheme: "dark",
   copyright: `© ${new Date().getFullYear()} Mohammad Taaha Ashraf. All rights reserved.`,
 };
