@@ -40,7 +40,7 @@ real problems.`,
   shortBio:
     "I build full-stack applications and AI-powered developer tools with a focus on clean architecture, scalable systems, and maintainable software. Every project is an opportunity to solve real problems through thoughtful engineering.",
 
-  avatar: "/images/profile-v2.png",
+  avatar: "/images/profilee-v2.png",
 
   status: "Available for Software Engineering Internships",
 
