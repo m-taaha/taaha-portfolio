@@ -48,7 +48,7 @@ real problems.`,
 
   linkedin: "https://linkedin.com/in/mohammad-taaha-ashraf",
 
-  resumeUrl: "/resume_updated.pdf",
+  resumeUrl: "/resume.pdf",
 
   location: "New Delhi, India",
 };
