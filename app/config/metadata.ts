@@ -6,7 +6,7 @@ import { person } from "./person";
 const title = `${person.name} • Software Engineer & AI Engineer`;
 
 const description =
-  "Portfolio of Mohammad Taaha Ashraf — Software Engineer and AI Engineer building scalable backend systems, AI-powered applications, and modern web experiences.";
+  "Portfolio of Mohammad Taaha Ashraf - Software Engineer and AI Engineer building scalable backend systems, AI-powered applications, and modern web experiences.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

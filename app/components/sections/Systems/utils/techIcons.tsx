@@ -4,6 +4,7 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiPython,
+  SiFastapi,
   SiPostgresql,
   SiTailwindcss,
   SiFramer,
@@ -14,10 +15,14 @@ import {
   SiMysql,
   SiGithub,
   SiGit,
+  SiCelery,
+  SiPydantic,
+  SiSqlalchemy,
 } from "react-icons/si";
 
-import { TbBrandCpp, TbStack2 } from "react-icons/tb";
+import { TbBrandCpp } from "react-icons/tb";
 import { FaEthereum } from "react-icons/fa";
+
 
 export const techIcons: Record<string, { icon: React.ReactNode; color: string }> = {
   "Next.js": {
@@ -104,8 +109,23 @@ export const techIcons: Record<string, { icon: React.ReactNode; color: string }>
     color: "text-white",
   },
 
-  BullMQ: {
-    icon: <TbStack2 />,
-    color: "text-brand-primary",
+  FastAPI: {
+    icon: <SiFastapi />,
+    color: "text-teal-400",
+  },
+
+  Celery: {
+    icon: <SiCelery />,
+    color: "text-green-400",
+  },
+
+  Pydantic: {
+    icon: <SiPydantic />,
+    color: "text-red-400",
+  },
+
+  SQLAlchemy: {
+    icon: <SiSqlalchemy />,
+    color: "text-orange-400",
   },
 };

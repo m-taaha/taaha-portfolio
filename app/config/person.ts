@@ -44,7 +44,7 @@ real problems.`,
 
   status: "Available for Software Engineering Internships",
 
-  skills: ["Next.js", "TypeScript", "Node.js", "Python", "C++", "AI"] as const,
+  skills: ["Python", "FastAPI", "TypeScript", "Next.js", "Node.js", "AI"] as const,
 
   linkedin: "https://linkedin.com/in/mohammad-taaha-ashraf",
 

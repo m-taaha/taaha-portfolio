@@ -27,7 +27,6 @@ export interface BlueprintData {
 export const architectures: Record<string, BlueprintData> = {
   nitpick: {
     id: "nitpick",
-
     title: "NitPick",
     subtitle: "AI Code Review Platform",
     status: "Building",
@@ -36,49 +35,67 @@ export const architectures: Record<string, BlueprintData> = {
       {
         id: "github",
         label: "GitHub",
-        x: 140,
+        x: 125,
         y: 260,
         type: "service",
       },
 
       {
-        id: "webhook",
-        label: "Webhook",
-        x: 360,
+        id: "fastapi",
+        label: "FastAPI",
+        x: 350,
         y: 260,
         type: "server",
       },
 
       {
-        id: "queue",
-        label: "BullMQ",
-        x: 580,
-        y: 260,
+        id: "postgres",
+        label: "PostgreSQL",
+        x: 520,
+        y: 120,
+        type: "database",
+      },
+
+      {
+        id: "celery",
+        label: "Celery",
+        x: 520,
+        y: 380,
         type: "queue",
       },
 
       {
         id: "redis",
         label: "Redis",
-        x: 500,
-        y: 430,
+        x: 720,
+        y: 380,
         type: "database",
+      },
+
+      {
+        id: "worker",
+        label: "Python Worker",
+        x: 720,
+        y: 550,
+        type: "server",
       },
 
       {
         id: "gemini",
         label: "Gemini",
-        x: 820,
-        y: 260,
+        x: 720,
+        y: 700,
         type: "service",
       },
     ],
 
     connections: [
-      { from: "github", to: "webhook" },
-      { from: "webhook", to: "queue" },
-      { from: "queue", to: "redis" },
-      { from: "queue", to: "gemini" },
+      { from: "github", to: "fastapi" },
+      { from: "fastapi", to: "postgres" },
+      { from: "fastapi", to: "celery" },
+      { from: "celery", to: "redis" },
+      { from: "redis", to: "worker" },
+      { from: "worker", to: "gemini" },
     ],
   },
 

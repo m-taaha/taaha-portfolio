@@ -33,54 +33,56 @@ export interface System {
 export const systems: readonly System[] = [
   {
     id: "nitpick",
-
     name: "NitPick",
-
     category: "AI Code Review Platform",
 
     overview:
-      "An AI-assisted developer platform that automates pull request analysis and intelligent code reviews.",
+      "An AI-powered developer platform that analyzes code and GitHub pull requests and turns them into structured code-review findings.",
 
     problem:
-      "Manual code reviews consume engineering time and often miss repetitive quality issues across large pull requests.",
+      "Manual code reviews consume engineering time and can miss bugs, security risks, and logic issues across large pull requests.",
 
     solution:
-      "Built an AI-powered review pipeline that processes GitHub pull requests through webhook events, background workers, Redis queues, and Gemini-powered analysis.",
+      "Built an asynchronous review pipeline that routes code and pull-request diffs through FastAPI, Celery, Redis, and Gemini, validates structured findings, and stores review results for delivery to developers.",
 
     architecture: [
       "Next.js Frontend",
-      "Node.js API",
-      "BullMQ Workers",
-      "Redis Queue",
-      "Gemini Integration",
+      "FastAPI API",
+      "PostgreSQL",
+      "Redis + Celery",
+      "Python Worker",
+      "Gemini",
     ],
 
     highlights: [
       "AI Code Reviews",
       "GitHub Webhooks",
       "Background Jobs",
-      "Queue Processing",
+      "Structured Output",
+      "AI Validation",
       "LLM Integration",
     ],
 
     technologies: [
       "Next.js",
-      "Node.js",
-      "TypeScript",
-      "BullMQ",
+      "Python",
+      "FastAPI",
+      "Celery",
       "Redis",
+      "PostgreSQL",
       "Gemini",
+      "Pydantic",
     ],
 
     image: "/images/projects/nitpick/cover.png",
 
-    github: "https://github.com/m-taaha/nitpick",
+    github:
+      "[https://github.com/m-taaha/nitpick](https://github.com/m-taaha/nitpick)",
 
     browserUrl: "github.com/m-taaha/nitpick",
 
     featured: true,
   },
-
   {
     id: "kidsportal",
 

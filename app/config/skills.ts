@@ -22,17 +22,15 @@ export const skills: readonly SkillCategory[] = [
 
   {
     title: "Engineer Systems",
-
     description:
-      "Designing backend systems, APIs, databases, and application architecture with scalability and maintainability in mind.",
-
+      "Designing backend systems, APIs, databases, asynchronous workflows, and application architecture with scalability and maintainability in mind.",
     technologies: [
+      "FastAPI",
       "Node.js",
       "Express",
-      "FastAPI",
       "PostgreSQL",
-      "MongoDB",
       "Redis",
+      "Celery",
     ],
   },
 
@@ -40,8 +38,15 @@ export const skills: readonly SkillCategory[] = [
     title: "Ship AI Products",
 
     description:
-      "Building AI-powered workflows using orchestration, automation, queues, and modern language models.",
+      "Building AI-powered workflows with language models, asynchronous processing, structured output validation, and developer-tool integrations.",
 
-    technologies: ["Gemini", "Python", "GitHub API", "BullMQ", "Git"],
+    technologies: [
+      "Gemini",
+      "Python",
+      "FastAPI",
+      "Celery",
+      "Pydantic",
+      "GitHub API",
+    ],
   },
 ] as const;

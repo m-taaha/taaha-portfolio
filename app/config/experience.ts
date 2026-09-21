@@ -51,7 +51,7 @@ export const experiences: readonly ExperienceItem[] = [
       title: "First Complete UI",
       subtitle: "React Project",
       lesson:
-        "Good interfaces aren't about beautiful components—they're about reducing friction for users.",
+        "Good interfaces aren't about beautiful components-they're about reducing friction for users.",
     },
   },
 
@@ -115,25 +115,28 @@ export const experiences: readonly ExperienceItem[] = [
     },
   },
 
-  {
-    year: "2026",
+{
+  year: "2026",
+  title: "AI Systems",
+  organization: "Building Intelligent Products",
+  description:
+    "Instead of using AI as a feature, I started designing systems around it. NitPick taught me how asynchronous processing, queues, validation, GitHub integrations, and LLMs work together to solve real engineering problems.",
 
-    title: "AI Systems",
+  technologies: [
+    "Python",
+    "FastAPI",
+    "Celery",
+    "Redis",
+    "Gemini",
+  ],
 
-    organization: "Building Intelligent Products",
-
-    description:
-      "Instead of using AI as a feature, I started designing systems around it. NitPick taught me how orchestration, automation, queues, and LLMs work together to solve real engineering problems.",
-
-    technologies: ["Gemini", "BullMQ", "Redis", "GitHub Webhooks", "Next.js"],
-
-    artifact: {
-      title: "NitPick",
-      subtitle: "AI Code Review Platform",
-      lesson:
-        "LLMs become significantly more valuable when combined with reliable orchestration, queues, and automation.",
-    },
+  artifact: {
+    title: "NitPick",
+    subtitle: "AI Code Review Platform",
+    lesson:
+      "LLMs become significantly more valuable when surrounded by reliable systems for orchestration, validation, and delivery.",
   },
+},
 
   {
     year: "Today",
@@ -143,7 +146,7 @@ export const experiences: readonly ExperienceItem[] = [
     organization: "Current Focus",
 
     description:
-      "Today my focus is designing production-ready software, AI-powered developer tools, and scalable systems where architecture matters more than frameworks.",
+      "Today my focus is designing production-ready software, AI-powered   developer tools, and scalable systems where architecture matters more than frameworks.",
 
     technologies: [
       "Architecture",

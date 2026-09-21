@@ -12,15 +12,10 @@ export interface CurrentFocus {
 
 export const currentFocus: CurrentFocus = {
   title: "Current Focus",
-
   subtitle: "NitPick",
-
   description:
-    "Building an AI-powered code review platform that helps engineering teams review pull requests faster through intelligent automation.",
-
+    "Building an AI-powered code review platform that analyzes code and GitHub pull requests through an asynchronous review pipeline powered by FastAPI, Celery, Redis, and Gemini.",
   stage: "Building MVP",
-
-  focus: "Developer Tools",
-
-  technologies: ["Next.js", "Gemini", "Redis"],
+  focus: "AI Developer Tools",
+  technologies: ["FastAPI", "Celery", "Redis", "Gemini", "PostgreSQL"],
 } as const;

@@ -11,7 +11,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Capabilities"
           title="How I Build Software"
-          description="The engineering domains I work across—from polished user interfaces to distributed backend systems and AI-powered products."
+          description="The engineering domains I work across-from polished user interfaces to distributed backend systems and AI-powered products."
         />
 
         <div className="mt-20">
@@ -53,7 +53,7 @@ lg:text-lg
             >
               Technologies don't exist in isolation. This graph represents how
               the tools I use connect together to build complete software
-              systems—from frontend experiences to scalable backend services and
+              systems-from frontend experiences to scalable backend services and
               AI-powered products.
             </p>
           </div>

@@ -12,7 +12,7 @@ export function Experience() {
           eyebrow="Journey"
           title="How My Thinking Changed"
           description="
-            Every stage represents a shift in how I approach software—
+            Every stage represents a shift in how I approach software -
             from writing code to designing complete systems.
           "
         />
