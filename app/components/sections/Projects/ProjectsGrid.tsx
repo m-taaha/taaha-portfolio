@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, Code2 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -96,14 +97,17 @@ export function ProjectsGrid() {
                   )}
                 </ul>
 
-                <div className="mt-6 flex gap-3 border-t border-border-subtle pt-5">
+                <div className="mt-6 flex flex-wrap gap-3 border-t border-border-subtle pt-5">
+                  <Link href={`/projects/${project.id}`} className="inline-flex items-center gap-2 rounded-lg bg-brand-primary px-3 py-2 text-sm font-semibold text-brand-foreground transition hover:-translate-y-0.5 hover:bg-brand-soft">
+                    Case study <ArrowUpRight className="h-4 w-4" />
+                  </Link>
                   {repo && (
                     <a href={repo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-border-default px-3 py-2 text-sm text-text-secondary transition hover:border-brand-primary/40 hover:text-text-primary">
                       <Code2 className="h-4 w-4" /> Source
                     </a>
                   )}
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-brand-primary px-3 py-2 text-sm font-medium text-brand-foreground transition hover:bg-brand-soft">
+                    <a href={project.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-border-default px-3 py-2 text-sm font-medium text-text-secondary transition hover:border-brand-primary/40 hover:text-text-primary">
                       Live preview <ArrowUpRight className="h-4 w-4" />
                     </a>
                   )}
