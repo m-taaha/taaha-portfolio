@@ -6,10 +6,9 @@ export function ContactCard() {
     <ScaleIn>
       <article
         className="
-        rounded-3xl
-        border
-        border-border-subtle
-        bg-surface-primary
+        os-panel
+        os-panel-interactive
+        rounded-[1.75rem]
         p-8
       "
       >

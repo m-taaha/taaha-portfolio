@@ -14,7 +14,7 @@ export function Skills() {
           description="The engineering domains I work across-from polished user interfaces to distributed backend systems and AI-powered products."
         />
 
-        <div className="mt-20">
+        <div className="mt-14 sm:mt-16 lg:mt-20">
           <SkillsGrid />
         </div>
         <div className="mt-20 lg:mt-28">

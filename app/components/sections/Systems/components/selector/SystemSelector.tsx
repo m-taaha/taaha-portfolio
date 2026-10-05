@@ -21,6 +21,8 @@ export function SystemSelector({ activeId, onSelect }: Props) {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.96 }}
             onClick={() => onSelect(system.id)}
+            aria-pressed={active}
+            type="button"
             className={`
               relative
               overflow-hidden

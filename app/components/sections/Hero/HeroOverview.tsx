@@ -13,18 +13,17 @@ export function HeroOverview() {
         duration: 0.25,
       }}
       className="
-        mt-10
-       rounded-3xl
-border
-border-border-subtle
-bg-surface-primary
+       os-panel
+        os-panel-interactive
+        rounded-[1.75rem]
 p-6
-transition-all
-duration-300
-hover:border-brand-primary/25
-hover:shadow-[0_18px_40px_rgba(209,139,53,.12)]
       "
     >
+      <div className="os-window-bar -mx-6 -mt-6 mb-6">
+        <span className="os-window-dots" aria-hidden="true"><span /><span /><span /></span>
+        <span>now / building</span>
+        <span className="ml-auto text-brand-primary">active</span>
+      </div>
       <div className="space-y-6">
         {/* Header */}
         <div>

@@ -55,9 +55,15 @@ export function ProjectsGrid() {
               key={project.id}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -3 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="group overflow-hidden rounded-3xl border border-border-subtle bg-surface-primary transition duration-300 hover:-translate-y-1 hover:border-brand-primary/35 hover:shadow-[0_20px_55px_rgba(209,139,53,.08)]"
+              className="os-panel os-panel-interactive group overflow-hidden rounded-[1.75rem]"
             >
+              <div className="os-window-bar">
+                <span className="os-window-dots" aria-hidden="true"><span /><span /><span /></span>
+                <span>project / {project.id}</span>
+                <span className="ml-auto text-text-muted">preview</span>
+              </div>
               <div className="relative aspect-[16/10] overflow-hidden border-b border-border-subtle bg-bg-secondary">
                 <Image
                   src={project.image}

@@ -25,12 +25,8 @@ sm:py-2
 text-xs
 sm:text-sm
         text-text-secondary
-        transition-all
-        duration-300
-        hover:-translate-y-0.5
-        hover:border-brand-primary/30
-        hover:bg-brand-primary/5
-        hover:text-text-primary
+        transition-colors
+        duration-200
       "
     >
       {item && (

@@ -22,23 +22,11 @@ export function NavBrand() {
   rounded-md
 "
     >
-      <span
-        className="
-          relative
-          after:absolute
-          after:left-0
-          after:-bottom-1
-          after:h-px
-          after:w-full
-          after:origin-left
-          after:scale-x-0
-          after:bg-brand-primary
-          after:transition-transform
-          after:duration-300
-          group-hover:after:scale-x-100
-        "
-      >
-        {site.name}
+      <span className="flex items-center gap-2.5">
+        <span className="grid h-8 w-8 place-items-center rounded-xl border border-brand-primary/25 bg-brand-primary/10 font-mono text-sm font-semibold text-brand-primary transition group-hover:border-brand-primary/50 group-hover:bg-brand-primary/15">
+          t.
+        </span>
+        <span>{site.name}</span>
       </span>
     </Link>
   );

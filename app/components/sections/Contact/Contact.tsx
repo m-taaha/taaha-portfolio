@@ -18,7 +18,7 @@ export function Contact() {
         />
 
         <FadeUp>
-          <div className="mt-20 grid gap-20 lg:grid-cols-2 lg:items-start">
+          <div className="mt-14 grid gap-12 sm:mt-16 lg:mt-20 lg:grid-cols-2 lg:gap-16 lg:items-start">
             <ContactContent />
             <ContactCard />
           </div>

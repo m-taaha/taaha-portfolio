@@ -6,21 +6,16 @@ export function HeroStatus() {
   return (
     <div
       className="
-        inline-flex
+        os-pill
+        max-w-full
+        text-left
         items-center
-        gap-2
-        rounded-full
-        border
-        border-brand-primary/30
-        bg-brand-primary/10
-        px-4
-        py-2
-        text-sm
-        text-brand-primary
+        gap-2.5
+        text-xs sm:text-sm
       "
     >
       <motion.div
-        className="h-2 w-2 rounded-full bg-green-500"
+        className="h-2 w-2 shrink-0 rounded-full bg-success shadow-[0_0_10px_rgba(59,165,93,.55)]"
         animate={{
           scale: [1, 1.4, 1],
           opacity: [1, 0.6, 1],
@@ -32,7 +27,9 @@ export function HeroStatus() {
         }}
       />
 
-      <span>Available for Software Engineering Internships</span>
+      <span className="min-w-0 leading-5">
+        Available for Software Engineering Internships
+      </span>
     </div>
   );
 }

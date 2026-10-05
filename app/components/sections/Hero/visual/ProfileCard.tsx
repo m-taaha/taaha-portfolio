@@ -18,24 +18,33 @@ export function ProfileCard() {
       variants={{
         rest: {
           y: 0,
+          x: 0,
           scale: 1,
+          zIndex: 10,
         },
         hover: {
           y: -6,
+          x: -28,
           scale: 1.02,
+          zIndex: 30,
         },
       }}
       className="
     w-full
     max-w-[340px]
     rounded-3xl
-    border
-    border-border-subtle
-    bg-surface-primary
+    os-panel
+    os-panel-interactive
+    overflow-hidden
     p-6
     sm:p-8
   "
     >
+      <div className="os-window-bar -mx-6 -mt-6 mb-6 sm:-mx-8 sm:-mt-8 sm:mb-8">
+        <span className="os-window-dots" aria-hidden="true"><span /><span /><span /></span>
+        <span>profile / taaha.dev</span>
+        <span className="ml-auto text-brand-primary">online</span>
+      </div>
       <div className="flex flex-col items-center text-center gap-6 ">
         <motion.div
           variants={{
@@ -60,8 +69,10 @@ export function ProfileCard() {
             className="
     rounded-full
     object-cover
-    ring
-    ring-border-default
+    ring-2
+    ring-brand-primary/20
+    ring-offset-4
+    ring-offset-bg-primary
     sm:w-[170px]
     sm:h-[170px]
   "
@@ -71,7 +82,7 @@ export function ProfileCard() {
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">{person.name}</h3>
           <p className="text-xs uppercase tracking-[0.3em] text-text-secondary">
-            AI FULL • STACK
+            SOFTWARE / AI ENGINEERING
           </p>
 
           <StatusBadge status={person.status} />
@@ -84,4 +95,3 @@ export function ProfileCard() {
     </motion.div>
   );
 }
-

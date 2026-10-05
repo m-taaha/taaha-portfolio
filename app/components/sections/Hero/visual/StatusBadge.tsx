@@ -22,6 +22,9 @@ export function StatusBadge({ status }: StatusBadgeProps) {
       }}
       className="
         inline-flex
+        max-w-full
+        whitespace-normal
+        text-left
         items-center
         gap-2
         rounded-full

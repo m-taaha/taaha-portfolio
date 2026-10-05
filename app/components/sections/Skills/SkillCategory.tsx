@@ -15,16 +15,13 @@ export function SkillCategory({ category }: SkillCategoryProps) {
         relative
         overflow-hidden
         rounded-3xl
-        border
-        border-border-subtle
-        bg-surface-primary
+        os-panel
+        os-panel-interactive
        p-6
 sm:p-8
         transition-all
         duration-500
-        hover:-translate-y-1.5
-        hover:border-brand-primary/30
-        hover:shadow-[0_18px_45px_rgba(0,0,0,.35)]
+        hover:-translate-y-1
       "
     >
       {/* Top Accent */}
@@ -77,11 +74,11 @@ sm:p-8
               duration: 0.25,
             }}
             className="
-text-xl
-sm:text-2xl
-lg:text-3xl
-    font-bold
-    tracking-tight
+            text-xl
+            sm:text-2xl
+            lg:text-3xl
+    font-semibold
+    tracking-[-0.03em]
     transition-colors
     duration-300
     group-hover:text-brand-primary

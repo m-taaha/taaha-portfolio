@@ -63,14 +63,13 @@ export function Navbar() {
         sticky
         top-0
         z-50
-        border-b
-        border-border-subtle
-        bg-bg-primary/85
-        backdrop-blur-xl
+        bg-bg-primary/30
+        px-2
+        backdrop-blur-2xl
       "
     >
       <Container>
-        <div className="flex h-20 items-center justify-between">
+        <div className="mt-3 flex h-[4.5rem] items-center justify-between rounded-2xl border border-white/[0.07] bg-surface-primary/85 px-4 shadow-[0_14px_44px_rgba(0,0,0,.3)] backdrop-blur-2xl sm:px-6">
           <NavBrand />
 
           <div className="hidden md:block">

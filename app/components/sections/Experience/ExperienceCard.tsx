@@ -31,6 +31,8 @@ export function ExperienceCard({ experience, active, onClick, index }: Props) {
         ease: [0.16, 1, 0.3, 1],
       }}
       onClick={onClick}
+      aria-pressed={active}
+      type="button"
       className="
     flex
     flex-col

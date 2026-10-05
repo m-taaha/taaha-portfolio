@@ -79,16 +79,11 @@ export function ExperienceTimeline() {
               ease: [0.16, 1, 0.3, 1],
             }}
             className="
-rounded-3xl
-border
-border-border-subtle
-bg-surface-primary
+os-panel
+rounded-[1.75rem]
 p-6
 sm:p-8
 lg:p-10
-             transition-shadow
-             duration-300
-             hover:shadow-[0_18px_45px_rgba(209,139,53,.08)]
             "
           >
             <motion.p
@@ -196,12 +191,11 @@ text-sm
               className="
 mt-8
 lg:mt-12
-rounded-2xl
                 rounded-2xl
                 border
                 border-brand-primary/20
                 bg-brand-primary/[0.04]
-                p-7
+                p-6 sm:p-7
               "
             >
               <div className="flex items-center gap-2">

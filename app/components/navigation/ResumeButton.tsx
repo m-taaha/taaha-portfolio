@@ -47,7 +47,7 @@ focus-visible:ring-offset-bg-primary
           ease-out
           hover:-translate-y-px
           hover:border-brand-primary/40
-          hover:shadow-[0_0_28px_rgba(201,124,75,0.18)]
+          hover:shadow-[0_0_28px_rgba(209,139,53,.18)]
         "
       >
         {/* Background Glow */}

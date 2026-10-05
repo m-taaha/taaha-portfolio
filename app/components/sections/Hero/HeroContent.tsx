@@ -35,7 +35,9 @@ export function HeroContent() {
           className="
     max-w-xl
     text-5xl
-    leading-none
+    leading-[.98]
+    tracking-[-0.055em]
+    text-balance
     sm:text-6xl
     lg:max-w-2xl
   "
@@ -49,6 +51,7 @@ export function HeroContent() {
           className="
     max-w-md
     text-center
+    text-pretty
     lg:max-w-2xl
     lg:text-left
   "

@@ -11,7 +11,7 @@ export function SkillChips({skills}: SkillChipsProps) {
       {skills.map((skill) => (
         <span
           key={skill}
-          className="rounded-full border border-border-subtle bg-bg-primary px-3 py-1 text-sm text-text-secondary"
+          className="rounded-full border border-border-subtle/80 bg-bg-primary/70 px-3 py-1.5 font-mono text-[11px] text-text-secondary"
         >
           {skill}
         </span>
@@ -19,4 +19,3 @@ export function SkillChips({skills}: SkillChipsProps) {
     </div>
   );
 }
-

@@ -26,18 +26,19 @@ export function SystemViewer({ system }: Props) {
         duration: 0.25,
       }}
       className="
-    mt-8 lg:mt-12
+    os-panel
+    os-panel-interactive
     overflow-hidden
     rounded-[32px]
-    border
-    border-border-subtle
-    bg-surface-primary
-    transition-all
-    duration-300
-    hover:border-brand-primary/30
-    hover:shadow-[0_24px_60px_rgba(209,139,53,.10)]
   "
     >
+      <div className="os-window-bar">
+        <span className="os-window-dots" aria-hidden="true"><span /><span /><span /></span>
+        <span>systems / {system.id}</span>
+        <span className="ml-auto inline-flex items-center gap-2 text-brand-soft">
+          <span className="h-1.5 w-1.5 rounded-full bg-success" /> interactive preview
+        </span>
+      </div>
       <div className="grid xl:grid-cols-[540px_1fr]">
         {/* LEFT */}
 

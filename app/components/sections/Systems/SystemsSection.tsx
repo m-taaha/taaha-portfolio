@@ -10,10 +10,10 @@ export function SystemsSection() {
       <SectionHeading
         eyebrow="Engineering Systems"
         title="Systems I've Designed"
-        description="Each system represents a real engineering challenge-from scalable backend architecture to AI-powered developer tools and interactive learning platforms."
+        description="A closer look at the engineering behind my work, from scalable backend architecture to AI powered tools and interactive learning platforms."
       />
 
-      <div className="mt-20 lg:mt-24">
+      <div className="mt-14 sm:mt-16 lg:mt-20">
         <SystemsGrid />
       </div>
 
