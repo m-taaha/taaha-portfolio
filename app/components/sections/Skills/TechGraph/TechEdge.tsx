@@ -22,7 +22,7 @@ export function TechEdge({ start, end }: Props) {
       <motion.path
         d={path}
         fill="none"
-        stroke="rgba(201,124,75,.28)"
+        stroke="rgba(117,167,255,.24)"
         strokeWidth={6}
         strokeLinecap="round"
         initial={{
@@ -43,7 +43,7 @@ export function TechEdge({ start, end }: Props) {
       <motion.path
         d={path}
         fill="none"
-        stroke="rgba(201,124,75,.18)"
+        stroke="rgba(117,167,255,.16)"
         strokeWidth={4}
         strokeLinecap="round"
         initial={{
@@ -65,7 +65,7 @@ export function TechEdge({ start, end }: Props) {
       <motion.path
         d={path}
         fill="none"
-        stroke="#c97c4b"
+        stroke="#75a7ff"
         strokeWidth={1.8}
         strokeLinecap="round"
         initial={{

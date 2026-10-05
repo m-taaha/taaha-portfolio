@@ -56,7 +56,7 @@ ${endNode.x} ${endNode.y}
       <motion.path
         d={path}
         fill="none"
-        stroke="rgba(209,139,53,.16)"
+        stroke="rgba(117,167,255,.16)"
         strokeWidth={5}
         strokeLinecap="round"
         variants={{
@@ -82,7 +82,7 @@ ${endNode.x} ${endNode.y}
       <motion.path
         d={path}
         fill="none"
-        stroke="#d18b35"
+        stroke="#75a7ff"
         strokeWidth={1.8}
         strokeLinecap="round"
         variants={{

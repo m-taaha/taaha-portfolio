@@ -12,7 +12,7 @@ export function Heading ({
     return (
       <h1
         className={cn(
-          "text-5xl font-bold tracking-tight text-text-primary lg:text-7xl",
+          "text-5xl font-bold tracking-[-0.055em] text-text-primary lg:text-7xl",
           className,
         )}
       >

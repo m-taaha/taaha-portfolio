@@ -10,7 +10,7 @@ export function FooterBrand() {
       <motion.h3
         whileHover={{
           x: 4,
-          color: "#d18b35",
+          color: "#75a7ff",
         }}
         transition={{
           duration: 0.2,

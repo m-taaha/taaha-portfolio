@@ -9,7 +9,10 @@ import { Sparkles } from "lucide-react";
 import { MobileTimeline } from "./MobileTimeline";
 
 export function ExperienceTimeline() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(() => {
+    const currentIndex = experiences.findIndex((experience) => experience.current);
+    return currentIndex >= 0 ? currentIndex : 0;
+  });
 
   const activeExperience = experiences[activeIndex];
 
@@ -38,7 +41,7 @@ export function ExperienceTimeline() {
             }}
           />
 
-          <div className="relative grid grid-cols-7 gap-2">
+          <div className="relative grid grid-cols-8 gap-2">
             {experiences.map((experience, index) => (
               <ExperienceCard
                 key={experience.title}
@@ -92,7 +95,7 @@ lg:p-10
               animate={{ opacity: 1 }}
               transition={{ delay: 0.05 }}
             >
-              {activeExperience.year}
+              {activeExperience.period ?? activeExperience.year}
             </motion.p>
 
             <motion.h3

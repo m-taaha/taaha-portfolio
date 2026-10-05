@@ -9,7 +9,7 @@ const buttonVariants = {
     text-brand-foreground
 
     hover:bg-brand-soft
-    hover:shadow-[0_12px_30px_rgba(209,139,53,.2)]
+    hover:shadow-[0_12px_30px_rgba(117,167,255,.18)]
   `,
 
   secondary: `
@@ -58,7 +58,7 @@ export function Button({
   duration-300
 
   hover:-translate-y-0.5
-  hover:shadow-[0_12px_30px_rgba(209,139,53,.14)]
+  hover:shadow-[0_12px_30px_rgba(117,167,255,.14)]
 
   active:translate-y-0
   active:scale-[0.98]

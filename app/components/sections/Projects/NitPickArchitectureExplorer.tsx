@@ -175,7 +175,7 @@ export function NitPickArchitectureExplorer() {
           onPointerLeave={resetCanvas}
         >
           <motion.div
-            className="relative h-[500px] overflow-visible rounded-2xl border border-white/[0.07] bg-[radial-gradient(ellipse_at_45%_45%,rgba(184,115,51,.09),transparent_50%),linear-gradient(145deg,#0e171e,#0a1015)] [transform-style:preserve-3d]"
+            className="relative h-[500px] overflow-visible rounded-2xl border border-white/[0.07] bg-[radial-gradient(ellipse_at_45%_45%,rgba(117,167,255,.07),transparent_50%),linear-gradient(145deg,#171e29,#0d121a)] [transform-style:preserve-3d]"
             style={{ rotateX, rotateY }}
           >
             <div
@@ -243,7 +243,7 @@ export function NitPickArchitectureExplorer() {
                       setFlowIndex(-1);
                     }}
                     aria-pressed={isSelected}
-                    className={`relative flex min-w-[132px] items-center gap-2.5 rounded-xl border px-3 py-2.5 text-left backdrop-blur-xl transition-colors ${isSelected || flowActive ? "border-brand-primary/65 bg-[#19232a]/95 text-text-primary shadow-[0_0_28px_rgba(184,115,51,.2)]" : "border-white/[0.1] bg-[#101920]/95 text-text-secondary hover:border-brand-primary/40"}`}
+                    className={`relative flex min-w-[132px] items-center gap-2.5 rounded-xl border px-3 py-2.5 text-left backdrop-blur-xl transition-colors ${isSelected || flowActive ? "border-brand-primary/65 bg-[#1b2a43]/95 text-text-primary shadow-[0_0_28px_rgba(117,167,255,.16)]" : "border-white/[0.1] bg-[#121821]/95 text-text-secondary hover:border-brand-primary/40"}`}
                     whileHover={prefersReducedMotion ? undefined : { scale: 1.06 }}
                     whileTap={prefersReducedMotion ? undefined : { scale: 0.97 }}
                   >

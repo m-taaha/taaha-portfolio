@@ -36,7 +36,7 @@ export function InteractivePreview({ system }: Props) {
         className="
           absolute
           inset-0
-          bg-[radial-gradient(circle_at_center,rgba(201,124,75,.10),transparent_70%)]
+          bg-[radial-gradient(circle_at_center,rgba(117,167,255,.08),transparent_70%)]
         "
       />
 

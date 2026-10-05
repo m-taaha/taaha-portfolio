@@ -12,7 +12,7 @@ export function SectionHeading({
   return (
     <div className="max-w-3xl">
       <p className="os-pill">
-        <span className="h-1.5 w-1.5 rounded-full bg-brand-primary shadow-[0_0_10px_rgba(209,139,53,.65)]" aria-hidden="true" />
+        <span className="h-1.5 w-1.5 rounded-full bg-brand-primary shadow-[0_0_10px_rgba(117,167,255,.55)]" aria-hidden="true" />
         {eyebrow}
       </p>
 

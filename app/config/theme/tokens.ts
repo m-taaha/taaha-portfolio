@@ -39,37 +39,36 @@ readonly feedback: {
 
 export const darkColors: ColorTokens = {
   background: {
-    primary: "#080D12",
-    secondary: "#0D151C",
-    elevated: "#121D25",
+    primary: "#0A0D12",
+    secondary: "#10151D",
+    elevated: "#171E29",
   },
 
   surface: {
-    primary: "#101A22",
-    secondary: "#15232D",
+    primary: "#121821",
+    secondary: "#192231",
   },
 
   text: {
-    primary: "#F0F7F5",
-    secondary: "#B5C7C6",
-    muted: "#829796",
+    primary: "#F2F5F9",
+    secondary: "#B5C0CE",
+    muted: "#8592A3",
   },
 
   border: {
-    subtle: "#1B2B33",
-    default: "#29404A",
-    strong: "#3B5962",
+    subtle: "#222C3A",
+    default: "#344256",
+    strong: "#50637C",
   },
 
   brand: {
-    primary: "#B87333",
-    soft: "#D4A373",
+    primary: "#75A7FF",
+    soft: "#B7D0FF",
   },
 
   feedback: {
-    success: "#3BA55D",
-    warning: "#D6A34A",
-    error: "#D9534F",
+    success: "#64D7A5",
+    warning: "#E8BF72",
+    error: "#F07888",
   },
 };
-

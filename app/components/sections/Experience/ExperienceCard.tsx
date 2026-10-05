@@ -61,7 +61,7 @@ export function ExperienceCard({ experience, active, onClick, index }: Props) {
           border-2
         "
         style={{
-          borderColor: active ? "#d18b35" : "rgba(209,139,53,.35)",
+          borderColor: active ? "#75a7ff" : "rgba(117,167,255,.35)",
         }}
       >
         <motion.div

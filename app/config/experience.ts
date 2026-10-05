@@ -7,6 +7,8 @@ export interface ExperienceArtifact {
 
 export interface ExperienceItem {
   readonly year: string;
+  readonly period?: string;
+  readonly current?: boolean;
   readonly title: string;
   readonly organization: string;
   readonly description: string;
@@ -137,6 +139,23 @@ export const experiences: readonly ExperienceItem[] = [
       "LLMs become significantly more valuable when surrounded by reliable systems for orchestration, validation, and delivery.",
   },
 },
+
+  {
+    year: "2026",
+    period: "Jan 2026 – Present",
+    current: true,
+    title: "Student Intern",
+    organization: "ZaviaNexus Infoventures Pvt. Ltd.",
+    description:
+      "Contributing to ZipMinds, an AI-enabled education portal for children. The internship confirmation describes a Python platform using LangChain and LangGraph to support guided learning experiences.",
+    technologies: ["Python", "LangChain", "LangGraph", "Agentic AI"],
+    artifact: {
+      title: "ZipMinds",
+      subtitle: "AI-enabled education portal",
+      lesson:
+        "Exploring how language-model workflows can support guided, interactive learning experiences.",
+    },
+  },
 
   {
     year: "Today",

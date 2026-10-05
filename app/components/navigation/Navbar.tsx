@@ -82,7 +82,7 @@ export function Navbar() {
             <div className="hidden items-center gap-3 lg:flex">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2.5 text-sm font-semibold text-brand-foreground transition hover:-translate-y-0.5 hover:bg-brand-soft hover:shadow-[0_12px_30px_rgba(209,139,53,.18)]"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2.5 text-sm font-semibold text-brand-foreground transition hover:-translate-y-0.5 hover:bg-brand-soft hover:shadow-[0_12px_30px_rgba(117,167,255,.16)]"
               >
                 Projects <ArrowUpRight className="h-4 w-4" />
               </Link>
