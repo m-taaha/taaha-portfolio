@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1290" y2="860" gradientUnits="userSpaceOnUse"><stop stop-color="#1A2B43"/><stop offset="1" stop-color="#0A0D12"/></linearGradient>
+    <linearGradient id="sky" x1="500" y1="170" x2="1180" y2="590" gradientUnits="userSpaceOnUse"><stop stop-color="#91B9F7"/><stop offset="1" stop-color="#435E84"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" stroke="#B7D0FF" stroke-opacity=".06"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#02040A" flood-opacity=".56"/></filter>
+  </defs>
+  <rect width="1440" height="900" rx="32" fill="url(#bg)"/><rect width="1440" height="900" rx="32" fill="url(#grid)"/>
+  <circle cx="1190" cy="120" r="260" fill="#75A7FF" fill-opacity=".09"/>
+  <rect x="96" y="78" width="1248" height="744" rx="28" fill="#0D1420" stroke="#35445C" filter="url(#shadow)"/>
+  <path d="M96 142H1344" stroke="#35445C"/>
+  <circle cx="130" cy="110" r="7" fill="#EF796F"/><circle cx="154" cy="110" r="7" fill="#E5B85D"/><circle cx="178" cy="110" r="7" fill="#69B97A"/>
+  <text x="216" y="116" fill="#8998AE" font-family="ui-monospace,monospace" font-size="16" letter-spacing="2">MUSAFIR TRIPS / CONTENT STUDIO</text>
+  <rect x="126" y="178" width="238" height="606" rx="18" fill="#121C2B" stroke="#28364A"/>
+  <text x="158" y="224" fill="#E7EDF8" font-family="Arial,sans-serif" font-size="22" font-weight="700">Workspace</text>
+  <text x="158" y="282" fill="#B7D0FF" font-family="Arial,sans-serif" font-size="17">Overview</text>
+  <text x="158" y="332" fill="#8998AE" font-family="Arial,sans-serif" font-size="17">Tours</text>
+  <text x="158" y="382" fill="#8998AE" font-family="Arial,sans-serif" font-size="17">Stories</text>
+  <text x="158" y="432" fill="#8998AE" font-family="Arial,sans-serif" font-size="17">Enquiries</text>
+  <text x="158" y="482" fill="#8998AE" font-family="Arial,sans-serif" font-size="17">Site settings</text>
+  <rect x="398" y="178" width="916" height="606" rx="18" fill="#111A28" stroke="#28364A"/>
+  <text x="438" y="232" fill="#E7EDF8" font-family="Arial,sans-serif" font-size="30" font-weight="700">Travel content</text>
+  <text x="438" y="266" fill="#8998AE" font-family="Arial,sans-serif" font-size="16">Manage tours, stories, and site updates.</text>
+  <rect x="1110" y="204" width="158" height="44" rx="13" fill="#75A7FF"/><text x="1140" y="232" fill="#09111D" font-family="Arial,sans-serif" font-size="15" font-weight="700">New tour +</text>
+  <rect x="438" y="308" width="392" height="214" rx="16" fill="url(#sky)"/>
+  <path d="M438 466C506 400 564 440 620 374s133-51 210 19v129H438z" fill="#263E5B" fill-opacity=".78"/>
+  <circle cx="725" cy="364" r="25" fill="#D2E4FF" fill-opacity=".88"/>
+  <rect x="856" y="308" width="412" height="214" rx="16" fill="#172235" stroke="#34445D"/>
+  <text x="888" y="350" fill="#B7D0FF" font-family="ui-monospace,monospace" font-size="13" letter-spacing="1">FEATURED TOUR</text>
+  <text x="888" y="394" fill="#E7EDF8" font-family="Arial,sans-serif" font-size="23" font-weight="700">Explore the mountains</text>
+  <text x="888" y="432" fill="#9AAAC0" font-family="Arial,sans-serif" font-size="15">Draft · Updated moments ago</text>
+  <rect x="888" y="463" width="104" height="34" rx="10" fill="#1D2C41" stroke="#435A7D"/><text x="909" y="485" fill="#B7D0FF" font-family="Arial,sans-serif" font-size="13">Edit content</text>
+  <rect x="438" y="550" width="830" height="176" rx="16" fill="#121C2B" stroke="#28364A"/>
+  <text x="470" y="592" fill="#E7EDF8" font-family="Arial,sans-serif" font-size="19" font-weight="700">Recent updates</text>
+  <circle cx="482" cy="632" r="6" fill="#75A7FF"/><text x="502" y="638" fill="#B5C0CE" font-family="Arial,sans-serif" font-size="15">Tour details published</text>
+  <circle cx="482" cy="680" r="6" fill="#8EDBD4"/><text x="502" y="686" fill="#B5C0CE" font-family="Arial,sans-serif" font-size="15">New enquiry received</text>
+  <text x="126" y="862" fill="#8090A7" font-family="ui-monospace,monospace" font-size="14" letter-spacing="3">ILLUSTRATIVE COVER / CMS / SERVER ACTIONS / POSTGRESQL</text>
+</svg>

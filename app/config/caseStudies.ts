@@ -9,6 +9,69 @@ export interface CaseStudyContent {
 }
 
 export const caseStudies: Readonly<Record<string, CaseStudyContent>> = {
+  "exac-draw": {
+    architectureIntro:
+      "Follow a representative collaboration path: a user's canvas change is synchronized to another client, rendered by the custom canvas engine, and retained as board state.",
+    notes: [
+      {
+        title: "Synchronize edits as they happen",
+        description:
+          "WebSockets carry canvas synchronization for simultaneous multi-user editing.",
+      },
+      {
+        title: "Own the canvas rendering",
+        description:
+          "A custom canvas engine renders the geometric shapes used on the collaborative board.",
+      },
+      {
+        title: "Keep board state persistent",
+        description:
+          "PostgreSQL stores whiteboard state so the shared work is backed by durable data.",
+      },
+    ],
+  },
+  "musafir-trips": {
+    architectureIntro:
+      "The product combines a content-managed Next.js site with server-side mutations, authenticated administration, PostgreSQL persistence, and media-rich publishing workflows.",
+    notes: [
+      {
+        title: "Keep content operations in one CMS",
+        description:
+          "The admin dashboard manages tours, blogs, hero slides, enquiries, awards, and site-wide settings.",
+      },
+      {
+        title: "Secure admin access",
+        description:
+          "Auth.js supports Google OAuth and credential sign-in, with middleware protecting application routes.",
+      },
+      {
+        title: "Make publishing updates visible",
+        description:
+          "Server Actions use Prisma for database mutations and trigger ISR revalidation after content changes.",
+      },
+    ],
+  },
+  cropchain: {
+    architectureIntro:
+      "This contribution focused on a backend request path: validate input centrally, then exercise API success and error behavior with integration tests.",
+    notes: [
+      {
+        title: "Validate requests at the boundary",
+        description:
+          "Joi schemas define accepted request data before it reaches the route logic.",
+      },
+      {
+        title: "Share validation behavior",
+        description:
+          "Centralized Express middleware applies request validation consistently across the protected route.",
+      },
+      {
+        title: "Test behavior through HTTP",
+        description:
+          "Jest and Supertest integration tests cover API responses and error handling.",
+      },
+    ],
+  },
   nitpick: {
     architectureIntro:
       "Explore the review pipeline. Select a service to inspect its responsibility, or replay a representative request path through the asynchronous AI workflow.",

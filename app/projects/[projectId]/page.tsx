@@ -8,19 +8,20 @@ import { Container } from "@/app/components/ui/Container";
 import { Footer } from "@/app/components/sections/Footer/Footer";
 import { Navbar } from "@/app/components/navigation/Navbar";
 import { NitPickArchitectureExplorer } from "@/app/components/sections/Projects/NitPickArchitectureExplorer";
+import { ExacDrawArchitectureExplorer } from "@/app/components/sections/Projects/ExacDrawArchitectureExplorer";
 import { caseStudies } from "@/app/config/caseStudies";
-import { systems } from "@/app/config/systems";
+import { projects } from "@/app/config/systems";
 
 interface ProjectPageProps {
   params: Promise<{ projectId: string }>;
 }
 
 function getProject(projectId: string) {
-  return systems.find((system) => system.id === projectId);
+  return projects.find((project) => project.id === projectId);
 }
 
 export function generateStaticParams() {
-  return systems.map((project) => ({ projectId: project.id }));
+  return projects.map((project) => ({ projectId: project.id }));
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     openGraph: {
       title: `${project.name} case study`,
       description: project.overview,
-      images: [{ url: project.image }],
+      images: [{ url: project.image, alt: project.imageAlt ?? `${project.name} interface preview` }],
     },
   };
 }
@@ -101,12 +102,12 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
             <div className="os-window-bar">
               <span className="os-window-dots" aria-hidden="true"><span /><span /><span /></span>
               <span>preview / {project.id}</span>
-              <span className="ml-auto text-brand-soft">project snapshot</span>
+              <span className="ml-auto text-brand-soft">{project.imageKind === "illustration" ? "illustrative artwork" : "project snapshot"}</span>
             </div>
             <div className="relative aspect-[16/8.5] max-h-[680px] min-h-[260px] bg-bg-secondary">
               <Image
                 src={project.image}
-                alt={`${project.name} interface preview`}
+                alt={project.imageAlt ?? `${project.name} interface preview`}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 1200px"
@@ -146,6 +147,8 @@ export default async function ProjectCaseStudyPage({ params }: ProjectPageProps)
 
             {project.id === "nitpick" ? (
               <NitPickArchitectureExplorer />
+            ) : project.id === "exac-draw" ? (
+              <ExacDrawArchitectureExplorer />
             ) : (
               <div className="os-panel rounded-[1.6rem] p-5 sm:p-7">
                 <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">

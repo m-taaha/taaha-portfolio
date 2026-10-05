@@ -19,6 +19,10 @@ export interface System {
 
   readonly image: string;
 
+  readonly imageAlt?: string;
+
+  readonly imageKind?: "screenshot" | "illustration";
+
   readonly github?: string;
 
   readonly gitlab?: string;
@@ -30,7 +34,39 @@ export interface System {
   readonly featured: boolean;
 }
 
-export const systems: readonly System[] = [
+export const projects: readonly System[] = [
+  {
+    id: "exac-draw",
+    name: "exac.draw",
+    category: "Real-time Collaborative Whiteboard",
+    overview:
+      "A collaborative whiteboard for simultaneous multi-user canvas editing, with real-time WebSocket synchronization and persistent board state.",
+    problem:
+      "A shared whiteboard needs edits from multiple people to stay in sync while preserving the board state between sessions.",
+    solution:
+      "Built a custom canvas rendering engine, synchronized canvas changes over WebSockets, and persisted whiteboard state in PostgreSQL.",
+    architecture: [
+      "Next.js 15 Client",
+      "WebSocket Synchronization",
+      "Custom Canvas Engine",
+      "PostgreSQL State",
+    ],
+    highlights: [
+      "Multi-user Editing",
+      "WebSocket Synchronization",
+      "Custom Canvas Rendering",
+      "Persistent Board State",
+      "Turborepo Monorepo",
+    ],
+    technologies: ["Next.js 15", "Turborepo", "WebSockets", "PostgreSQL", "Tailwind CSS", "pnpm"],
+    image: "/images/projects/exac-draw/cover.svg",
+    imageAlt: "Stylized illustration of a collaborative whiteboard interface",
+    imageKind: "illustration",
+    github: "https://github.com/m-taaha/exac-draw",
+    live: "https://exac-draw-web.vercel.app/",
+    browserUrl: "exac-draw-web.vercel.app",
+    featured: true,
+  },
   {
     id: "nitpick",
     name: "NitPick",
@@ -126,6 +162,73 @@ export const systems: readonly System[] = [
   },
 
   {
+    id: "musafir-trips",
+    name: "Musafir Trips",
+    category: "Full-Stack Travel Platform",
+    overview:
+      "A CMS-driven travel platform with an administration dashboard for tours, blogs, enquiries, awards, and site content.",
+    problem:
+      "Travel content and business enquiries need to be managed through one consistent platform with secure access and a flexible publishing workflow.",
+    solution:
+      "Built an admin-managed platform using Next.js Server Actions and Prisma, with Auth.js sign-in, Cloudinary uploads, a Tiptap editor, and ISR revalidation after content updates.",
+    architecture: [
+      "Next.js 14 App Router",
+      "Auth.js v5",
+      "Server Actions",
+      "Prisma 7 + PostgreSQL",
+      "Cloudinary + Tiptap",
+      "Vercel",
+    ],
+    highlights: [
+      "CMS-driven Content",
+      "Admin Dashboard",
+      "Google OAuth + Credentials",
+      "Route-level Access Control",
+      "ISR Content Revalidation",
+      "Cloudinary Media Workflows",
+    ],
+    technologies: ["Next.js 14", "TypeScript", "Prisma 7", "PostgreSQL", "Auth.js v5", "Tailwind CSS", "Cloudinary", "Tiptap"],
+    image: "/images/projects/musafir-trips/cover.svg",
+    imageAlt: "Stylized illustration of a travel content management dashboard",
+    imageKind: "illustration",
+    github: "https://github.com/m-taaha/musafir-trips",
+    live: "https://musafir-trips.vercel.app/",
+    browserUrl: "musafir-trips.vercel.app",
+    featured: false,
+  },
+
+  {
+    id: "cropchain",
+    name: "CropChain · Aperture 2.0",
+    category: "Open-source Backend Contribution",
+    overview:
+      "An open-source contribution focused on validating backend requests and testing API behavior in the CropChain project.",
+    problem:
+      "A backend route lacked request protection, leaving its input handling and error behavior without a focused integration test suite.",
+    solution:
+      "Added Joi validation schemas and centralized request-validation middleware, then wrote Jest and Supertest integration tests for API behavior and error handling.",
+    architecture: [
+      "Express Route",
+      "Joi Schemas",
+      "Validation Middleware",
+      "Jest + Supertest",
+    ],
+    highlights: [
+      "Request Validation",
+      "Centralized Middleware",
+      "Integration Tests",
+      "Error-path Coverage",
+    ],
+    technologies: ["Node.js", "Express", "Joi", "Jest", "Supertest", "JavaScript"],
+    image: "/images/projects/cropchain/cover.svg",
+    imageAlt: "Stylized illustration of an API validation and test workflow",
+    imageKind: "illustration",
+    github: "https://github.com/Nitya-003/CropChain",
+    browserUrl: "github.com/Nitya-003/CropChain",
+    featured: false,
+  },
+
+  {
     id: "portfolio",
 
     name: "taaha.dev",
@@ -168,3 +271,9 @@ export const systems: readonly System[] = [
     featured: true,
   },
 ] as const;
+
+const systemsOrder = ["nitpick", "kidsportal", "portfolio", "exac-draw"];
+
+export const systems: readonly System[] = projects
+  .filter((project) => project.featured)
+  .sort((a, b) => systemsOrder.indexOf(a.id) - systemsOrder.indexOf(b.id));
