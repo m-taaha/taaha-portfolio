@@ -5,19 +5,23 @@ export interface NavigationItem {
 
 export const navigation: readonly NavigationItem[] = [
   {
+    label: "Projects",
+    href: "/projects",
+  },
+  {
     label: "Systems",
-    href: "#systems",
+    href: "/#systems",
   },
   {
     label: "Journey",
-    href: "#journey",
+    href: "/#journey",
   },
   {
     label: "Capabilities",
-    href: "#skills",
+    href: "/#skills",
   },
   {
     label: "Contact",
-    href: "#contact",
+    href: "/#contact",
   },
 ] as const;

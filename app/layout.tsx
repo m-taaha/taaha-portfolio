@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
+import { MotionConfig } from "framer-motion";
 
 import "./globals.css";
 import { ScrollProgress } from "./layout/ScrollProgress";
@@ -27,11 +28,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <ScrollProgress />
+        <MotionConfig reducedMotion="user">
+          <ScrollProgress />
 
-        {children}
+          {children}
 
-        <Toaster position="bottom-right" richColors closeButton />
+          <Toaster position="bottom-right" richColors closeButton />
+        </MotionConfig>
       </body>
     </html>
   );

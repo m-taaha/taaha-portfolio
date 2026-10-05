@@ -76,8 +76,7 @@ export const systems: readonly System[] = [
 
     image: "/images/projects/nitpick/cover.png",
 
-    github:
-      "[https://github.com/m-taaha/nitpick](https://github.com/m-taaha/nitpick)",
+    github: "https://github.com/m-taaha/nitpick",
 
     browserUrl: "github.com/m-taaha/nitpick",
 
@@ -117,7 +116,7 @@ export const systems: readonly System[] = [
 
     technologies: ["React", "TypeScript", "FastAPI", "Python", "PostgreSQL"],
 
-    image: "/images/projects/kidsportal/cover-v2.png",
+    image: "/images/projects/kidsportal/cover-v3.png",
 
     gitlab: "https://gitlab.com/zavianexus/kidsportal",
 

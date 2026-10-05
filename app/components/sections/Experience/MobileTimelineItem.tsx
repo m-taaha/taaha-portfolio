@@ -63,7 +63,7 @@ ${
     ? "border-brand-primary shadow-[0_0_28px_rgba(209,139,53,.55)]"
     : "border-brand-primary/30"
 }
-bg-background-primary
+bg-bg-primary
 `}
       >
         <motion.div

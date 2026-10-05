@@ -12,13 +12,16 @@ export function NavLinks() {
   return (
     <nav aria-label="Primary navigation">
       <ul className="flex items-center gap-10">
-        {navigation.map((item) => {
-          const isActive = activeSection === item.href.replace("#", "");
+        {navigation
+          .filter((item) => item.href !== "/projects")
+          .map((item) => {
+          const isActive = activeSection === item.href.split("#")[1];
 
           return (
             <li key={item.label} className="relative">
               <Link
                 href={item.href}
+                aria-current={isActive ? "page" : undefined}
                 className={`
 group
 relative

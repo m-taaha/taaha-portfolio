@@ -9,6 +9,8 @@ import { MobileMenu } from "./MobileMenu";
 import { NavBrand } from "./NavBrand";
 import { NavLinks } from "./NavLinks";
 import { ResumeButton } from "./ResumeButton";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export function Navbar() {
   const [visible, setVisible] = useState(true);
@@ -63,7 +65,7 @@ export function Navbar() {
         z-50
         border-b
         border-border-subtle
-        bg-background/90
+        bg-bg-primary/85
         backdrop-blur-xl
       "
     >
@@ -75,7 +77,13 @@ export function Navbar() {
             <NavLinks />
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-3 md:flex">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2.5 text-sm font-semibold text-brand-foreground transition hover:-translate-y-0.5 hover:bg-brand-soft hover:shadow-[0_12px_30px_rgba(209,139,53,.18)]"
+            >
+              Projects <ArrowUpRight className="h-4 w-4" />
+            </Link>
             <ResumeButton />
           </div>
 
