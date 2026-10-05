@@ -22,6 +22,7 @@ import {
 
 import { TbBrandCpp } from "react-icons/tb";
 import { FaEthereum } from "react-icons/fa";
+import { Network, Radio } from "lucide-react";
 
 
 export const techIcons: Record<string, { icon: React.ReactNode; color: string }> = {
@@ -127,5 +128,30 @@ export const techIcons: Record<string, { icon: React.ReactNode; color: string }>
   SQLAlchemy: {
     icon: <SiSqlalchemy />,
     color: "text-orange-400",
+  },
+
+  WebSockets: {
+    icon: <Network />,
+    color: "text-brand-primary",
+  },
+
+  "Socket.IO": {
+    icon: <Radio />,
+    color: "text-brand-primary",
+  },
+
+  WebRTC: {
+    icon: <Network />,
+    color: "text-brand-primary",
+  },
+
+  LangChain: {
+    icon: <Network />,
+    color: "text-brand-primary",
+  },
+
+  LangGraph: {
+    icon: <Network />,
+    color: "text-brand-primary",
   },
 };

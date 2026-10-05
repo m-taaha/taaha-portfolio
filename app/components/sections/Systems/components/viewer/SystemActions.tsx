@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion";
+import Link from "next/link";
 import { System } from "@/app/config/systems";
 
 import { FiArrowRight, FiGithub, FiExternalLink } from "react-icons/fi";
@@ -38,36 +38,23 @@ sm:justify-between"
         </SystemLink>
       </div>
 
-      <motion.button
-        whileHover="hover"
-        whileTap={{
-          scale: 0.98,
-        }}
+      <Link
+        href={`/projects/${system.id}`}
         className="
+          group
           flex
           items-center
           gap-2
           text-sm
           font-medium
           text-brand-primary
-          transition-transform
-          group-hover:translate-x-1
+          transition-colors
+          hover:text-brand-soft
         "
       >
-        View System
-        <motion.span
-          variants={{
-            hover: {
-              x: 4,
-            },
-          }}
-          transition={{
-            duration: 0.2,
-          }}
-        >
-          <FiArrowRight />
-        </motion.span>
-      </motion.button>
+        Read case study
+        <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+      </Link>
     </div>
   );
 }

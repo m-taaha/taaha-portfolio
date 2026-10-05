@@ -32,7 +32,7 @@ export function BlueprintNode({ node }: Props) {
         cx={node.x}
         cy={node.y}
         r={52}
-        fill="rgba(201,124,75,.05)"
+        fill="rgba(117,167,255,.05)"
         animate={{
           scale: [1, 1.05, 1],
           opacity: [0.35, 0.55, 0.35],
@@ -50,7 +50,7 @@ export function BlueprintNode({ node }: Props) {
         cx={node.x}
         cy={node.y}
         r={38}
-        fill="rgba(201,124,75,.03)"
+        fill="rgba(117,167,255,.03)"
         animate={{
           scale: [1, 1.03, 1],
           opacity: [0.2, 0.35, 0.2],
@@ -83,9 +83,9 @@ export function BlueprintNode({ node }: Props) {
           "
           animate={{
             boxShadow: [
-              "0 0 14px rgba(201,124,75,.08)",
-              "0 0 26px rgba(201,124,75,.18)",
-              "0 0 14px rgba(201,124,75,.08)",
+              "0 0 14px rgba(117,167,255,.08)",
+              "0 0 26px rgba(117,167,255,.16)",
+              "0 0 14px rgba(117,167,255,.08)",
             ],
           }}
           transition={{

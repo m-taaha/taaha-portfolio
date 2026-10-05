@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1290" y2="860" gradientUnits="userSpaceOnUse"><stop stop-color="#1A2B43"/><stop offset="1" stop-color="#0A0D12"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" stroke="#B7D0FF" stroke-opacity=".07"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#02040A" flood-opacity=".56"/></filter>
+  </defs>
+  <rect width="1440" height="900" rx="32" fill="url(#bg)"/><rect width="1440" height="900" rx="32" fill="url(#grid)"/>
+  <circle cx="350" cy="710" r="280" fill="#75A7FF" fill-opacity=".08"/>
+  <rect x="96" y="78" width="1248" height="744" rx="28" fill="#0D1420" stroke="#35445C" filter="url(#shadow)"/>
+  <path d="M96 142H1344" stroke="#35445C"/>
+  <circle cx="130" cy="110" r="7" fill="#EF796F"/><circle cx="154" cy="110" r="7" fill="#E5B85D"/><circle cx="178" cy="110" r="7" fill="#69B97A"/>
+  <text x="216" y="116" fill="#8998AE" font-family="ui-monospace,monospace" font-size="16" letter-spacing="2">CROPCHAIN / API VALIDATION</text>
+  <text x="148" y="222" fill="#E7EDF8" font-family="Arial,sans-serif" font-size="32" font-weight="700">Protect the request boundary</text>
+  <text x="148" y="263" fill="#9AAAC0" font-family="Arial,sans-serif" font-size="17">A contribution focused on validation and tested API behavior.</text>
+  <rect x="154" y="332" width="250" height="174" rx="18" fill="#141F30" stroke="#34445D"/>
+  <text x="184" y="376" fill="#B7D0FF" font-family="ui-monospace,monospace" font-size="13" letter-spacing="1">INCOMING REQUEST</text>
+  <path d="M190 420h150M190 451h112" stroke="#8495AD" stroke-width="10" stroke-linecap="round"/>
+  <rect x="494" y="332" width="250" height="174" rx="18" fill="#17243A" stroke="#75A7FF" stroke-opacity=".7"/>
+  <text x="525" y="376" fill="#B7D0FF" font-family="ui-monospace,monospace" font-size="13" letter-spacing="1">JOI SCHEMA</text>
+  <path d="m533 432 21 21 45-52" stroke="#75A7FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="616" y="443" fill="#E7EDF8" font-family="Arial,sans-serif" font-size="20" font-weight="600">Validated</text>
+  <rect x="834" y="332" width="250" height="174" rx="18" fill="#141F30" stroke="#34445D"/>
+  <text x="865" y="376" fill="#B7D0FF" font-family="ui-monospace,monospace" font-size="13" letter-spacing="1">EXPRESS ROUTE</text>
+  <path d="M872 420h160M872 451h120" stroke="#8495AD" stroke-width="10" stroke-linecap="round"/>
+  <rect x="1174" y="332" width="128" height="174" rx="18" fill="#141F30" stroke="#34445D"/>
+  <text x="1198" y="376" fill="#B7D0FF" font-family="ui-monospace,monospace" font-size="13" letter-spacing="1">TESTS</text>
+  <circle cx="1237" cy="438" r="25" fill="#18392F"/><path d="m1226 438 8 8 15-18" stroke="#64D7A5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M404 419h78m262 0h78m262 0h78" stroke="#75A7FF" stroke-width="3" stroke-dasharray="8 9"/>
+  <rect x="154" y="564" width="1148" height="166" rx="18" fill="#101824" stroke="#28364A"/>
+  <text x="190" y="608" fill="#8998AE" font-family="ui-monospace,monospace" font-size="13" letter-spacing="1">INTEGRATION COVERAGE</text>
+  <text x="190" y="661" fill="#E7EDF8" font-family="ui-monospace,monospace" font-size="18">request payload</text>
+  <text x="520" y="661" fill="#E7EDF8" font-family="ui-monospace,monospace" font-size="18">validation result</text>
+  <text x="906" y="661" fill="#E7EDF8" font-family="ui-monospace,monospace" font-size="18">API response + errors</text>
+  <rect x="190" y="686" width="1040" height="4" rx="2" fill="#26364D"/><rect x="190" y="686" width="710" height="4" rx="2" fill="#75A7FF"/>
+  <text x="126" y="862" fill="#8090A7" font-family="ui-monospace,monospace" font-size="14" letter-spacing="3">ILLUSTRATIVE COVER / EXPRESS / JOI / JEST / SUPERTEST</text>
+</svg>

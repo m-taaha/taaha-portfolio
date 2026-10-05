@@ -36,7 +36,7 @@ duration-300
 hover:-translate-y-1
 hover:border-brand-primary/30
 hover:bg-surface-secondary
-hover:shadow-[0_12px_30px_rgba(209,139,53,.12)]
+hover:shadow-[0_12px_30px_rgba(117,167,255,.12)]
 "
         >
           <div className="flex items-center gap-3">

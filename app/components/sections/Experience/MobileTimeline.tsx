@@ -6,7 +6,10 @@ import { experiences } from "@/app/config/experience";
 import { MobileTimelineItem } from "./MobileTimelineItem";
 
 export function MobileTimeline() {
-const [activeIndex, setActiveIndex] = useState(0);
+const [activeIndex, setActiveIndex] = useState(() => {
+  const currentIndex = experiences.findIndex((experience) => experience.current);
+  return currentIndex >= 0 ? currentIndex : 0;
+});
 
 return (
   <div className="space-y-6 lg:hidden">

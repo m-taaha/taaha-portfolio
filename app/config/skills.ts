@@ -28,10 +28,22 @@ export const skills: readonly SkillCategory[] = [
       "FastAPI",
       "Node.js",
       "Express",
+      "REST APIs",
       "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "SQLAlchemy",
       "Redis",
       "Celery",
+      "Prisma",
     ],
+  },
+
+  {
+    title: "Build Real-Time Products",
+    description:
+      "Creating collaborative and live experiences with event-driven communication between connected clients.",
+    technologies: ["WebSockets", "Socket.IO", "WebRTC"],
   },
 
   {
@@ -43,6 +55,8 @@ export const skills: readonly SkillCategory[] = [
     technologies: [
       "Gemini",
       "Python",
+      "LangChain",
+      "LangGraph",
       "FastAPI",
       "Celery",
       "Pydantic",

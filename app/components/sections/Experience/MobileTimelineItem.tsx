@@ -27,7 +27,7 @@ export function MobileTimelineItem({
         <motion.div
           animate={{
             backgroundColor: active
-              ? "rgba(209,139,53,.8)"
+              ? "rgba(117,167,255,.8)"
               : "rgba(255,255,255,.08)",
           }}
           transition={{
@@ -60,7 +60,7 @@ z-10
 transition-all
 ${
   active
-    ? "border-brand-primary shadow-[0_0_28px_rgba(209,139,53,.55)]"
+    ? "border-brand-primary shadow-[0_0_28px_rgba(117,167,255,.45)]"
     : "border-brand-primary/30"
 }
 bg-bg-primary
@@ -98,7 +98,7 @@ bg-bg-primary
     transition-all
     ${
       active
-        ? "border-brand-primary/40 bg-brand-primary/[0.02] shadow-[0_10px_30px_rgba(209,139,53,.12)]"
+        ? "border-brand-primary/40 bg-brand-primary/[0.02] shadow-[0_10px_30px_rgba(117,167,255,.12)]"
         : "border-border-subtle bg-surface-primary"
     }
   `}
@@ -126,7 +126,7 @@ bg-bg-primary
                 text-brand-primary
               "
             >
-              {experience.year}
+              {experience.period ?? experience.year}
             </p>
 
             <h3 className="mt-3 text-xl font-semibold">{experience.title}</h3>

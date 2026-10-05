@@ -7,6 +7,8 @@ export interface ExperienceArtifact {
 
 export interface ExperienceItem {
   readonly year: string;
+  readonly period?: string;
+  readonly current?: boolean;
   readonly title: string;
   readonly organization: string;
   readonly description: string;
@@ -78,38 +80,39 @@ export const experiences: readonly ExperienceItem[] = [
   {
     year: "2025",
 
-    title: "Realtime",
+    title: "Real-time Collaboration",
 
-    organization: "Distributed Communication",
+    organization: "exac.draw · Collaborative Whiteboard",
 
     description:
-      "Applications became conversations instead of requests. I explored WebSockets, event-driven architectures, queues, and asynchronous communication between services.",
+      "Engineered real-time canvas synchronization over WebSockets for simultaneous multi-user editing, and persisted whiteboard state in PostgreSQL.",
 
-    technologies: ["WebSockets", "Socket.IO", "Redis", "Events", "Queues"],
+    technologies: ["Next.js", "WebSockets", "PostgreSQL", "Turborepo"],
 
     artifact: {
-      title: "Socket.IO Chat",
-      subtitle: "Realtime Communication",
+      title: "exac.draw",
+      subtitle: "Real-time Collaborative Whiteboard",
       lesson:
-        "Applications became conversations instead of requests. That changed how I think about architecture.",
+        "Collaborative canvas work brings live synchronization, custom rendering, and durable state together.",
     },
   },
 
   {
-    year: "2026",
+    year: "2025",
+    period: "2025 – Present",
 
-    title: "Leadership",
+    title: "Tech Lead",
 
-    organization: "Jamia Hamdard Tezos Society",
+    organization: "Tezos Society · Jamia Hamdard",
 
     description:
-      "I realized building software isn't only about writing code. Becoming Tech Head gave me opportunities to mentor juniors, review projects, and help other students build better software.",
+      "Lead a team of student developers on technical initiatives and events, and launched DSA-focused practice sessions for new team members.",
 
-    technologies: ["Leadership", "Mentoring", "Code Review", "Git"],
+    technologies: ["Team Leadership", "Developer Mentoring", "DSA", "Technical Events"],
 
     artifact: {
-      title: "Tech Head",
-      subtitle: "Jamia Hamdard",
+      title: "Student Developer Team",
+      subtitle: "Tezos Society · Jamia Hamdard",
       lesson:
         "Teaching others exposed gaps in my own understanding faster than building projects alone.",
     },
@@ -137,6 +140,23 @@ export const experiences: readonly ExperienceItem[] = [
       "LLMs become significantly more valuable when surrounded by reliable systems for orchestration, validation, and delivery.",
   },
 },
+
+  {
+    year: "2026",
+    period: "Jan 2026 – Present",
+    current: true,
+    title: "Student Intern",
+    organization: "ZaviaNexus Infoventures Pvt. Ltd.",
+    description:
+      "Contributing to ZipMinds, an AI-enabled education portal for children. The internship confirmation describes a Python platform using LangChain and LangGraph to support guided learning experiences.",
+    technologies: ["Python", "LangChain", "LangGraph", "Agentic AI"],
+    artifact: {
+      title: "ZipMinds",
+      subtitle: "AI-enabled education portal",
+      lesson:
+        "Exploring how language-model workflows can support guided, interactive learning experiences.",
+    },
+  },
 
   {
     year: "Today",

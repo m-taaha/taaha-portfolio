@@ -25,6 +25,25 @@ export interface BlueprintData {
 }
 
 export const architectures: Record<string, BlueprintData> = {
+  "exac-draw": {
+    id: "exac-draw",
+    title: "exac.draw",
+    subtitle: "Real-time Collaborative Whiteboard",
+    status: "Live",
+    nodes: [
+      { id: "browser-a", label: "Client A", x: 130, y: 210, type: "client" },
+      { id: "browser-b", label: "Client B", x: 130, y: 420, type: "client" },
+      { id: "sync", label: "WebSocket Sync", x: 390, y: 315, type: "service" },
+      { id: "canvas", label: "Canvas Engine", x: 640, y: 315, type: "service" },
+      { id: "postgres", label: "PostgreSQL", x: 880, y: 315, type: "database" },
+    ],
+    connections: [
+      { from: "browser-a", to: "sync" },
+      { from: "browser-b", to: "sync" },
+      { from: "sync", to: "canvas" },
+      { from: "canvas", to: "postgres" },
+    ],
+  },
   nitpick: {
     id: "nitpick",
     title: "NitPick",

@@ -43,7 +43,7 @@ export function ScrollProgress() {
           origin-left
           rounded-r-full
           bg-brand-primary
-          shadow-[0_0_20px_rgba(209,139,53,.65)]
+          shadow-[0_0_20px_rgba(117,167,255,.55)]
         "
         style={{ scaleX }}
       />

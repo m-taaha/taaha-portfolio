@@ -87,7 +87,7 @@ export function MobileMenu() {
     duration-300
     hover:border-brand-primary/40
     hover:bg-brand-primary/5
-    hover:shadow-[0_0_18px_rgba(209,139,53,.12)]
+    hover:shadow-[0_0_18px_rgba(117,167,255,.12)]
   "
       >
         <Menu className="h-5 w-5" />
@@ -240,7 +240,7 @@ export function MobileMenu() {
   duration-300
   hover:-translate-y-1
   hover:border-brand-primary/50
-  hover:shadow-[0_12px_30px_rgba(209,139,53,.18)]
+  hover:shadow-[0_12px_30px_rgba(117,167,255,.16)]
 "
                   >
                     Resume

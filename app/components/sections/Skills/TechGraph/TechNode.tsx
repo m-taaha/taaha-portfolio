@@ -32,7 +32,7 @@ export function TechNode({ node }: Props) {
         cx={node.x}
         cy={node.y}
         r={30}
-        fill="rgba(201,124,75,.06)"
+        fill="rgba(117,167,255,.05)"
         animate={{
           scale: [1, 1.08, 1],
           opacity: [0.35, 0.65, 0.35],
@@ -70,7 +70,7 @@ export function TechNode({ node }: Props) {
             duration-300
 
             hover:border-brand-primary/40
-            hover:shadow-[0_0_24px_rgba(209,139,53,.22)]
+            hover:shadow-[0_0_24px_rgba(117,167,255,.18)]
             text-[14px]
             font-medium
             uppercase

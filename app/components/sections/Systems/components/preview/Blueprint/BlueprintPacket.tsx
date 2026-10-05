@@ -17,7 +17,7 @@ export function BlueprintPacket({ x, y, delay = 0 }: Props) {
         cx={x}
         cy={y}
         r={8}
-        fill="rgba(209,139,53,.18)"
+        fill="rgba(117,167,255,.18)"
         animate={{
           scale: [0.6, 1.4, 0.6],
           opacity: [0, 0.9, 0],
@@ -37,7 +37,7 @@ export function BlueprintPacket({ x, y, delay = 0 }: Props) {
         cx={x}
         cy={y}
         r={2.6}
-        fill="#d18b35"
+        fill="#75a7ff"
         animate={{
           scale: [0, 1, 1, 0],
           opacity: [0, 1, 1, 0],
