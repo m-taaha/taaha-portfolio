@@ -11,6 +11,7 @@ import { NavLinks } from "./NavLinks";
 import { ResumeButton } from "./ResumeButton";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { CommandPalette } from "./CommandPalette";
 
 export function Navbar() {
   const [visible, setVisible] = useState(true);
@@ -72,22 +73,24 @@ export function Navbar() {
         <div className="mt-3 flex h-[4.5rem] items-center justify-between rounded-2xl border border-white/[0.07] bg-surface-primary/85 px-4 shadow-[0_14px_44px_rgba(0,0,0,.3)] backdrop-blur-2xl sm:px-6">
           <NavBrand />
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <NavLinks />
           </div>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2.5 text-sm font-semibold text-brand-foreground transition hover:-translate-y-0.5 hover:bg-brand-soft hover:shadow-[0_12px_30px_rgba(209,139,53,.18)]"
-            >
-              Projects <ArrowUpRight className="h-4 w-4" />
-            </Link>
-            <ResumeButton />
-          </div>
-
-          <div className="md:hidden">
-            <MobileMenu />
+          <div className="flex items-center gap-2">
+            <CommandPalette />
+            <div className="hidden items-center gap-3 lg:flex">
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 rounded-full bg-brand-primary px-4 py-2.5 text-sm font-semibold text-brand-foreground transition hover:-translate-y-0.5 hover:bg-brand-soft hover:shadow-[0_12px_30px_rgba(209,139,53,.18)]"
+              >
+                Projects <ArrowUpRight className="h-4 w-4" />
+              </Link>
+              <ResumeButton />
+            </div>
+            <div className="lg:hidden">
+              <MobileMenu />
+            </div>
           </div>
         </div>
       </Container>
